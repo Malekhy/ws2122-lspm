@@ -8,7 +8,7 @@ A web app which takes(csv/xes) files as an input and produce sampled (xes) files
 * Make sure your system have Docker installed 
 * Otherwise follow the instruction of setup and installation of Docker from https://docs.docker.com/docker-for-windows/install/
 
-## steps:
+## Steps for windows users:
 * Clone the project from https://github.com/Malekhy/ws2122-lspm
 * Open the command terminal 'cmd'
 * Move into the directory folder of the project: (project-path)\ws2122-lspm-main\src
