@@ -1,0 +1,238 @@
+{
+    "nodes": [
+        {
+            "id": "node_0",
+            "name": "pay compensation",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "pay compensation"
+                }
+            ]
+        },
+        {
+            "id": "node_1",
+            "name": "register request",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "register request"
+                }
+            ]
+        },
+        {
+            "id": "node_2",
+            "name": "reinitiate request",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "reinitiate request"
+                }
+            ]
+        },
+        {
+            "id": "node_3",
+            "name": "decide",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "decide"
+                }
+            ]
+        },
+        {
+            "id": "node_4",
+            "name": "examine thoroughly",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "examine thoroughly"
+                }
+            ]
+        },
+        {
+            "id": "node_5",
+            "name": "reject request",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "reject request"
+                }
+            ]
+        },
+        {
+            "id": "node_6",
+            "name": "check ticket",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "check ticket"
+                }
+            ]
+        },
+        {
+            "id": "node_7",
+            "name": "examine casually",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "examine casually"
+                }
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "source": "node_1",
+            "target": "node_7",
+            "label": 3,
+            "style": {
+                "lineWidth": 9.2,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_7",
+            "target": "node_6",
+            "label": 4,
+            "style": {
+                "lineWidth": 12.799999999999999,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_6",
+            "target": "node_3",
+            "label": 6,
+            "style": {
+                "lineWidth": 20.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_3",
+            "target": "node_2",
+            "label": 3,
+            "style": {
+                "lineWidth": 9.2,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_2",
+            "target": "node_4",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_4",
+            "target": "node_6",
+            "label": 2,
+            "style": {
+                "lineWidth": 5.6,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_3",
+            "target": "node_0",
+            "label": 3,
+            "style": {
+                "lineWidth": 9.2,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_1",
+            "target": "node_6",
+            "label": 2,
+            "style": {
+                "lineWidth": 5.6,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_6",
+            "target": "node_7",
+            "label": 2,
+            "style": {
+                "lineWidth": 5.6,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_7",
+            "target": "node_3",
+            "label": 2,
+            "style": {
+                "lineWidth": 5.6,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_1",
+            "target": "node_4",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_3",
+            "target": "node_5",
+            "label": 3,
+            "style": {
+                "lineWidth": 9.2,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_2",
+            "target": "node_6",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_2",
+            "target": "node_7",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_6",
+            "target": "node_4",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_4",
+            "target": "node_3",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        }
+    ]
+}
