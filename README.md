@@ -13,8 +13,8 @@ A web app which takes(csv/xes) files as an input and produce sampled (xes) files
 * Open the command terminal 'cmd'
 * Move into the directory folder of the project: (project-path)\ws2122-lspm-main\src
 * Move into project environment: 
-** For Windows users: .\Scripts\activate
-** For Mac users: source Scripts\activate
+  - **For Windows users:** .\Scripts\activate
+  - **For Mac users:** source Scripts\activate
 * Run the web app: python manage.py runserver
 * Open the browser and hit the URL: http://localhost:8000/
 * --- Happy Predictive Monitoring ---
