@@ -1,0 +1,8 @@
+git@github.com:Malekhy/ws2122-lspm.git
+
+pip install pandas
+pip install pm4py
+python -m pip install django
+
+jupyter notebook --notebook-dir D:/my_works/jupyter_ipynbs
+jupyter lab --notebook-dir C:\ws2122-lspm\Lab

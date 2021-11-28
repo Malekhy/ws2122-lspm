@@ -2,236 +2,410 @@
     "nodes": [
         {
             "id": "node_0",
-            "name": "pay compensation",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "pay compensation"
-                }
-            ]
+            "label": "get review 2"
         },
         {
             "id": "node_1",
-            "name": "register request",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "register request"
-                }
-            ]
+            "label": "get review 3"
         },
         {
             "id": "node_2",
-            "name": "reinitiate request",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "reinitiate request"
-                }
-            ]
+            "label": "get review X"
         },
         {
             "id": "node_3",
-            "name": "decide",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "decide"
-                }
-            ]
+            "label": "accept"
         },
         {
             "id": "node_4",
-            "name": "examine thoroughly",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "examine thoroughly"
-                }
-            ]
+            "label": "collect reviews"
         },
         {
             "id": "node_5",
-            "name": "reject request",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "reject request"
-                }
-            ]
+            "label": "invite additional reviewer"
         },
         {
             "id": "node_6",
-            "name": "check ticket",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "check ticket"
-                }
-            ]
+            "label": "time-out 2"
         },
         {
             "id": "node_7",
-            "name": "examine casually",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "examine casually"
-                }
-            ]
+            "label": "time-out X"
+        },
+        {
+            "id": "node_8",
+            "label": "time-out 1"
+        },
+        {
+            "id": "node_9",
+            "label": "invite reviewers"
+        },
+        {
+            "id": "node_10",
+            "label": "decide"
+        },
+        {
+            "id": "node_11",
+            "label": "reject"
+        },
+        {
+            "id": "node_12",
+            "label": "time-out 3"
+        },
+        {
+            "id": "node_13",
+            "label": "get review 1"
         }
     ],
     "edges": [
         {
-            "source": "node_1",
-            "target": "node_7",
-            "label": 3,
-            "style": {
-                "lineWidth": 9.2,
-                "endArrow": true
+            "from": "node_9",
+            "to": "node_9",
+            "data": {
+                "freq": 100
             }
         },
         {
-            "source": "node_7",
-            "target": "node_6",
-            "label": 4,
-            "style": {
-                "lineWidth": 12.799999999999999,
-                "endArrow": true
+            "from": "node_9",
+            "to": "node_0",
+            "data": {
+                "freq": 19
             }
         },
         {
-            "source": "node_6",
-            "target": "node_3",
-            "label": 6,
-            "style": {
-                "lineWidth": 20.0,
-                "endArrow": true
+            "from": "node_0",
+            "to": "node_1",
+            "data": {
+                "freq": 12
             }
         },
         {
-            "source": "node_3",
-            "target": "node_2",
-            "label": 3,
-            "style": {
-                "lineWidth": 9.2,
-                "endArrow": true
+            "from": "node_1",
+            "to": "node_13",
+            "data": {
+                "freq": 9
             }
         },
         {
-            "source": "node_2",
-            "target": "node_4",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
+            "from": "node_13",
+            "to": "node_4",
+            "data": {
+                "freq": 11
             }
         },
         {
-            "source": "node_4",
-            "target": "node_6",
-            "label": 2,
-            "style": {
-                "lineWidth": 5.6,
-                "endArrow": true
+            "from": "node_4",
+            "to": "node_4",
+            "data": {
+                "freq": 100
             }
         },
         {
-            "source": "node_3",
-            "target": "node_0",
-            "label": 3,
-            "style": {
-                "lineWidth": 9.2,
-                "endArrow": true
+            "from": "node_4",
+            "to": "node_10",
+            "data": {
+                "freq": 100
             }
         },
         {
-            "source": "node_1",
-            "target": "node_6",
-            "label": 2,
-            "style": {
-                "lineWidth": 5.6,
-                "endArrow": true
+            "from": "node_10",
+            "to": "node_10",
+            "data": {
+                "freq": 626
             }
         },
         {
-            "source": "node_6",
-            "target": "node_7",
-            "label": 2,
-            "style": {
-                "lineWidth": 5.6,
-                "endArrow": true
+            "from": "node_10",
+            "to": "node_5",
+            "data": {
+                "freq": 526
             }
         },
         {
-            "source": "node_7",
-            "target": "node_3",
-            "label": 2,
-            "style": {
-                "lineWidth": 5.6,
-                "endArrow": true
+            "from": "node_5",
+            "to": "node_5",
+            "data": {
+                "freq": 526
             }
         },
         {
-            "source": "node_1",
-            "target": "node_4",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
+            "from": "node_5",
+            "to": "node_2",
+            "data": {
+                "freq": 263
             }
         },
         {
-            "source": "node_3",
-            "target": "node_5",
-            "label": 3,
-            "style": {
-                "lineWidth": 9.2,
-                "endArrow": true
+            "from": "node_2",
+            "to": "node_10",
+            "data": {
+                "freq": 263
             }
         },
         {
-            "source": "node_2",
-            "target": "node_6",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
+            "from": "node_10",
+            "to": "node_11",
+            "data": {
+                "freq": 55
             }
         },
         {
-            "source": "node_2",
-            "target": "node_7",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
+            "from": "node_11",
+            "to": "node_11",
+            "data": {
+                "freq": 55
             }
         },
         {
-            "source": "node_6",
-            "target": "node_4",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
+            "from": "node_1",
+            "to": "node_8",
+            "data": {
+                "freq": 11
             }
         },
         {
-            "source": "node_4",
-            "target": "node_3",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
+            "from": "node_8",
+            "to": "node_4",
+            "data": {
+                "freq": 22
+            }
+        },
+        {
+            "from": "node_5",
+            "to": "node_7",
+            "data": {
+                "freq": 263
+            }
+        },
+        {
+            "from": "node_7",
+            "to": "node_10",
+            "data": {
+                "freq": 263
+            }
+        },
+        {
+            "from": "node_10",
+            "to": "node_3",
+            "data": {
+                "freq": 45
+            }
+        },
+        {
+            "from": "node_3",
+            "to": "node_3",
+            "data": {
+                "freq": 45
+            }
+        },
+        {
+            "from": "node_9",
+            "to": "node_1",
+            "data": {
+                "freq": 19
+            }
+        },
+        {
+            "from": "node_13",
+            "to": "node_0",
+            "data": {
+                "freq": 10
+            }
+        },
+        {
+            "from": "node_0",
+            "to": "node_4",
+            "data": {
+                "freq": 10
+            }
+        },
+        {
+            "from": "node_1",
+            "to": "node_6",
+            "data": {
+                "freq": 15
+            }
+        },
+        {
+            "from": "node_6",
+            "to": "node_8",
+            "data": {
+                "freq": 10
+            }
+        },
+        {
+            "from": "node_0",
+            "to": "node_8",
+            "data": {
+                "freq": 9
+            }
+        },
+        {
+            "from": "node_8",
+            "to": "node_1",
+            "data": {
+                "freq": 9
+            }
+        },
+        {
+            "from": "node_1",
+            "to": "node_4",
+            "data": {
+                "freq": 11
+            }
+        },
+        {
+            "from": "node_9",
+            "to": "node_6",
+            "data": {
+                "freq": 12
+            }
+        },
+        {
+            "from": "node_6",
+            "to": "node_12",
+            "data": {
+                "freq": 8
+            }
+        },
+        {
+            "from": "node_12",
+            "to": "node_13",
+            "data": {
+                "freq": 7
+            }
+        },
+        {
+            "from": "node_8",
+            "to": "node_6",
+            "data": {
+                "freq": 11
+            }
+        },
+        {
+            "from": "node_6",
+            "to": "node_4",
+            "data": {
+                "freq": 26
+            }
+        },
+        {
+            "from": "node_9",
+            "to": "node_8",
+            "data": {
+                "freq": 16
+            }
+        },
+        {
+            "from": "node_8",
+            "to": "node_0",
+            "data": {
+                "freq": 7
+            }
+        },
+        {
+            "from": "node_0",
+            "to": "node_12",
+            "data": {
+                "freq": 8
+            }
+        },
+        {
+            "from": "node_12",
+            "to": "node_4",
+            "data": {
+                "freq": 20
+            }
+        },
+        {
+            "from": "node_6",
+            "to": "node_13",
+            "data": {
+                "freq": 7
+            }
+        },
+        {
+            "from": "node_13",
+            "to": "node_12",
+            "data": {
+                "freq": 10
+            }
+        },
+        {
+            "from": "node_9",
+            "to": "node_13",
+            "data": {
+                "freq": 16
+            }
+        },
+        {
+            "from": "node_12",
+            "to": "node_6",
+            "data": {
+                "freq": 9
+            }
+        },
+        {
+            "from": "node_9",
+            "to": "node_12",
+            "data": {
+                "freq": 18
+            }
+        },
+        {
+            "from": "node_12",
+            "to": "node_0",
+            "data": {
+                "freq": 5
+            }
+        },
+        {
+            "from": "node_13",
+            "to": "node_6",
+            "data": {
+                "freq": 8
+            }
+        },
+        {
+            "from": "node_1",
+            "to": "node_0",
+            "data": {
+                "freq": 4
+            }
+        },
+        {
+            "from": "node_13",
+            "to": "node_1",
+            "data": {
+                "freq": 6
+            }
+        },
+        {
+            "from": "node_12",
+            "to": "node_8",
+            "data": {
+                "freq": 9
+            }
+        },
+        {
+            "from": "node_6",
+            "to": "node_1",
+            "data": {
+                "freq": 4
+            }
+        },
+        {
+            "from": "node_8",
+            "to": "node_12",
+            "data": {
+                "freq": 6
+            }
+        },
+        {
+            "from": "node_0",
+            "to": "node_13",
+            "data": {
+                "freq": 6
             }
         }
     ]
