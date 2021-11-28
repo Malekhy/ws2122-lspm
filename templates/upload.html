@@ -882,7 +882,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" id="CompareModel-tab" data-toggle="tab" href="#CompareModel" role="tab"
-               aria-controls="CompareModel" aria-selected="true">Compare Model</a>
+               aria-controls="CompareModel" aria-selected="true">Sampling</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" id="Help-tab" data-toggle="tab" href="#Help" role="tab"
@@ -905,7 +905,20 @@
                             <p>
                                 <input type="submit" class="btn btn-primary mb-2" value="Upload EventLog" name="uploadButton"
                                        id='submitresEL' />
+
+                                <h3>Choose the sampling method</h3>
+
+                                <select name="plan" id="plan">
+
+                                    <option value="Unique Selection" selected>Unique Selection</option>
+                                    <option value="Logarithmic distribution" >Logarithmic distribution </option>
+                                    <option value="Division">Division</option>
+
+                                </select>
+
                             </p>
+
+
 
                         </form>
                     </div>
