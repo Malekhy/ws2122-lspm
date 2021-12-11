@@ -1,0 +1,26 @@
+{%  extends "base.html" %}
+
+
+
+{% load static %}
+
+{% block content %}
+
+<h1> Hello </h1>
+
+
+
+{% endblock %}
+
+
+
+{% block script %}
+
+<script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+</script>
+
+{% endblock %}

@@ -131,8 +131,8 @@
         var filename = new Object();
         $(document).ready(function () {
 
-            $('#SwitchToCompare').click(function () {
-                $('#CompareModel-tab').trigger('click');
+            $('#SwitchToSampling').click(function () {
+                $('#Sampling-tab').trigger('click');
             });
 
             $(document).on("click", "button", function () {
@@ -257,6 +257,12 @@
                         listItems += "<option value='" + colValueArray[i] + "'>" + colValueArray[i] + "</option>";
                     }
                     $(("select#RCV" + selectId)).html(listItems);
+                }
+
+            });
+
+            $('#AddModel2').click(function () {
+                document.getElementById("step-2").innerHTML = "Here goes the results";
                 }
 
             });
@@ -719,6 +725,36 @@
             rangeInput();
         }
 
+        function AddModel2(data) {
+            filename = "{{ log_name}}"
+            clicks += 1;
+            var leftDivId = clicks;
+            // create a new div element
+            const leftDiv = document.createElement("div");
+            leftDiv.setAttribute("id", leftDivId);
+            leftDiv.setAttribute("style", "border : 1px solid #000000; height: 750px; width: 35%;float:left;");
+            const currentDiv = document.getElementById("DisplayGraph");
+            const Duplicatediv = document.getElementById("GetFiltersDiv");
+            const centerDiv = Duplicatediv.cloneNode(true);
+            centerDiv.setAttribute("id", ('Div' + clicks));
+            centerDiv.setAttribute("style", "border : 1px solid #000000; height: 750px; width: 30%;float:left;");
+            CreateForm(clicks, centerDiv);
+            const rightDiv = document.createElement("div");
+            clicks += 1;
+            var rightDivId = clicks;
+            rightDiv.setAttribute("id", rightDivId);
+            rightDiv.setAttribute("style", "border : 1px solid #000000; height: 750px; width: 35%;float:left;");
+
+            currentDiv.appendChild(leftDiv);
+            currentDiv.appendChild(centerDiv);
+            currentDiv.appendChild(rightDiv);
+
+            CreateGraph(data, leftDivId);
+            CreateGraph(data, rightDivId);
+            rangeInput();
+        }
+
+      
         function nodecolFunc(node) {
             if (node.isUnique === 'True')
                 return  '#FF0000';
@@ -881,7 +917,7 @@
                aria-controls="eventlogs" aria-selected="true">Event Logs</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="CompareModel-tab" data-toggle="tab" href="#CompareModel" role="tab"
+            <a class="nav-link" id="Sampling-tab" data-toggle="tab" href="#CompareModel" role="tab"
                aria-controls="CompareModel" aria-selected="true">Sampling</a>
         </li>
         <li class="nav-item">
@@ -944,8 +980,8 @@
                                    value="Download" name="downloadButton" id='downloadButton' />
 
                             {% if log_name != null %}
-                            <input style="margin-top: 10px;" type="button" class="btn btn-primary" value="Compare Model Tab"
-                                   id="SwitchToCompare" />
+                            <input style="margin-top: 10px;" type="button" class="btn btn-primary" value="Sampling Tab"
+                                   id="SwitchToSampling" />
                             {% endif %}
                         </form>
                     </div>
@@ -955,19 +991,19 @@
             </div>
 
         </div>
-        <div class="tab-pane fade show" id="CompareModel" role="tabpanel" aria-labelledby="CompareModel-tab">
+        <div class="tab-pane fade show" id="CompareModel" role="tabpanel" aria-labelledby="Sampling-tab">
             <div class="container-fluid">
                 <h3 class="mt-4" style="color:#00529F;">Sampling Window</h3>
                 {% if log_name != null %}
                 <br />
                 <h6 style="margin:2%;text-align:center;">Please navigate to Event Logs tab for changing the selected log</h6><br />
-                <input style="margin-top: 10px;" type="button" class="btn btn-primary" value="Add comparison Model"
-                       onclick="AddModel1('{{log_attributes.dfg}}')" id='AddModel' />
+                <input style="margin-top: 10px;" type="button" class="btn btn-primary" value="Start sampling"
+                        onclick="AddModel1('{{log_attributes.dfg}}')" id='AddModel' />              
                 <br />
                 <br />
                 {% else %}
                 <br />
-                <h3 style="margin:2%;text-align:center;">Please navigate to Event Logs tab and select an event log to event logs</h3><br />
+                <h3 style="margin:2%;text-align:center;">Please navigate to Event Logs tab and select an event log to start sampling logs</h3><br />
 
                 {% endif %}
                 <br>

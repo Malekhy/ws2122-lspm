@@ -6,3 +6,23 @@ python -m pip install django
 
 jupyter notebook --notebook-dir D:/my_works/jupyter_ipynbs
 jupyter lab --notebook-dir C:\ws2122-lspm\Lab
+
+
+.\Scripts\activate
+
+python manage.py runserver
+
+-------------------------------------------
+python manage.py makemigrations /tell about even little changes
+
+python manage.py migrate /send to db
+
+------------------------
+virtualenv .
+.\Scripts\activate
+
+
+
+
+virtualenv newenv
+source newenv/bin/activate
