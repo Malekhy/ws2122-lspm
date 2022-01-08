@@ -27,5 +27,4 @@ A web app which takes(csv/xes) files as an input and produce sampled (xes) files
 * 5- Run the docker container using command: `docker run -d -p 8000:8000 lspm`
 * 6- Open the browser and enter this URL: `http://localhost:8000/`
 
-
-* --- Happy Predictive Monitoring ---
+----------------------   Happy Predictive Monitoring   -----------------------
