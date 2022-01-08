@@ -102,9 +102,9 @@ log_csv = pd.read_csv('./eventlogs/ItalianHelpdeskFinal.csv', sep=',')
 # fill the csv file with the most frequent values of each column
 log_csv = log_csv.fillna(log_csv.mode().iloc[0])
 log_csv = dataframe_utils.convert_timestamp_columns_in_df(log_csv)
-param_keys = {constants.PARAMETER_CONSTANT_CASEID_KEY: 'Case ID',
-                  constants.PARAMETER_CONSTANT_ACTIVITY_KEY: 'Activity',
-                  constants.PARAMETER_CONSTANT_TIMESTAMP_KEY: "Complete Timestamp"
+param_keys = {constants.PARAMETER_CONSTANT_CASEID_KEY: case_id,
+                  constants.PARAMETER_CONSTANT_ACTIVITY_KEY: activity_name,
+                  constants.PARAMETER_CONSTANT_TIMESTAMP_KEY: timestamp_time
                   }
 
 event_log = log_converter.apply(log_csv, parameters=param_keys)
