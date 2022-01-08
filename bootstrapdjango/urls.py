@@ -22,12 +22,25 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from bootstrapdjango import settings
 
+
+
+
 urlpatterns = [
     #path('', views.home, name='home'),
     #url(r'^rolemining/', include(role_mining.urls))
     path('', include('upload_eventlog.urls')),
     path('filter', include('log_filtering.urls')),
-    path('sampling', views.sampling, name='sampling'),
+    #path('log_sampling', include('log_sampling.urls')),
+    path('sampling', include('sampling.urls')),
+
+
+
+    
+
+  
+
+
+
 
 
 ]

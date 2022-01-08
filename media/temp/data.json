@@ -2,410 +2,653 @@
     "nodes": [
         {
             "id": "node_0",
-            "label": "get review 2"
+            "name": "RESOLVED",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "RESOLVED"
+                }
+            ]
         },
         {
             "id": "node_1",
-            "label": "get review 3"
+            "name": "Wait",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Wait"
+                }
+            ]
         },
         {
             "id": "node_2",
-            "label": "get review X"
+            "name": "INVALID",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "INVALID"
+                }
+            ]
         },
         {
             "id": "node_3",
-            "label": "accept"
+            "name": "Require upgrade",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Require upgrade"
+                }
+            ]
         },
         {
             "id": "node_4",
-            "label": "collect reviews"
+            "name": "VERIFIED",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "VERIFIED"
+                }
+            ]
         },
         {
             "id": "node_5",
-            "label": "invite additional reviewer"
+            "name": "Resolve SW anomaly",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Resolve SW anomaly"
+                }
+            ]
         },
         {
             "id": "node_6",
-            "label": "time-out 2"
+            "name": "Resolve ticket",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Resolve ticket"
+                }
+            ]
         },
         {
             "id": "node_7",
-            "label": "time-out X"
+            "name": "Schedule intervention",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Schedule intervention"
+                }
+            ]
         },
         {
             "id": "node_8",
-            "label": "time-out 1"
+            "name": "Closed",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Closed"
+                }
+            ]
         },
         {
             "id": "node_9",
-            "label": "invite reviewers"
+            "name": "Create SW anomaly",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Create SW anomaly"
+                }
+            ]
         },
         {
             "id": "node_10",
-            "label": "decide"
+            "name": "Insert ticket",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Insert ticket"
+                }
+            ]
         },
         {
             "id": "node_11",
-            "label": "reject"
+            "name": "Assign seriousness",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Assign seriousness"
+                }
+            ]
         },
         {
             "id": "node_12",
-            "label": "time-out 3"
+            "name": "DUPLICATE",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "DUPLICATE"
+                }
+            ]
         },
         {
             "id": "node_13",
-            "label": "get review 1"
+            "name": "Take in charge ticket",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Take in charge ticket"
+                }
+            ]
         }
     ],
     "edges": [
         {
-            "from": "node_9",
-            "to": "node_9",
-            "data": {
-                "freq": 100
+            "source": "node_11",
+            "target": "node_13",
+            "label": 4159,
+            "style": {
+                "lineWidth": 18.42756804214223,
+                "endArrow": true
             }
         },
         {
-            "from": "node_9",
-            "to": "node_0",
-            "data": {
-                "freq": 19
+            "source": "node_13",
+            "target": "node_13",
+            "label": 99,
+            "style": {
+                "lineWidth": 2.3871817383669884,
+                "endArrow": true
             }
         },
         {
-            "from": "node_0",
-            "to": "node_1",
-            "data": {
-                "freq": 12
+            "source": "node_13",
+            "target": "node_6",
+            "label": 3562,
+            "style": {
+                "lineWidth": 16.068920105355573,
+                "endArrow": true
             }
         },
         {
-            "from": "node_1",
-            "to": "node_13",
-            "data": {
-                "freq": 9
+            "source": "node_6",
+            "target": "node_8",
+            "label": 4557,
+            "style": {
+                "lineWidth": 20.0,
+                "endArrow": true
             }
         },
         {
-            "from": "node_13",
-            "to": "node_4",
-            "data": {
-                "freq": 11
+            "source": "node_6",
+            "target": "node_13",
+            "label": 154,
+            "style": {
+                "lineWidth": 2.6044776119402986,
+                "endArrow": true
             }
         },
         {
-            "from": "node_4",
-            "to": "node_4",
-            "data": {
-                "freq": 100
+            "source": "node_11",
+            "target": "node_11",
+            "label": 437,
+            "style": {
+                "lineWidth": 3.7225636523266026,
+                "endArrow": true
             }
         },
         {
-            "from": "node_4",
-            "to": "node_10",
-            "data": {
-                "freq": 100
+            "source": "node_10",
+            "target": "node_11",
+            "label": 111,
+            "style": {
+                "lineWidth": 2.43459174714662,
+                "endArrow": true
             }
         },
         {
-            "from": "node_10",
-            "to": "node_10",
-            "data": {
-                "freq": 626
+            "source": "node_6",
+            "target": "node_6",
+            "label": 254,
+            "style": {
+                "lineWidth": 2.999561018437226,
+                "endArrow": true
             }
         },
         {
-            "from": "node_10",
-            "to": "node_5",
-            "data": {
-                "freq": 526
+            "source": "node_13",
+            "target": "node_1",
+            "label": 1265,
+            "style": {
+                "lineWidth": 6.993854258121159,
+                "endArrow": true
             }
         },
         {
-            "from": "node_5",
-            "to": "node_5",
-            "data": {
-                "freq": 526
+            "source": "node_1",
+            "target": "node_6",
+            "label": 773,
+            "style": {
+                "lineWidth": 5.050043898156277,
+                "endArrow": true
             }
         },
         {
-            "from": "node_5",
-            "to": "node_2",
-            "data": {
-                "freq": 263
+            "source": "node_1",
+            "target": "node_13",
+            "label": 558,
+            "style": {
+                "lineWidth": 4.200614574187885,
+                "endArrow": true
             }
         },
         {
-            "from": "node_2",
-            "to": "node_10",
-            "data": {
-                "freq": 263
+            "source": "node_13",
+            "target": "node_9",
+            "label": 53,
+            "style": {
+                "lineWidth": 2.205443371378402,
+                "endArrow": true
             }
         },
         {
-            "from": "node_10",
-            "to": "node_11",
-            "data": {
-                "freq": 55
+            "source": "node_9",
+            "target": "node_3",
+            "label": 11,
+            "style": {
+                "lineWidth": 2.0395083406496926,
+                "endArrow": true
             }
         },
         {
-            "from": "node_11",
-            "to": "node_11",
-            "data": {
-                "freq": 55
+            "source": "node_3",
+            "target": "node_3",
+            "label": 16,
+            "style": {
+                "lineWidth": 2.059262510974539,
+                "endArrow": true
             }
         },
         {
-            "from": "node_1",
-            "to": "node_8",
-            "data": {
-                "freq": 11
+            "source": "node_3",
+            "target": "node_6",
+            "label": 82,
+            "style": {
+                "lineWidth": 2.320017559262511,
+                "endArrow": true
             }
         },
         {
-            "from": "node_8",
-            "to": "node_4",
-            "data": {
-                "freq": 22
+            "source": "node_1",
+            "target": "node_1",
+            "label": 113,
+            "style": {
+                "lineWidth": 2.4424934152765583,
+                "endArrow": true
             }
         },
         {
-            "from": "node_5",
-            "to": "node_7",
-            "data": {
-                "freq": 263
+            "source": "node_11",
+            "target": "node_6",
+            "label": 258,
+            "style": {
+                "lineWidth": 3.0153643546971027,
+                "endArrow": true
             }
         },
         {
-            "from": "node_7",
-            "to": "node_10",
-            "data": {
-                "freq": 263
+            "source": "node_11",
+            "target": "node_9",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
             }
         },
         {
-            "from": "node_10",
-            "to": "node_3",
-            "data": {
-                "freq": 45
+            "source": "node_11",
+            "target": "node_1",
+            "label": 69,
+            "style": {
+                "lineWidth": 2.2686567164179103,
+                "endArrow": true
             }
         },
         {
-            "from": "node_3",
-            "to": "node_3",
-            "data": {
-                "freq": 45
+            "source": "node_13",
+            "target": "node_3",
+            "label": 72,
+            "style": {
+                "lineWidth": 2.2805092186128184,
+                "endArrow": true
             }
         },
         {
-            "from": "node_9",
-            "to": "node_1",
-            "data": {
-                "freq": 19
+            "source": "node_9",
+            "target": "node_6",
+            "label": 42,
+            "style": {
+                "lineWidth": 2.1619841966637403,
+                "endArrow": true
             }
         },
         {
-            "from": "node_13",
-            "to": "node_0",
-            "data": {
-                "freq": 10
+            "source": "node_8",
+            "target": "node_8",
+            "label": 14,
+            "style": {
+                "lineWidth": 2.0513608428446006,
+                "endArrow": true
             }
         },
         {
-            "from": "node_0",
-            "to": "node_4",
-            "data": {
-                "freq": 10
+            "source": "node_3",
+            "target": "node_1",
+            "label": 8,
+            "style": {
+                "lineWidth": 2.027655838454785,
+                "endArrow": true
             }
         },
         {
-            "from": "node_1",
-            "to": "node_6",
-            "data": {
-                "freq": 15
+            "source": "node_8",
+            "target": "node_13",
+            "label": 2,
+            "style": {
+                "lineWidth": 2.003950834064969,
+                "endArrow": true
             }
         },
         {
-            "from": "node_6",
-            "to": "node_8",
-            "data": {
-                "freq": 10
+            "source": "node_10",
+            "target": "node_13",
+            "label": 3,
+            "style": {
+                "lineWidth": 2.0079016681299384,
+                "endArrow": true
             }
         },
         {
-            "from": "node_0",
-            "to": "node_8",
-            "data": {
-                "freq": 9
+            "source": "node_6",
+            "target": "node_1",
+            "label": 3,
+            "style": {
+                "lineWidth": 2.0079016681299384,
+                "endArrow": true
             }
         },
         {
-            "from": "node_8",
-            "to": "node_1",
-            "data": {
-                "freq": 9
+            "source": "node_1",
+            "target": "node_3",
+            "label": 7,
+            "style": {
+                "lineWidth": 2.0237050043898157,
+                "endArrow": true
             }
         },
         {
-            "from": "node_1",
-            "to": "node_4",
-            "data": {
-                "freq": 11
+            "source": "node_10",
+            "target": "node_1",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
             }
         },
         {
-            "from": "node_9",
-            "to": "node_6",
-            "data": {
-                "freq": 12
+            "source": "node_1",
+            "target": "node_11",
+            "label": 2,
+            "style": {
+                "lineWidth": 2.003950834064969,
+                "endArrow": true
             }
         },
         {
-            "from": "node_6",
-            "to": "node_12",
-            "data": {
-                "freq": 8
+            "source": "node_9",
+            "target": "node_13",
+            "label": 3,
+            "style": {
+                "lineWidth": 2.0079016681299384,
+                "endArrow": true
             }
         },
         {
-            "from": "node_12",
-            "to": "node_13",
-            "data": {
-                "freq": 7
+            "source": "node_3",
+            "target": "node_4",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
             }
         },
         {
-            "from": "node_8",
-            "to": "node_6",
-            "data": {
-                "freq": 11
+            "source": "node_4",
+            "target": "node_12",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
             }
         },
         {
-            "from": "node_6",
-            "to": "node_4",
-            "data": {
-                "freq": 26
+            "source": "node_12",
+            "target": "node_6",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
             }
         },
         {
-            "from": "node_9",
-            "to": "node_8",
-            "data": {
-                "freq": 16
+            "source": "node_11",
+            "target": "node_3",
+            "label": 8,
+            "style": {
+                "lineWidth": 2.027655838454785,
+                "endArrow": true
             }
         },
         {
-            "from": "node_8",
-            "to": "node_0",
-            "data": {
-                "freq": 7
+            "source": "node_9",
+            "target": "node_5",
+            "label": 7,
+            "style": {
+                "lineWidth": 2.0237050043898157,
+                "endArrow": true
             }
         },
         {
-            "from": "node_0",
-            "to": "node_12",
-            "data": {
-                "freq": 8
+            "source": "node_5",
+            "target": "node_5",
+            "label": 5,
+            "style": {
+                "lineWidth": 2.0158033362598773,
+                "endArrow": true
             }
         },
         {
-            "from": "node_12",
-            "to": "node_4",
-            "data": {
-                "freq": 20
+            "source": "node_5",
+            "target": "node_6",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
             }
         },
         {
-            "from": "node_6",
-            "to": "node_13",
-            "data": {
-                "freq": 7
+            "source": "node_13",
+            "target": "node_7",
+            "label": 5,
+            "style": {
+                "lineWidth": 2.0158033362598773,
+                "endArrow": true
             }
         },
         {
-            "from": "node_13",
-            "to": "node_12",
-            "data": {
-                "freq": 10
+            "source": "node_7",
+            "target": "node_13",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
             }
         },
         {
-            "from": "node_9",
-            "to": "node_13",
-            "data": {
-                "freq": 16
+            "source": "node_6",
+            "target": "node_0",
+            "label": 2,
+            "style": {
+                "lineWidth": 2.003950834064969,
+                "endArrow": true
             }
         },
         {
-            "from": "node_12",
-            "to": "node_6",
-            "data": {
-                "freq": 9
+            "source": "node_0",
+            "target": "node_2",
+            "label": 2,
+            "style": {
+                "lineWidth": 2.003950834064969,
+                "endArrow": true
             }
         },
         {
-            "from": "node_9",
-            "to": "node_12",
-            "data": {
-                "freq": 18
+            "source": "node_2",
+            "target": "node_8",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
             }
         },
         {
-            "from": "node_12",
-            "to": "node_0",
-            "data": {
-                "freq": 5
+            "source": "node_8",
+            "target": "node_4",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
             }
         },
         {
-            "from": "node_13",
-            "to": "node_6",
-            "data": {
-                "freq": 8
+            "source": "node_7",
+            "target": "node_6",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
             }
         },
         {
-            "from": "node_1",
-            "to": "node_0",
-            "data": {
-                "freq": 4
+            "source": "node_9",
+            "target": "node_9",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
             }
         },
         {
-            "from": "node_13",
-            "to": "node_1",
-            "data": {
-                "freq": 6
+            "source": "node_5",
+            "target": "node_3",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
             }
         },
         {
-            "from": "node_12",
-            "to": "node_8",
-            "data": {
-                "freq": 9
+            "source": "node_3",
+            "target": "node_13",
+            "label": 6,
+            "style": {
+                "lineWidth": 2.0197541703248465,
+                "endArrow": true
             }
         },
         {
-            "from": "node_6",
-            "to": "node_1",
-            "data": {
-                "freq": 4
+            "source": "node_3",
+            "target": "node_9",
+            "label": 3,
+            "style": {
+                "lineWidth": 2.0079016681299384,
+                "endArrow": true
             }
         },
         {
-            "from": "node_8",
-            "to": "node_12",
-            "data": {
-                "freq": 6
+            "source": "node_6",
+            "target": "node_3",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
             }
         },
         {
-            "from": "node_0",
-            "to": "node_13",
-            "data": {
-                "freq": 6
+            "source": "node_13",
+            "target": "node_11",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_1",
+            "target": "node_9",
+            "label": 2,
+            "style": {
+                "lineWidth": 2.003950834064969,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_6",
+            "target": "node_11",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_13",
+            "target": "node_5",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_2",
+            "target": "node_4",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_4",
+            "target": "node_8",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
             }
         }
     ]

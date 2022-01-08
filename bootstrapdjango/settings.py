@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'upload_eventlog.apps.UploadEventlogConfig',
+    'sampling.apps.SamplingConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog_app',
-    'log_sampling',
+    'django_extensions',
 )
 
 MIDDLEWARE = (

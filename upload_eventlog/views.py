@@ -19,12 +19,19 @@ from pm4py.objects.conversion.log.variants import to_data_frame as log_to_data_f
 import heapq
 import pm4py
 from pm4py.algo.filtering.dfg import dfg_filtering
-from pm4py.statistics.traces.log import case_statistics
+from pm4py.statistics.traces.generic.log import case_statistics
 import datetime
+import numpy as np
+import pandas as pd
+
+
+from array import array
+
 
 # Create your views here.
 
 filtered_logs = {}
+
 
 def upload_page(request):
     log_attributes = {}
@@ -36,7 +43,8 @@ def upload_page(request):
             filename = request.POST["log_name"]
             print('filename = ', filename)
             file_dir = os.path.join(event_logs_path, filename)
-            eventlogs = [f for f in listdir(event_logs_path) if isfile(join(event_logs_path, f))]
+            eventlogs = [f for f in listdir(
+                event_logs_path) if isfile(join(event_logs_path, f))]
 
             log = xes_importer_factory.apply(file_dir)
             no_traces = len(log)
@@ -44,7 +52,8 @@ def upload_page(request):
             log_attributes['no_traces'] = no_traces
             log_attributes['no_events'] = no_events
             print(log_attributes)
-            json_respone = {'log_attributes': log_attributes, 'eventlog_list': eventlogs}
+            json_respone = {'log_attributes': log_attributes,
+                            'eventlog_list': eventlogs}
             return HttpResponse(json.dumps(json_respone), content_type='application/json')
             # return render(request, 'upload.html', {'log_attributes': log_attributes, 'eventlog_list':eventlogs})
         else:
@@ -57,7 +66,8 @@ def upload_page(request):
                 filename = fs.save(log.name, log)
                 uploaded_file_url = fs.url(filename)
 
-                eventlogs = [f for f in listdir(event_logs_path) if isfile(join(event_logs_path, f))]
+                eventlogs = [f for f in listdir(
+                    event_logs_path) if isfile(join(event_logs_path, f))]
                 # eventlogs.append(filename)
 
                 file_dir = os.path.join(event_logs_path, filename)
@@ -78,14 +88,15 @@ def upload_page(request):
                 if settings.EVENT_LOG_NAME == filename:
                     settings.EVENT_LOG_NAME = ":notset:"
 
-                eventlogs = [f for f in listdir(event_logs_path) if isfile(join(event_logs_path, f))]
-                n_eventlogs = [f for f in listdir(n_event_logs_path) if isfile(join(n_event_logs_path, f))]
+                eventlogs = [f for f in listdir(
+                    event_logs_path) if isfile(join(event_logs_path, f))]
+                n_eventlogs = [f for f in listdir(
+                    n_event_logs_path) if isfile(join(n_event_logs_path, f))]
 
                 eventlogs.remove(filename)
                 file_dir = os.path.join(event_logs_path, filename)
                 os.remove(file_dir)
                 return render(request, 'upload.html', {'eventlog_list': eventlogs, 'n_eventlog_list': n_eventlogs})
-
 
             elif "n_deleteButton" in request.POST:  # for none event logs
                 if "n_log_list" not in request.POST:
@@ -93,13 +104,39 @@ def upload_page(request):
 
                 filename = request.POST["n_log_list"]
 
-                n_eventlogs = [f for f in listdir(n_event_logs_path) if isfile(join(n_event_logs_path, f))]
-                eventlogs = [f for f in listdir(event_logs_path) if isfile(join(event_logs_path, f))]
+                n_eventlogs = [f for f in listdir(
+                    n_event_logs_path) if isfile(join(n_event_logs_path, f))]
+                eventlogs = [f for f in listdir(
+                    event_logs_path) if isfile(join(event_logs_path, f))]
 
                 n_eventlogs.remove(filename)
                 file_dir = os.path.join(n_event_logs_path, filename)
                 os.remove(file_dir)
                 return render(request, 'upload.html', {'eventlog_list': eventlogs, 'n_eventlog_list': n_eventlogs})
+
+            elif "setButtonN" in request.POST:
+                if "log_list" not in request.POST:
+                    return HttpResponseRedirect(request.path_info)
+
+                filename = request.POST["log_list"]
+                settings.EVENT_LOG_NAME = filename
+
+                file_dir = os.path.join(event_logs_path, filename)
+                print("File_dir --------------------" + file_dir)
+
+                log, vars = convert_eventfile_to_log(file_dir)
+
+               
+                log_attributes['ColumnNamesValues'] = convert_eventlog_to_json(
+                    log)
+
+                eventlogs = [f for f in listdir(
+                    event_logs_path) if isfile(join(event_logs_path, f))]
+
+                # Get all the log statistics
+
+                return render(request, 'upload.html',
+                              {'eventlog_list': eventlogs, 'log_name': filename, 'vars': vars, 'log_attributes': log_attributes})
 
             elif "setButton" in request.POST:
                 if "log_list" not in request.POST:
@@ -110,14 +147,14 @@ def upload_page(request):
 
                 file_dir = os.path.join(event_logs_path, filename)
 
-                log = convert_eventfile_to_log(file_dir)
+
+                log, vars = convert_eventfile_to_log(file_dir)
 
                 # Apply Filters on log
                 # filters = {
                 #     'concept:name': ['Test Repair']
                 # }
                 # log = filter_log(log, filters, True)
-
 
                 dfg = log_to_dfg(log, 1, 'Frequency')
 
@@ -143,7 +180,8 @@ def upload_page(request):
 
 
                 return render(request, 'upload.html',
-                              {'eventlog_list': eventlogs, 'log_name': filename, 'log_attributes': log_attributes})
+                              {'eventlog_list': eventlogs, 'log_name': filename, 'vars': vars, 'log_attributes': log_attributes})
+        
 
             elif "downloadButton" in request.POST:  # for event logs
                 if "log_list" not in request.POST:
@@ -154,8 +192,10 @@ def upload_page(request):
 
                 try:
                     wrapper = FileWrapper(open(file_dir, 'rb'))
-                    response = HttpResponse(wrapper, content_type='application/force-download')
-                    response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_dir)
+                    response = HttpResponse(
+                        wrapper, content_type='application/force-download')
+                    response['Content-Disposition'] = 'inline; filename=' + \
+                        os.path.basename(file_dir)
                     return response
                 except Exception as e:
                     return None
@@ -169,8 +209,10 @@ def upload_page(request):
 
                 try:
                     wrapper = FileWrapper(open(file_dir, 'rb'))
-                    response = HttpResponse(wrapper, content_type='application/force-download')
-                    response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_dir)
+                    response = HttpResponse(
+                        wrapper, content_type='application/force-download')
+                    response['Content-Disposition'] = 'inline; filename=' + \
+                        os.path.basename(file_dir)
                     return response
                 except Exception as e:
                     return None
@@ -183,8 +225,10 @@ def upload_page(request):
         # no_events = sum([len(trace) for trace in xes_log])
         # log_attributes['no_traces'] = no_traces
         # log_attributes['no_events'] = no_events
-        eventlogs = [f for f in listdir(event_logs_path) if isfile(join(event_logs_path, f))]
-        n_eventlogs = [f for f in listdir(n_event_logs_path) if isfile(join(n_event_logs_path, f))]
+        eventlogs = [f for f in listdir(
+            event_logs_path) if isfile(join(event_logs_path, f))]
+        n_eventlogs = [f for f in listdir(
+            n_event_logs_path) if isfile(join(n_event_logs_path, f))]
 
         return render(request, 'upload.html', {'eventlog_list': eventlogs, 'n_eventlog_list': n_eventlogs})
 
@@ -196,16 +240,18 @@ def log_to_dfg(log, percentage_most_freq_edges, type):
     from pm4py.algo.discovery.dfg import algorithm as dfg_discovery
 
     if type == 'Frequency':
-        dfg = dfg_discovery.apply(log, variant=dfg_discovery.Variants.FREQUENCY)
+        dfg = dfg_discovery.apply(
+            log, variant=dfg_discovery.Variants.FREQUENCY)
     else:
-        dfg = dfg_discovery.apply(log, variant=dfg_discovery.Variants.PERFORMANCE)
-    
-    
+        dfg = dfg_discovery.apply(
+            log, variant=dfg_discovery.Variants.PERFORMANCE)
+
     dfg1, sa, ea = pm4py.discover_directly_follows_graph(log)
     activities_count = pm4py.get_attribute_values(log, "concept:name")
 
     # Filter Frequent Paths
-    dfg, sa, ea, activities_count = dfg_filtering.filter_dfg_on_paths_percentage(dfg, sa, ea, activities_count, percentage_most_freq_edges)
+    dfg, sa, ea, activities_count = dfg_filtering.filter_dfg_on_paths_percentage(
+        dfg, sa, ea, activities_count, percentage_most_freq_edges)
     return dfg
 
 
@@ -277,15 +323,15 @@ def find_node_in_g6(node_name, g6_dict):
 
 def filter_log(log, filterItemList, isKeepOnlyThese=True):
     from pm4py.algo.filtering.log.attributes import attributes_filter
-    filtered_log_events = log;
+    filtered_log_events = log
 
     for key in filterItemList:
         list_of_values = filterItemList[key]
         if (type(list_of_values[0]).__name__ == 'int'):
             filtered_log_events = attributes_filter.apply_numeric_events(filtered_log_events, min(list_of_values),
                                                                          max(list_of_values), parameters={
-                    attributes_filter.Parameters.ATTRIBUTE_KEY: key,
-                    attributes_filter.Parameters.POSITIVE: isKeepOnlyThese})
+                attributes_filter.Parameters.ATTRIBUTE_KEY: key,
+                attributes_filter.Parameters.POSITIVE: isKeepOnlyThese})
         else:
             filtered_log_events = attributes_filter.apply(filtered_log_events, list_of_values,
                                                           parameters={attributes_filter.Parameters.ATTRIBUTE_KEY: key,
@@ -295,22 +341,46 @@ def filter_log(log, filterItemList, isKeepOnlyThese=True):
 
 
 def convert_eventfile_to_log(file_path):
+
     file_name, file_extension = os.path.splitext(file_path)
 
     if file_extension == '.csv':
 
         log = pd.read_csv(file_path, sep=',')
-        log = dataframe_utils.convert_timestamp_columns_in_df(log)
-        # log = log.sort_values('<timestamp_column>')
-        log = log_converter.apply(log)
+        charcteristic = list(log.columns.values)
+
+        log = dataframe_utils.convert_timestamp_columns_in_df(log)  
+
+
+
+        log = log_converter.apply(log)  # convert to eventlog
+
+        vars = charcteristic
 
     else:
 
         log = xes_importer_factory.apply(file_path)
-    
-    #df = log_to_data_frame.apply(log)
-    
-    return log
+        df1 = log_to_data_frame.apply(log)
+
+        charcteristic = list(df1.columns.values)
+        vars = charcteristic
+
+        """ list_of_column_names = []
+
+        for row in log:
+            list_of_column_names.append(row)
+            break
+
+        vars=[] 
+        array = np.array(list_of_column_names)
+        for column in array:
+            for j in column:
+                print(j)
+                vars.append(j)
+        vars = np.array(vars, dtype=object)
+    # df = log_to_data_frame.apply(log) """
+
+    return log, vars
 
 
 def FilterDataToLogAttributes(FilterData, div_id):
@@ -479,3 +549,8 @@ def days_hours_minutes(totalSeconds):
     seconds = td.seconds - hours*3600 - minutes*60
 
     return str(days) + "d " + str(hours) + "h " + str(minutes) + "m " + str(seconds) + "s"
+
+
+
+
+    

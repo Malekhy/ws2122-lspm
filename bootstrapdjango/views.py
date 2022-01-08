@@ -17,5 +17,3 @@ def analyses_main(request):
 def comming_main(request):
     return render(request, 'initial.html')
 
-def sampling(request):
-    return render(request,'sampling.html')
