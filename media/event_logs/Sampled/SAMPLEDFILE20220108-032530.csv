@@ -1,0 +1,569 @@
+,case:concept:name,concept:name,org:resource,time:timestamp,start time,seriousness,customer,product,seriousness_2,service_level,service_type,workgroup
+0,Case 1,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,50:17.0,Value 1,Value 1,Value 1,Value 1,Value 1,Value 1,Value 1
+1,Case 1,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,51:01.0,Value 1,Value 1,Value 1,Value 1,Value 1,Value 1,Value 1
+2,Case 1,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,02:56.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+3,Case 1,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,54:26.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+4,Case 1,Closed,Value 3,2000-03-14 23:00:00+00:00,54:39.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+121,Case 28,Assign seriousness,Value 9,2000-03-14 23:00:00+00:00,53:59.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+122,Case 28,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,54:05.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+123,Case 28,Create SW anomaly,Value 9,2000-03-14 23:00:00+00:00,54:12.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+124,Case 28,Require upgrade,Value 9,2000-03-14 23:00:00+00:00,54:23.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+125,Case 28,Require upgrade,Value 1,2000-03-14 23:00:00+00:00,55:48.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+126,Case 28,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,08:05.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+400,Case 88,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,57:49.0,Value 1,Value 53,Value 3,Value 2,Value 2,Value 1,Value 1
+401,Case 88,Assign seriousness,Value 7,2000-03-14 23:00:00+00:00,43:51.0,Value 1,Value 53,Value 3,Value 2,Value 2,Value 1,Value 1
+402,Case 88,Wait,Value 7,2000-03-14 23:00:00+00:00,44:52.0,Value 1,Value 53,Value 3,Value 2,Value 2,Value 1,Value 1
+403,Case 88,Take in charge ticket,Value 14,2000-03-14 23:00:00+00:00,48:54.0,Value 1,Value 53,Value 3,Value 2,Value 2,Value 1,Value 1
+404,Case 88,Resolve ticket,Value 14,2000-03-14 23:00:00+00:00,49:08.0,Value 1,Value 53,Value 3,Value 2,Value 2,Value 1,Value 1
+405,Case 88,Closed,Value 5,2000-03-14 23:00:00+00:00,49:30.0,Value 1,Value 53,Value 3,Value 2,Value 2,Value 1,Value 1
+504,Case 111,Assign seriousness,Value 9,2000-03-14 23:00:00+00:00,00:48.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+505,Case 111,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,16:26.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+506,Case 111,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,05:04.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+507,Case 111,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,19:00.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+508,Case 111,Wait,Value 9,2000-03-14 23:00:00+00:00,00:03.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+509,Case 111,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,07:18.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+510,Case 111,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,08:52.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+511,Case 111,Closed,Value 5,2000-03-14 23:00:00+00:00,10:24.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+618,Case 135,Assign seriousness,Value 9,2000-03-14 23:00:00+00:00,57:41.0,Value 1,Value 16,Value 2,Value 1,Value 2,Value 1,Value 1
+619,Case 135,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,58:01.0,Value 1,Value 16,Value 2,Value 1,Value 2,Value 1,Value 1
+620,Case 135,Wait,Value 9,2000-03-14 23:00:00+00:00,27:30.0,Value 1,Value 16,Value 2,Value 1,Value 2,Value 1,Value 1
+621,Case 135,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,01:11.0,Value 1,Value 16,Value 2,Value 1,Value 2,Value 1,Value 1
+622,Case 135,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,02:59.0,Value 1,Value 16,Value 2,Value 1,Value 2,Value 1,Value 1
+623,Case 135,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,46:37.0,Value 1,Value 16,Value 2,Value 1,Value 2,Value 1,Value 1
+624,Case 135,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,05:29.0,Value 1,Value 16,Value 2,Value 1,Value 2,Value 1,Value 1
+625,Case 135,Closed,Value 5,2000-03-14 23:00:00+00:00,15:17.0,Value 1,Value 16,Value 2,Value 1,Value 2,Value 1,Value 1
+669,Case 145,Assign seriousness,Value 9,2000-03-14 23:00:00+00:00,19:28.0,Value 1,Value 85,Value 1,Value 1,Value 2,Value 1,Value 1
+670,Case 145,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,58:38.0,Value 1,Value 85,Value 1,Value 1,Value 2,Value 1,Value 1
+671,Case 145,Require upgrade,Value 1,2000-03-14 23:00:00+00:00,54:00.0,Value 1,Value 85,Value 1,Value 1,Value 2,Value 1,Value 1
+672,Case 145,Wait,Value 1,2000-03-14 23:00:00+00:00,24:54.0,Value 1,Value 85,Value 1,Value 1,Value 2,Value 1,Value 1
+673,Case 145,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,32:15.0,Value 1,Value 85,Value 1,Value 1,Value 2,Value 1,Value 1
+674,Case 145,Closed,Value 3,2000-03-14 23:00:00+00:00,32:34.0,Value 1,Value 85,Value 1,Value 1,Value 2,Value 1,Value 1
+840,Case 184,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,24:55.0,Value 1,Value 99,Value 1,Value 1,Value 2,Value 1,Value 1
+841,Case 184,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,49:07.0,Value 1,Value 99,Value 1,Value 1,Value 2,Value 1,Value 1
+842,Case 184,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,38:48.0,Value 1,Value 99,Value 1,Value 1,Value 2,Value 1,Value 1
+843,Case 184,Wait,Value 2,2000-03-14 23:00:00+00:00,14:01.0,Value 1,Value 99,Value 1,Value 1,Value 2,Value 1,Value 1
+844,Case 184,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,33:54.0,Value 1,Value 99,Value 1,Value 1,Value 2,Value 1,Value 1
+845,Case 184,Closed,Value 3,2000-03-14 23:00:00+00:00,34:13.0,Value 1,Value 99,Value 1,Value 1,Value 2,Value 1,Value 1
+1006,Case 219,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,10:51.0,Value 1,Value 100,Value 1,Value 1,Value 2,Value 1,Value 2
+1007,Case 219,Wait,Value 1,2000-03-14 23:00:00+00:00,52:25.0,Value 1,Value 100,Value 1,Value 1,Value 2,Value 1,Value 2
+1008,Case 219,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,46:26.0,Value 1,Value 100,Value 1,Value 1,Value 2,Value 1,Value 2
+1009,Case 219,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,47:32.0,Value 1,Value 100,Value 1,Value 1,Value 2,Value 1,Value 2
+1010,Case 219,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,47:33.0,Value 1,Value 100,Value 1,Value 1,Value 2,Value 1,Value 2
+1011,Case 219,Closed,Value 5,2000-03-14 23:00:00+00:00,10:17.0,Value 1,Value 100,Value 1,Value 1,Value 2,Value 1,Value 2
+1063,Case 232,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,11:26.0,Value 1,Value 121,Value 1,Value 1,Value 2,Value 1,Value 1
+1064,Case 232,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,15:40.0,Value 1,Value 121,Value 1,Value 1,Value 2,Value 1,Value 1
+1065,Case 232,Wait,Value 2,2000-03-14 23:00:00+00:00,47:46.0,Value 1,Value 121,Value 1,Value 1,Value 2,Value 1,Value 1
+1066,Case 232,Wait,Value 2,2000-03-14 23:00:00+00:00,31:36.0,Value 1,Value 121,Value 1,Value 1,Value 2,Value 1,Value 1
+1067,Case 232,Resolve ticket,Value 14,2000-03-14 23:00:00+00:00,48:37.0,Value 1,Value 121,Value 1,Value 1,Value 2,Value 1,Value 1
+1068,Case 232,Resolve ticket,Value 14,2000-03-14 23:00:00+00:00,48:37.0,Value 1,Value 121,Value 1,Value 1,Value 2,Value 1,Value 1
+1069,Case 232,Closed,Value 3,2000-03-14 23:00:00+00:00,48:48.0,Value 1,Value 121,Value 1,Value 1,Value 2,Value 1,Value 1
+1453,Case 317,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,24:55.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+1454,Case 317,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,25:43.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+1455,Case 317,Require upgrade,Value 2,2000-03-14 23:00:00+00:00,53:09.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+1456,Case 317,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,30:47.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+1457,Case 317,Closed,Value 3,2000-03-14 23:00:00+00:00,31:07.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+1518,Case 330,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,07:26.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+1519,Case 330,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,27:05.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+1520,Case 330,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,32:11.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+1521,Case 330,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,55:02.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+1522,Case 330,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,07:16.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+1523,Case 330,Closed,Value 5,2000-03-14 23:00:00+00:00,10:23.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+1574,Case 342,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,48:19.0,Value 1,Value 148,Value 3,Value 2,Value 3,Value 1,Value 1
+1575,Case 342,Take in charge ticket,Value 6,2000-03-14 23:00:00+00:00,10:52.0,Value 1,Value 148,Value 3,Value 2,Value 3,Value 1,Value 1
+1576,Case 342,Resolve ticket,Value 6,2000-03-14 23:00:00+00:00,14:57.0,Value 1,Value 148,Value 3,Value 2,Value 3,Value 1,Value 1
+1590,Case 346,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,57:04.0,Value 1,Value 63,Value 1,Value 1,Value 2,Value 1,Value 1
+1591,Case 346,Wait,Value 2,2000-03-14 23:00:00+00:00,38:32.0,Value 1,Value 63,Value 1,Value 1,Value 2,Value 1,Value 1
+1592,Case 346,Wait,Value 14,2000-03-14 23:00:00+00:00,17:36.0,Value 1,Value 63,Value 1,Value 1,Value 2,Value 1,Value 1
+1593,Case 346,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,02:37.0,Value 1,Value 63,Value 1,Value 1,Value 2,Value 1,Value 1
+1594,Case 346,Closed,Value 3,2000-03-14 23:00:00+00:00,02:49.0,Value 1,Value 63,Value 1,Value 1,Value 2,Value 1,Value 1
+1763,Case 383,Insert ticket,Value 1,2000-03-14 23:00:00+00:00,59:04.0,Value 1,Value 159,Value 16,Value 3,Value 2,Value 1,Value 1
+1764,Case 383,Wait,Value 2,2000-03-14 23:00:00+00:00,25:37.0,Value 1,Value 159,Value 16,Value 2,Value 2,Value 1,Value 1
+1765,Case 383,Wait,Value 2,2000-03-14 23:00:00+00:00,12:26.0,Value 1,Value 159,Value 16,Value 2,Value 2,Value 1,Value 1
+2030,Case 441,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,16:35.0,Value 1,Value 53,Value 4,Value 1,Value 2,Value 1,Value 1
+2031,Case 441,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,25:49.0,Value 1,Value 53,Value 4,Value 1,Value 2,Value 1,Value 1
+2032,Case 441,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,25:50.0,Value 1,Value 53,Value 4,Value 1,Value 2,Value 1,Value 1
+2033,Case 441,Closed,Value 3,2000-03-14 23:00:00+00:00,26:08.0,Value 1,Value 53,Value 4,Value 1,Value 2,Value 1,Value 1
+2457,Case 532,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,58:17.0,Value 1,Value 9,Value 1,Value 1,Value 2,Value 1,Value 1
+2458,Case 532,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,37:15.0,Value 1,Value 9,Value 1,Value 1,Value 2,Value 1,Value 1
+2459,Case 532,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,13:51.0,Value 1,Value 9,Value 1,Value 1,Value 2,Value 1,Value 1
+2460,Case 532,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,56:48.0,Value 1,Value 9,Value 1,Value 1,Value 2,Value 1,Value 1
+2461,Case 532,Wait,Value 2,2000-03-14 23:00:00+00:00,48:53.0,Value 1,Value 9,Value 1,Value 1,Value 2,Value 1,Value 1
+2462,Case 532,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,46:27.0,Value 1,Value 9,Value 1,Value 1,Value 2,Value 1,Value 1
+2463,Case 532,Closed,Value 3,2000-03-14 23:00:00+00:00,46:46.0,Value 1,Value 9,Value 1,Value 1,Value 2,Value 1,Value 1
+2904,Case 631,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,55:55.0,Value 1,Value 12,Value 1,Value 2,Value 2,Value 1,Value 1
+2905,Case 631,Wait,Value 1,2000-03-14 23:00:00+00:00,10:39.0,Value 1,Value 12,Value 1,Value 2,Value 2,Value 1,Value 1
+2906,Case 631,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,57:05.0,Value 1,Value 12,Value 1,Value 2,Value 2,Value 1,Value 1
+2907,Case 631,Wait,Value 1,2000-03-14 23:00:00+00:00,29:29.0,Value 1,Value 12,Value 1,Value 2,Value 2,Value 1,Value 1
+2908,Case 631,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,26:03.0,Value 1,Value 12,Value 1,Value 2,Value 2,Value 1,Value 1
+2909,Case 631,Closed,Value 3,2000-03-14 23:00:00+00:00,26:23.0,Value 1,Value 12,Value 1,Value 2,Value 2,Value 1,Value 1
+3592,Case 781,Assign seriousness,Value 7,2000-03-14 23:00:00+00:00,56:02.0,Value 1,Value 9,Value 3,Value 1,Value 3,Value 1,Value 1
+3593,Case 781,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,02:04.0,Value 1,Value 9,Value 3,Value 1,Value 3,Value 1,Value 1
+3594,Case 781,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,54:11.0,Value 1,Value 9,Value 3,Value 1,Value 3,Value 1,Value 1
+3595,Case 781,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,33:11.0,Value 1,Value 9,Value 3,Value 1,Value 3,Value 1,Value 1
+3596,Case 781,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,29:38.0,Value 1,Value 9,Value 3,Value 1,Value 3,Value 1,Value 1
+3597,Case 781,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,29:38.0,Value 1,Value 9,Value 3,Value 1,Value 3,Value 1,Value 1
+3598,Case 781,Closed,Value 5,2000-03-14 23:00:00+00:00,29:47.0,Value 1,Value 9,Value 3,Value 1,Value 3,Value 1,Value 1
+3617,Case 786,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,44:45.0,Value 1,Value 22,Value 3,Value 2,Value 4,Value 1,Value 1
+3618,Case 786,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,10:45.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+3619,Case 786,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,32:05.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+3620,Case 786,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,27:56.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+3621,Case 786,Resolve ticket,Value 7,2000-03-14 23:00:00+00:00,41:44.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+3622,Case 786,Closed,Value 5,2000-03-14 23:00:00+00:00,42:08.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+3671,Case 798,Assign seriousness,Value 12,2000-03-14 23:00:00+00:00,33:33.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+3672,Case 798,Assign seriousness,Value 10,2000-03-14 23:00:00+00:00,38:22.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+3673,Case 798,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,22:20.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+3674,Case 798,Take in charge ticket,Value 7,2000-03-14 23:00:00+00:00,01:16.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+3675,Case 798,Wait,Value 7,2000-03-14 23:00:00+00:00,01:42.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+3676,Case 798,Take in charge ticket,Value 5,2000-03-14 23:00:00+00:00,24:06.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+3677,Case 798,Wait,Value 5,2000-03-14 23:00:00+00:00,24:11.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+3678,Case 798,Take in charge ticket,Value 7,2000-03-14 23:00:00+00:00,31:52.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+3679,Case 798,Resolve ticket,Value 7,2000-03-14 23:00:00+00:00,32:23.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+3680,Case 798,Closed,Value 5,2000-03-14 23:00:00+00:00,32:38.0,Value 1,Value 13,Value 3,Value 2,Value 3,Value 1,Value 1
+4016,Case 874,Assign seriousness,Value 12,2000-03-14 23:00:00+00:00,03:00.0,Value 1,Value 117,Value 3,Value 2,Value 2,Value 1,Value 1
+4017,Case 874,Assign seriousness,Value 12,2000-03-14 23:00:00+00:00,55:56.0,Value 1,Value 117,Value 3,Value 2,Value 2,Value 1,Value 1
+4018,Case 874,Assign seriousness,Value 12,2000-03-14 23:00:00+00:00,55:57.0,Value 1,Value 117,Value 3,Value 2,Value 2,Value 1,Value 1
+4019,Case 874,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,48:25.0,Value 1,Value 117,Value 3,Value 2,Value 2,Value 1,Value 1
+4020,Case 874,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,06:31.0,Value 1,Value 117,Value 3,Value 2,Value 2,Value 1,Value 1
+4021,Case 874,Closed,Value 5,2000-03-14 23:00:00+00:00,06:53.0,Value 1,Value 117,Value 3,Value 2,Value 2,Value 1,Value 1
+4057,Case 883,Assign seriousness,Value 13,2000-03-14 23:00:00+00:00,52:21.0,Value 1,Value 244,Value 1,Value 1,Value 3,Value 1,Value 1
+4058,Case 883,Take in charge ticket,Value 13,2000-03-14 23:00:00+00:00,58:19.0,Value 1,Value 244,Value 1,Value 1,Value 3,Value 1,Value 1
+4059,Case 883,Wait,Value 13,2000-03-14 23:00:00+00:00,58:19.0,Value 1,Value 244,Value 1,Value 1,Value 3,Value 1,Value 1
+4060,Case 883,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,27:43.0,Value 1,Value 244,Value 1,Value 1,Value 3,Value 1,Value 1
+4061,Case 883,Wait,Value 1,2000-03-14 23:00:00+00:00,28:49.0,Value 1,Value 244,Value 1,Value 1,Value 3,Value 1,Value 1
+4062,Case 883,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,57:23.0,Value 1,Value 244,Value 1,Value 1,Value 3,Value 1,Value 1
+4063,Case 883,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,57:26.0,Value 1,Value 244,Value 1,Value 1,Value 3,Value 1,Value 1
+4064,Case 883,Closed,Value 5,2000-03-14 23:00:00+00:00,00:17.0,Value 1,Value 244,Value 1,Value 1,Value 3,Value 1,Value 1
+4689,Case 1017,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,24:46.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+4690,Case 1017,Take in charge ticket,Value 3,2000-03-14 23:00:00+00:00,51:17.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+4691,Case 1017,Wait,Value 4,2000-03-14 23:00:00+00:00,56:36.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+4692,Case 1017,Resolve ticket,Value 4,2000-03-14 23:00:00+00:00,03:02.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+4693,Case 1017,Resolve ticket,Value 4,2000-03-14 23:00:00+00:00,03:22.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+4694,Case 1017,Closed,Value 3,2000-03-14 23:00:00+00:00,03:17.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+4852,Case 1050,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,27:06.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+4853,Case 1050,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,27:37.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+4854,Case 1050,Wait,Value 9,2000-03-14 23:00:00+00:00,46:18.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+4855,Case 1050,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,05:57.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+4856,Case 1050,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,06:09.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+4857,Case 1050,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,09:31.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+4858,Case 1050,Wait,Value 9,2000-03-14 23:00:00+00:00,09:20.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+4859,Case 1050,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,44:40.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+4860,Case 1050,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,44:48.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+4861,Case 1050,Closed,Value 5,2000-03-14 23:00:00+00:00,44:59.0,Value 1,Value 71,Value 1,Value 1,Value 3,Value 1,Value 1
+5032,Case 1087,Assign seriousness,Value 13,2000-03-14 23:00:00+00:00,21:15.0,Value 1,Value 192,Value 2,Value 2,Value 2,Value 1,Value 1
+5033,Case 1087,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,44:24.0,Value 1,Value 192,Value 2,Value 2,Value 2,Value 1,Value 1
+5034,Case 1087,Wait,Value 1,2000-03-14 23:00:00+00:00,31:26.0,Value 1,Value 192,Value 2,Value 2,Value 2,Value 1,Value 1
+5035,Case 1087,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,02:01.0,Value 1,Value 192,Value 2,Value 2,Value 2,Value 1,Value 1
+5036,Case 1087,Take in charge ticket,Value 4,2000-03-14 23:00:00+00:00,47:06.0,Value 1,Value 192,Value 2,Value 2,Value 2,Value 1,Value 1
+5037,Case 1087,Resolve ticket,Value 4,2000-03-14 23:00:00+00:00,23:44.0,Value 1,Value 192,Value 2,Value 2,Value 2,Value 1,Value 1
+5038,Case 1087,Closed,Value 3,2000-03-14 23:00:00+00:00,24:00.0,Value 1,Value 192,Value 2,Value 2,Value 2,Value 1,Value 1
+5054,Case 1091,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,03:51.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+5055,Case 1091,Wait,Value 13,2000-03-14 23:00:00+00:00,43:12.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+5056,Case 1091,Resolve ticket,Value 13,2000-03-14 23:00:00+00:00,30:54.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+5057,Case 1091,Closed,Value 5,2000-03-14 23:00:00+00:00,00:27.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+5348,Case 1154,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,18:26.0,Value 1,Value 113,Value 11,Value 1,Value 2,Value 1,Value 1
+5349,Case 1154,Wait,Value 1,2000-03-14 23:00:00+00:00,19:22.0,Value 1,Value 113,Value 11,Value 1,Value 2,Value 1,Value 1
+5350,Case 1154,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,26:51.0,Value 1,Value 113,Value 11,Value 1,Value 2,Value 1,Value 1
+5351,Case 1154,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,22:00.0,Value 1,Value 113,Value 11,Value 1,Value 2,Value 1,Value 1
+5352,Case 1154,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,22:01.0,Value 1,Value 113,Value 11,Value 1,Value 2,Value 1,Value 1
+5353,Case 1154,Closed,Value 5,2000-03-14 23:00:00+00:00,30:37.0,Value 1,Value 113,Value 11,Value 1,Value 2,Value 1,Value 1
+5736,Case 1238,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,07:02.0,Value 1,Value 273,Value 1,Value 4,Value 2,Value 1,Value 1
+5737,Case 1238,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,19:03.0,Value 1,Value 273,Value 1,Value 4,Value 2,Value 1,Value 1
+5738,Case 1238,Wait,Value 9,2000-03-14 23:00:00+00:00,15:41.0,Value 1,Value 273,Value 1,Value 4,Value 2,Value 1,Value 1
+5739,Case 1238,Require upgrade,Value 9,2000-03-14 23:00:00+00:00,51:04.0,Value 1,Value 273,Value 1,Value 4,Value 2,Value 1,Value 1
+5740,Case 1238,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,34:46.0,Value 1,Value 273,Value 1,Value 4,Value 2,Value 1,Value 1
+5741,Case 1238,Closed,Value 3,2000-03-14 23:00:00+00:00,35:00.0,Value 1,Value 273,Value 1,Value 4,Value 2,Value 1,Value 1
+5948,Case 1282,Insert ticket,Value 5,2000-03-14 23:00:00+00:00,14:34.0,Value 1,Value 35,Value 3,Value 3,Value 4,Value 2,Value 2
+5949,Case 1282,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,32:08.0,Value 1,Value 35,Value 3,Value 2,Value 3,Value 2,Value 2
+5950,Case 1282,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,53:50.0,Value 1,Value 35,Value 3,Value 2,Value 3,Value 2,Value 2
+5951,Case 1282,Take in charge ticket,Value 6,2000-03-14 23:00:00+00:00,24:18.0,Value 1,Value 35,Value 3,Value 2,Value 3,Value 2,Value 2
+5952,Case 1282,Wait,Value 6,2000-03-14 23:00:00+00:00,24:33.0,Value 1,Value 35,Value 3,Value 2,Value 3,Value 2,Value 2
+5953,Case 1282,Take in charge ticket,Value 6,2000-03-14 23:00:00+00:00,22:16.0,Value 1,Value 35,Value 3,Value 2,Value 3,Value 2,Value 2
+5954,Case 1282,Resolve ticket,Value 6,2000-03-14 23:00:00+00:00,22:33.0,Value 1,Value 35,Value 3,Value 2,Value 3,Value 2,Value 2
+5955,Case 1282,Closed,Value 5,2000-03-14 23:00:00+00:00,22:48.0,Value 1,Value 35,Value 3,Value 2,Value 3,Value 2,Value 2
+6209,Case 1339,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,21:02.0,Value 1,Value 250,Value 2,Value 1,Value 2,Value 1,Value 1
+6210,Case 1339,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,29:27.0,Value 1,Value 250,Value 2,Value 1,Value 2,Value 1,Value 1
+6211,Case 1339,Take in charge ticket,Value 13,2000-03-14 23:00:00+00:00,31:29.0,Value 1,Value 250,Value 2,Value 1,Value 2,Value 1,Value 1
+6212,Case 1339,Wait,Value 13,2000-03-14 23:00:00+00:00,47:43.0,Value 1,Value 250,Value 2,Value 1,Value 2,Value 1,Value 1
+6213,Case 1339,Take in charge ticket,Value 13,2000-03-14 23:00:00+00:00,39:57.0,Value 1,Value 250,Value 2,Value 1,Value 2,Value 1,Value 1
+6214,Case 1339,Wait,Value 13,2000-03-14 23:00:00+00:00,45:22.0,Value 1,Value 250,Value 2,Value 1,Value 2,Value 1,Value 1
+6215,Case 1339,Resolve ticket,Value 13,2000-03-14 23:00:00+00:00,32:18.0,Value 1,Value 250,Value 2,Value 1,Value 2,Value 1,Value 1
+6216,Case 1339,Closed,Value 5,2000-03-14 23:00:00+00:00,10:59.0,Value 1,Value 250,Value 2,Value 1,Value 2,Value 1,Value 1
+6335,Case 1365,Insert ticket,Value 4,2000-03-14 23:00:00+00:00,10:47.0,Value 1,Value 28,Value 1,Value 1,Value 3,Value 1,Value 1
+6336,Case 1365,Take in charge ticket,Value 4,2000-03-14 23:00:00+00:00,11:11.0,Value 1,Value 28,Value 1,Value 1,Value 3,Value 1,Value 1
+6337,Case 1365,Resolve ticket,Value 4,2000-03-14 23:00:00+00:00,28:28.0,Value 1,Value 28,Value 1,Value 1,Value 3,Value 1,Value 1
+6338,Case 1365,Closed,Value 5,2000-03-14 23:00:00+00:00,20:30.0,Value 1,Value 28,Value 1,Value 1,Value 3,Value 1,Value 1
+6362,Case 1371,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,56:44.0,Value 1,Value 97,Value 1,Value 1,Value 2,Value 1,Value 1
+6363,Case 1371,Wait,Value 1,2000-03-14 23:00:00+00:00,57:53.0,Value 1,Value 97,Value 1,Value 1,Value 2,Value 1,Value 1
+6364,Case 1371,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,36:52.0,Value 1,Value 97,Value 1,Value 1,Value 2,Value 1,Value 1
+6365,Case 1371,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,36:52.0,Value 1,Value 97,Value 1,Value 1,Value 2,Value 1,Value 1
+6366,Case 1371,Closed,Value 3,2000-03-14 23:00:00+00:00,37:11.0,Value 1,Value 97,Value 1,Value 1,Value 2,Value 1,Value 1
+6601,Case 1420,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,20:41.0,Value 1,Value 139,Value 1,Value 2,Value 3,Value 1,Value 1
+6602,Case 1420,Take in charge ticket,Value 18,2000-03-14 23:00:00+00:00,00:04.0,Value 1,Value 139,Value 1,Value 2,Value 3,Value 1,Value 1
+6603,Case 1420,Schedule intervention,Value 18,2000-03-14 23:00:00+00:00,26:10.0,Value 1,Value 139,Value 1,Value 2,Value 3,Value 1,Value 1
+6604,Case 1420,Resolve ticket,Value 18,2000-03-14 23:00:00+00:00,31:38.0,Value 1,Value 139,Value 1,Value 2,Value 3,Value 1,Value 1
+6605,Case 1420,Closed,Value 3,2000-03-14 23:00:00+00:00,31:58.0,Value 1,Value 139,Value 1,Value 2,Value 3,Value 1,Value 1
+6677,Case 1436,Assign seriousness,Value 13,2000-03-14 23:00:00+00:00,25:10.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6678,Case 1436,Take in charge ticket,Value 13,2000-03-14 23:00:00+00:00,25:33.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6679,Case 1436,Wait,Value 9,2000-03-14 23:00:00+00:00,23:13.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6680,Case 1436,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,56:43.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6681,Case 1436,Wait,Value 9,2000-03-14 23:00:00+00:00,22:43.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6682,Case 1436,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,01:02.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6683,Case 1436,Wait,Value 9,2000-03-14 23:00:00+00:00,03:40.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6684,Case 1436,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,14:12.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6685,Case 1436,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,15:42.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6686,Case 1436,Closed,Value 5,2000-03-14 23:00:00+00:00,16:14.0,Value 1,Value 41,Value 1,Value 2,Value 3,Value 1,Value 1
+6737,Case 1449,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,03:20.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+6738,Case 1449,Wait,Value 1,2000-03-14 23:00:00+00:00,09:27.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+6739,Case 1449,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,21:05.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+6740,Case 1449,Wait,Value 1,2000-03-14 23:00:00+00:00,53:57.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+6741,Case 1449,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,00:41.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+6742,Case 1449,Closed,Value 3,2000-03-14 23:00:00+00:00,00:58.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+6748,Case 1451,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,48:49.0,Value 1,Value 106,Value 1,Value 1,Value 1,Value 1,Value 1
+6749,Case 1451,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,12:40.0,Value 1,Value 106,Value 1,Value 1,Value 1,Value 1,Value 1
+6750,Case 1451,Require upgrade,Value 4,2000-03-14 23:00:00+00:00,07:35.0,Value 1,Value 106,Value 1,Value 1,Value 1,Value 1,Value 1
+6751,Case 1451,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,37:32.0,Value 1,Value 106,Value 1,Value 1,Value 1,Value 1,Value 1
+6752,Case 1451,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,38:32.0,Value 1,Value 106,Value 1,Value 1,Value 1,Value 1,Value 1
+6753,Case 1451,Closed,Value 3,2000-03-14 23:00:00+00:00,37:52.0,Value 1,Value 106,Value 1,Value 1,Value 1,Value 1,Value 1
+6957,Case 1495,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,33:14.0,Value 1,Value 43,Value 4,Value 1,Value 2,Value 1,Value 1
+6958,Case 1495,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,57:30.0,Value 1,Value 43,Value 4,Value 1,Value 2,Value 1,Value 1
+6959,Case 1495,Require upgrade,Value 2,2000-03-14 23:00:00+00:00,37:52.0,Value 1,Value 43,Value 4,Value 1,Value 2,Value 1,Value 1
+6960,Case 1495,Require upgrade,Value 9,2000-03-14 23:00:00+00:00,27:08.0,Value 1,Value 43,Value 4,Value 1,Value 2,Value 1,Value 1
+6961,Case 1495,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,12:26.0,Value 1,Value 43,Value 4,Value 1,Value 2,Value 1,Value 1
+6962,Case 1495,Closed,Value 3,2000-03-14 23:00:00+00:00,12:45.0,Value 1,Value 43,Value 4,Value 1,Value 2,Value 1,Value 1
+6963,Case 1496,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,14:38.0,Value 1,Value 218,Value 2,Value 1,Value 2,Value 1,Value 1
+6964,Case 1496,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,14:50.0,Value 1,Value 218,Value 2,Value 1,Value 2,Value 1,Value 1
+6965,Case 1496,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,12:41.0,Value 1,Value 218,Value 2,Value 1,Value 2,Value 1,Value 1
+6966,Case 1496,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,39:55.0,Value 1,Value 218,Value 2,Value 1,Value 2,Value 1,Value 1
+6967,Case 1496,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,42:09.0,Value 1,Value 218,Value 2,Value 1,Value 2,Value 1,Value 1
+6968,Case 1496,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,26:40.0,Value 1,Value 218,Value 2,Value 1,Value 2,Value 1,Value 1
+6969,Case 1496,Closed,Value 5,2000-03-14 23:00:00+00:00,20:43.0,Value 1,Value 218,Value 2,Value 1,Value 2,Value 1,Value 1
+7080,Case 1518,Assign seriousness,Value 6,2000-03-14 23:00:00+00:00,51:47.0,Value 1,Value 8,Value 3,Value 2,Value 2,Value 2,Value 1
+7081,Case 1518,Wait,Value 16,2000-03-14 23:00:00+00:00,14:46.0,Value 1,Value 8,Value 3,Value 2,Value 2,Value 2,Value 1
+7082,Case 1518,Take in charge ticket,Value 16,2000-03-14 23:00:00+00:00,47:11.0,Value 1,Value 8,Value 3,Value 2,Value 2,Value 2,Value 1
+7083,Case 1518,Wait,Value 16,2000-03-14 23:00:00+00:00,17:21.0,Value 1,Value 8,Value 3,Value 2,Value 2,Value 2,Value 1
+7084,Case 1518,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,25:45.0,Value 1,Value 8,Value 3,Value 2,Value 2,Value 2,Value 1
+7085,Case 1518,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,26:18.0,Value 1,Value 8,Value 3,Value 2,Value 2,Value 2,Value 1
+7086,Case 1518,Closed,Value 5,2000-03-14 23:00:00+00:00,26:39.0,Value 1,Value 8,Value 3,Value 2,Value 2,Value 2,Value 1
+7167,Case 1535,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,41:38.0,Value 1,Value 45,Value 1,Value 2,Value 2,Value 2,Value 2
+7168,Case 1535,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,42:32.0,Value 1,Value 45,Value 1,Value 2,Value 2,Value 2,Value 2
+7169,Case 1535,Assign seriousness,Value 12,2000-03-14 23:00:00+00:00,02:09.0,Value 1,Value 45,Value 1,Value 2,Value 2,Value 2,Value 2
+7170,Case 1535,Resolve ticket,Value 6,2000-03-14 23:00:00+00:00,51:26.0,Value 1,Value 45,Value 1,Value 2,Value 2,Value 2,Value 2
+7171,Case 1535,Closed,Value 3,2000-03-14 23:00:00+00:00,51:44.0,Value 1,Value 45,Value 1,Value 2,Value 2,Value 2,Value 2
+7576,Case 1622,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,25:43.0,Value 1,Value 59,Value 3,Value 1,Value 2,Value 1,Value 1
+7577,Case 1622,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,20:42.0,Value 1,Value 59,Value 3,Value 1,Value 2,Value 1,Value 1
+7578,Case 1622,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,21:07.0,Value 1,Value 59,Value 3,Value 1,Value 2,Value 1,Value 1
+7579,Case 1622,Wait,Value 14,2000-03-14 23:00:00+00:00,36:34.0,Value 1,Value 59,Value 3,Value 1,Value 2,Value 1,Value 1
+7580,Case 1622,Wait,Value 14,2000-03-14 23:00:00+00:00,36:35.0,Value 1,Value 59,Value 3,Value 1,Value 2,Value 1,Value 1
+7581,Case 1622,Take in charge ticket,Value 14,2000-03-14 23:00:00+00:00,36:55.0,Value 1,Value 59,Value 3,Value 1,Value 2,Value 1,Value 1
+7582,Case 1622,Resolve ticket,Value 14,2000-03-14 23:00:00+00:00,37:15.0,Value 1,Value 59,Value 3,Value 1,Value 2,Value 1,Value 1
+7583,Case 1622,Closed,Value 5,2000-03-14 23:00:00+00:00,30:24.0,Value 1,Value 59,Value 3,Value 1,Value 2,Value 1,Value 1
+7659,Case 1641,Assign seriousness,Value 13,2000-03-14 23:00:00+00:00,37:45.0,Value 1,Value 199,Value 2,Value 2,Value 2,Value 1,Value 1
+7660,Case 1641,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,58:41.0,Value 1,Value 199,Value 2,Value 2,Value 2,Value 1,Value 1
+7661,Case 1641,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,58:42.0,Value 1,Value 199,Value 2,Value 2,Value 2,Value 1,Value 1
+7662,Case 1641,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,58:48.0,Value 1,Value 199,Value 2,Value 2,Value 2,Value 1,Value 1
+7663,Case 1641,Wait,Value 9,2000-03-14 23:00:00+00:00,34:05.0,Value 1,Value 199,Value 2,Value 2,Value 2,Value 1,Value 1
+7664,Case 1641,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,06:15.0,Value 1,Value 199,Value 2,Value 2,Value 2,Value 1,Value 1
+7665,Case 1641,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,06:29.0,Value 1,Value 199,Value 2,Value 2,Value 2,Value 1,Value 1
+7666,Case 1641,Closed,Value 5,2000-03-14 23:00:00+00:00,06:44.0,Value 1,Value 199,Value 2,Value 2,Value 2,Value 1,Value 1
+7699,Case 1650,Assign seriousness,Value 9,2000-03-14 23:00:00+00:00,21:08.0,Value 1,Value 22,Value 1,Value 2,Value 2,Value 1,Value 1
+7700,Case 1650,Create SW anomaly,Value 2,2000-03-14 23:00:00+00:00,13:38.0,Value 1,Value 22,Value 1,Value 2,Value 2,Value 1,Value 1
+7701,Case 1650,Create SW anomaly,Value 2,2000-03-14 23:00:00+00:00,13:38.0,Value 1,Value 22,Value 1,Value 2,Value 2,Value 1,Value 1
+7702,Case 1650,Resolve SW anomaly,Value 22,2000-03-14 23:00:00+00:00,54:23.0,Value 1,Value 22,Value 1,Value 2,Value 2,Value 1,Value 1
+7703,Case 1650,Resolve SW anomaly,Value 22,2000-03-14 23:00:00+00:00,54:26.0,Value 1,Value 22,Value 1,Value 2,Value 2,Value 1,Value 1
+7704,Case 1650,Require upgrade,Value 2,2000-03-14 23:00:00+00:00,57:50.0,Value 1,Value 22,Value 1,Value 2,Value 2,Value 1,Value 1
+7705,Case 1650,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,38:24.0,Value 1,Value 22,Value 1,Value 2,Value 2,Value 1,Value 1
+7706,Case 1650,Closed,Value 3,2000-03-14 23:00:00+00:00,38:44.0,Value 1,Value 22,Value 1,Value 2,Value 2,Value 1,Value 1
+7850,Case 1684,Assign seriousness,Value 9,2000-03-14 23:00:00+00:00,54:13.0,Value 1,Value 86,Value 3,Value 2,Value 2,Value 1,Value 1
+7851,Case 1684,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,42:11.0,Value 1,Value 86,Value 3,Value 1,Value 2,Value 1,Value 1
+7852,Case 1684,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,37:22.0,Value 1,Value 86,Value 3,Value 1,Value 2,Value 1,Value 1
+7853,Case 1684,Wait,Value 9,2000-03-14 23:00:00+00:00,37:30.0,Value 1,Value 86,Value 3,Value 1,Value 2,Value 1,Value 1
+7854,Case 1684,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,39:16.0,Value 1,Value 86,Value 3,Value 1,Value 2,Value 1,Value 1
+7855,Case 1684,Wait,Value 9,2000-03-14 23:00:00+00:00,50:31.0,Value 1,Value 86,Value 3,Value 1,Value 2,Value 1,Value 1
+7856,Case 1684,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,42:31.0,Value 1,Value 86,Value 3,Value 1,Value 2,Value 1,Value 1
+7857,Case 1684,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,42:54.0,Value 1,Value 86,Value 3,Value 1,Value 2,Value 1,Value 1
+7858,Case 1684,Closed,Value 5,2000-03-14 23:00:00+00:00,00:24.0,Value 1,Value 86,Value 3,Value 1,Value 2,Value 1,Value 1
+7891,Case 1691,Insert ticket,Value 14,2000-03-14 23:00:00+00:00,34:29.0,Value 1,Value 58,Value 1,Value 1,Value 2,Value 1,Value 1
+7892,Case 1691,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,39:36.0,Value 1,Value 58,Value 1,Value 1,Value 2,Value 1,Value 1
+7893,Case 1691,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,20:16.0,Value 1,Value 58,Value 1,Value 1,Value 2,Value 1,Value 1
+7894,Case 1691,Wait,Value 9,2000-03-14 23:00:00+00:00,02:22.0,Value 1,Value 58,Value 1,Value 1,Value 2,Value 1,Value 1
+7895,Case 1691,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,16:20.0,Value 1,Value 58,Value 1,Value 1,Value 2,Value 1,Value 1
+7896,Case 1691,Closed,Value 3,2000-03-14 23:00:00+00:00,16:30.0,Value 1,Value 58,Value 1,Value 1,Value 2,Value 1,Value 1
+8009,Case 1716,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,48:40.0,Value 1,Value 5,Value 1,Value 1,Value 3,Value 1,Value 1
+8010,Case 1716,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,48:57.0,Value 1,Value 5,Value 1,Value 1,Value 3,Value 1,Value 1
+8011,Case 1716,Wait,Value 1,2000-03-14 23:00:00+00:00,53:58.0,Value 1,Value 5,Value 1,Value 1,Value 3,Value 1,Value 1
+8012,Case 1716,Wait,Value 2,2000-03-14 23:00:00+00:00,45:27.0,Value 1,Value 5,Value 1,Value 1,Value 3,Value 1,Value 1
+8013,Case 1716,Wait,Value 2,2000-03-14 23:00:00+00:00,45:27.0,Value 1,Value 5,Value 1,Value 1,Value 3,Value 1,Value 1
+8014,Case 1716,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,48:44.0,Value 1,Value 5,Value 1,Value 1,Value 3,Value 1,Value 1
+8015,Case 1716,Closed,Value 5,2000-03-14 23:00:00+00:00,48:53.0,Value 1,Value 5,Value 1,Value 1,Value 3,Value 1,Value 1
+8103,Case 1735,Assign seriousness,Value 18,2000-03-14 23:00:00+00:00,07:59.0,Value 1,Value 313,Value 7,Value 1,Value 2,Value 1,Value 2
+8104,Case 1735,Require upgrade,Value 1,2000-03-14 23:00:00+00:00,08:53.0,Value 1,Value 313,Value 7,Value 1,Value 2,Value 1,Value 2
+8105,Case 1735,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,28:06.0,Value 1,Value 313,Value 7,Value 1,Value 2,Value 1,Value 2
+8106,Case 1735,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,28:07.0,Value 1,Value 313,Value 7,Value 1,Value 2,Value 1,Value 2
+8107,Case 1735,Closed,Value 3,2000-03-14 23:00:00+00:00,28:25.0,Value 1,Value 313,Value 7,Value 1,Value 2,Value 1,Value 2
+8176,Case 1752,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,20:25.0,Value 1,Value 24,Value 2,Value 1,Value 2,Value 1,Value 1
+8177,Case 1752,Take in charge ticket,Value 4,2000-03-14 23:00:00+00:00,21:47.0,Value 1,Value 24,Value 2,Value 1,Value 2,Value 1,Value 1
+8178,Case 1752,Wait,Value 4,2000-03-14 23:00:00+00:00,32:49.0,Value 1,Value 24,Value 2,Value 1,Value 2,Value 1,Value 1
+8179,Case 1752,Take in charge ticket,Value 4,2000-03-14 23:00:00+00:00,28:17.0,Value 1,Value 24,Value 2,Value 1,Value 2,Value 1,Value 1
+8180,Case 1752,Take in charge ticket,Value 4,2000-03-14 23:00:00+00:00,37:51.0,Value 1,Value 24,Value 2,Value 1,Value 2,Value 1,Value 1
+8181,Case 1752,Resolve ticket,Value 4,2000-03-14 23:00:00+00:00,25:54.0,Value 1,Value 24,Value 2,Value 1,Value 2,Value 1,Value 1
+8182,Case 1752,Closed,Value 5,2000-03-14 23:00:00+00:00,30:25.0,Value 1,Value 24,Value 2,Value 1,Value 2,Value 1,Value 1
+8204,Case 1757,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,19:49.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+8205,Case 1757,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,27:41.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+8206,Case 1757,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,27:59.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+8207,Case 1757,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,43:52.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+8208,Case 1757,Create SW anomaly,Value 2,2000-03-14 23:00:00+00:00,33:45.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+8209,Case 1757,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,02:17.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+8210,Case 1757,Closed,Value 5,2000-03-14 23:00:00+00:00,02:34.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+8556,Case 1830,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,33:15.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+8557,Case 1830,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,28:33.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+8558,Case 1830,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,30:41.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+8559,Case 1830,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,48:34.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+8560,Case 1830,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,05:42.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+8561,Case 1830,Closed,Value 5,2000-03-14 23:00:00+00:00,41:50.0,Value 1,Value 18,Value 3,Value 1,Value 2,Value 1,Value 1
+8652,Case 1850,Assign seriousness,Value 15,2000-03-14 23:00:00+00:00,09:54.0,Value 1,Value 197,Value 3,Value 1,Value 2,Value 1,Value 1
+8653,Case 1850,Wait,Value 15,2000-03-14 23:00:00+00:00,10:21.0,Value 1,Value 197,Value 3,Value 1,Value 2,Value 1,Value 1
+8654,Case 1850,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,08:43.0,Value 1,Value 197,Value 3,Value 1,Value 2,Value 1,Value 1
+8655,Case 1850,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,10:19.0,Value 1,Value 197,Value 3,Value 1,Value 2,Value 1,Value 1
+8656,Case 1850,Closed,Value 5,2000-03-14 23:00:00+00:00,10:29.0,Value 1,Value 197,Value 3,Value 1,Value 2,Value 1,Value 1
+8675,Case 1855,Insert ticket,Value 15,2000-03-14 23:00:00+00:00,06:49.0,Value 1,Value 126,Value 3,Value 2,Value 2,Value 1,Value 1
+8676,Case 1855,Assign seriousness,Value 15,2000-03-14 23:00:00+00:00,07:17.0,Value 1,Value 126,Value 3,Value 2,Value 2,Value 1,Value 1
+8677,Case 1855,Take in charge ticket,Value 15,2000-03-14 23:00:00+00:00,55:02.0,Value 1,Value 126,Value 3,Value 2,Value 2,Value 1,Value 1
+8678,Case 1855,Resolve ticket,Value 15,2000-03-14 23:00:00+00:00,30:02.0,Value 1,Value 126,Value 3,Value 2,Value 2,Value 1,Value 1
+8679,Case 1855,Closed,Value 5,2000-03-14 23:00:00+00:00,10:44.0,Value 1,Value 126,Value 3,Value 2,Value 2,Value 1,Value 1
+8826,Case 1887,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,52:54.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+8827,Case 1887,Take in charge ticket,Value 3,2000-03-14 23:00:00+00:00,59:00.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+8828,Case 1887,Resolve ticket,Value 4,2000-03-14 23:00:00+00:00,38:19.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+8829,Case 1887,Closed,Value 3,2000-03-14 23:00:00+00:00,38:33.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+9583,Case 2053,Insert ticket,Value 12,2000-03-14 23:00:00+00:00,29:12.0,Value 1,Value 88,Value 3,Value 2,Value 2,Value 1,Value 1
+9584,Case 2053,Assign seriousness,Value 12,2000-03-14 23:00:00+00:00,29:55.0,Value 1,Value 88,Value 3,Value 2,Value 2,Value 1,Value 1
+9585,Case 2053,Take in charge ticket,Value 16,2000-03-14 23:00:00+00:00,17:04.0,Value 1,Value 88,Value 3,Value 2,Value 2,Value 1,Value 1
+9586,Case 2053,Wait,Value 16,2000-03-14 23:00:00+00:00,17:45.0,Value 1,Value 88,Value 3,Value 2,Value 2,Value 1,Value 1
+9587,Case 2053,Take in charge ticket,Value 16,2000-03-14 23:00:00+00:00,01:40.0,Value 1,Value 88,Value 3,Value 2,Value 2,Value 1,Value 1
+9588,Case 2053,Wait,Value 16,2000-03-14 23:00:00+00:00,35:02.0,Value 1,Value 88,Value 3,Value 2,Value 2,Value 1,Value 1
+9589,Case 2053,Take in charge ticket,Value 16,2000-03-14 23:00:00+00:00,00:58.0,Value 1,Value 88,Value 3,Value 2,Value 2,Value 1,Value 1
+9590,Case 2053,Resolve ticket,Value 16,2000-03-14 23:00:00+00:00,05:26.0,Value 1,Value 88,Value 3,Value 2,Value 2,Value 1,Value 1
+9591,Case 2053,Closed,Value 5,2000-03-14 23:00:00+00:00,05:46.0,Value 1,Value 88,Value 3,Value 2,Value 2,Value 1,Value 1
+9799,Case 2098,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,38:17.0,Value 1,Value 63,Value 15,Value 2,Value 2,Value 1,Value 1
+9800,Case 2098,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,38:28.0,Value 1,Value 63,Value 15,Value 2,Value 2,Value 1,Value 1
+9801,Case 2098,Wait,Value 1,2000-03-14 23:00:00+00:00,22:07.0,Value 1,Value 63,Value 15,Value 2,Value 2,Value 1,Value 1
+9802,Case 2098,Wait,Value 2,2000-03-14 23:00:00+00:00,03:14.0,Value 1,Value 63,Value 15,Value 2,Value 2,Value 1,Value 1
+9803,Case 2098,Wait,Value 2,2000-03-14 23:00:00+00:00,03:15.0,Value 1,Value 63,Value 15,Value 2,Value 2,Value 1,Value 1
+9804,Case 2098,Wait,Value 2,2000-03-14 23:00:00+00:00,23:39.0,Value 1,Value 63,Value 15,Value 2,Value 2,Value 1,Value 1
+9805,Case 2098,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,15:58.0,Value 1,Value 63,Value 15,Value 2,Value 2,Value 1,Value 1
+9806,Case 2098,Closed,Value 5,2000-03-14 23:00:00+00:00,16:40.0,Value 1,Value 63,Value 15,Value 2,Value 2,Value 1,Value 1
+10421,Case 2232,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,26:18.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+10422,Case 2232,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,22:56.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+10423,Case 2232,Closed,Value 3,2000-03-14 23:00:00+00:00,23:15.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+10506,Case 2250,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,18:51.0,Value 1,Value 81,Value 1,Value 1,Value 2,Value 1,Value 1
+10507,Case 2250,Wait,Value 13,2000-03-14 23:00:00+00:00,42:53.0,Value 1,Value 81,Value 1,Value 1,Value 2,Value 1,Value 1
+10508,Case 2250,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,37:11.0,Value 1,Value 81,Value 1,Value 1,Value 2,Value 1,Value 1
+10509,Case 2250,Closed,Value 3,2000-03-14 23:00:00+00:00,37:22.0,Value 1,Value 81,Value 1,Value 1,Value 2,Value 1,Value 1
+10945,Case 2342,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,51:36.0,Value 1,Value 113,Value 1,Value 1,Value 2,Value 1,Value 1
+10946,Case 2342,Take in charge ticket,Value 4,2000-03-14 23:00:00+00:00,58:03.0,Value 1,Value 113,Value 1,Value 1,Value 2,Value 1,Value 1
+10947,Case 2342,Wait,Value 4,2000-03-14 23:00:00+00:00,08:45.0,Value 1,Value 113,Value 1,Value 1,Value 2,Value 1,Value 1
+10948,Case 2342,Wait,Value 4,2000-03-14 23:00:00+00:00,08:45.0,Value 1,Value 113,Value 1,Value 1,Value 2,Value 1,Value 1
+10949,Case 2342,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,26:50.0,Value 1,Value 113,Value 1,Value 1,Value 2,Value 1,Value 1
+10950,Case 2342,Closed,Value 3,2000-03-14 23:00:00+00:00,27:02.0,Value 1,Value 113,Value 1,Value 1,Value 2,Value 1,Value 1
+11252,Case 2407,Assign seriousness,Value 9,2000-03-14 23:00:00+00:00,06:23.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+11253,Case 2407,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,37:17.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+11254,Case 2407,Wait,Value 9,2000-03-14 23:00:00+00:00,43:07.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+11255,Case 2407,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,35:14.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+11256,Case 2407,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,07:14.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+11257,Case 2407,Wait,Value 9,2000-03-14 23:00:00+00:00,44:21.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+11258,Case 2407,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,20:33.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+11259,Case 2407,Closed,Value 5,2000-03-14 23:00:00+00:00,20:49.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+12030,Case 2572,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,32:54.0,Value 1,Value 251,Value 5,Value 2,Value 2,Value 1,Value 1
+12031,Case 2572,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,34:52.0,Value 1,Value 251,Value 5,Value 2,Value 2,Value 1,Value 1
+12032,Case 2572,Create SW anomaly,Value 2,2000-03-14 23:00:00+00:00,25:24.0,Value 1,Value 251,Value 5,Value 2,Value 2,Value 1,Value 1
+12033,Case 2572,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,48:13.0,Value 1,Value 251,Value 5,Value 2,Value 2,Value 1,Value 1
+12034,Case 2572,Wait,Value 2,2000-03-14 23:00:00+00:00,39:15.0,Value 1,Value 251,Value 5,Value 2,Value 2,Value 1,Value 1
+12035,Case 2572,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,53:02.0,Value 1,Value 251,Value 5,Value 2,Value 2,Value 1,Value 1
+12036,Case 2572,Closed,Value 5,2000-03-14 23:00:00+00:00,53:17.0,Value 1,Value 251,Value 5,Value 2,Value 2,Value 1,Value 1
+12132,Case 2593,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,32:54.0,Value 1,Value 118,Value 4,Value 1,Value 2,Value 1,Value 1
+12133,Case 2593,Require upgrade,Value 1,2000-03-14 23:00:00+00:00,33:10.0,Value 1,Value 118,Value 4,Value 1,Value 2,Value 1,Value 1
+12134,Case 2593,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,44:17.0,Value 1,Value 118,Value 4,Value 1,Value 2,Value 1,Value 1
+12135,Case 2593,Closed,Value 3,2000-03-14 23:00:00+00:00,44:36.0,Value 1,Value 118,Value 4,Value 1,Value 2,Value 1,Value 1
+12320,Case 2633,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,35:54.0,Value 1,Value 16,Value 3,Value 2,Value 2,Value 1,Value 1
+12321,Case 2633,Take in charge ticket,Value 14,2000-03-14 23:00:00+00:00,36:14.0,Value 1,Value 16,Value 3,Value 2,Value 2,Value 1,Value 1
+12322,Case 2633,Wait,Value 14,2000-03-14 23:00:00+00:00,50:09.0,Value 1,Value 16,Value 3,Value 2,Value 2,Value 1,Value 1
+12323,Case 2633,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,08:56.0,Value 1,Value 16,Value 3,Value 2,Value 2,Value 1,Value 1
+12324,Case 2633,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,09:35.0,Value 1,Value 16,Value 3,Value 2,Value 2,Value 1,Value 1
+12325,Case 2633,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,09:36.0,Value 1,Value 16,Value 3,Value 2,Value 2,Value 1,Value 1
+12326,Case 2633,Closed,Value 5,2000-03-14 23:00:00+00:00,40:59.0,Value 1,Value 16,Value 3,Value 2,Value 2,Value 1,Value 1
+12468,Case 2666,Assign seriousness,Value 18,2000-03-14 23:00:00+00:00,44:10.0,Value 1,Value 283,Value 1,Value 1,Value 2,Value 1,Value 1
+12469,Case 2666,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,54:26.0,Value 1,Value 283,Value 1,Value 1,Value 2,Value 1,Value 1
+12470,Case 2666,Take in charge ticket,Value 14,2000-03-14 23:00:00+00:00,09:00.0,Value 1,Value 283,Value 1,Value 1,Value 2,Value 1,Value 1
+12471,Case 2666,Wait,Value 14,2000-03-14 23:00:00+00:00,17:21.0,Value 1,Value 283,Value 1,Value 1,Value 2,Value 1,Value 1
+12472,Case 2666,Wait,Value 14,2000-03-14 23:00:00+00:00,17:22.0,Value 1,Value 283,Value 1,Value 1,Value 2,Value 1,Value 1
+12473,Case 2666,Resolve ticket,Value 14,2000-03-14 23:00:00+00:00,14:28.0,Value 1,Value 283,Value 1,Value 1,Value 2,Value 1,Value 1
+12474,Case 2666,Closed,Value 3,2000-03-14 23:00:00+00:00,14:47.0,Value 1,Value 283,Value 1,Value 1,Value 2,Value 1,Value 1
+13072,Case 2797,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,50:24.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+13073,Case 2797,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,00:37.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+13074,Case 2797,Closed,Value 3,2000-03-14 23:00:00+00:00,00:56.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+13334,Case 2853,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,28:23.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+13335,Case 2853,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,28:42.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+13336,Case 2853,Assign seriousness,Value 13,2000-03-14 23:00:00+00:00,18:57.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+13337,Case 2853,Take in charge ticket,Value 15,2000-03-14 23:00:00+00:00,18:24.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+13338,Case 2853,Wait,Value 15,2000-03-14 23:00:00+00:00,09:16.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+13339,Case 2853,Resolve ticket,Value 15,2000-03-14 23:00:00+00:00,32:55.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+13340,Case 2853,Closed,Value 5,2000-03-14 23:00:00+00:00,01:36.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+13536,Case 2897,Assign seriousness,Value 13,2000-03-14 23:00:00+00:00,27:36.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+13537,Case 2897,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,53:56.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+13538,Case 2897,Require upgrade,Value 2,2000-03-14 23:00:00+00:00,54:52.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+13539,Case 2897,Take in charge ticket,Value 4,2000-03-14 23:00:00+00:00,10:17.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+13540,Case 2897,Resolve ticket,Value 4,2000-03-14 23:00:00+00:00,11:22.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+13541,Case 2897,Closed,Value 3,2000-03-14 23:00:00+00:00,11:39.0,Value 1,Value 13,Value 1,Value 1,Value 3,Value 1,Value 1
+13968,Case 2988,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,02:26.0,Value 1,Value 116,Value 1,Value 2,Value 2,Value 1,Value 1
+13969,Case 2988,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,44:06.0,Value 1,Value 116,Value 1,Value 2,Value 2,Value 1,Value 1
+13970,Case 2988,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,44:07.0,Value 1,Value 116,Value 1,Value 2,Value 2,Value 1,Value 1
+13971,Case 2988,Closed,Value 3,2000-03-14 23:00:00+00:00,44:24.0,Value 1,Value 116,Value 1,Value 2,Value 2,Value 1,Value 1
+14239,Case 3048,Assign seriousness,Value 13,2000-03-14 23:00:00+00:00,41:41.0,Value 1,Value 17,Value 1,Value 1,Value 2,Value 1,Value 1
+14240,Case 3048,Take in charge ticket,Value 13,2000-03-14 23:00:00+00:00,30:49.0,Value 1,Value 17,Value 1,Value 1,Value 2,Value 1,Value 1
+14241,Case 3048,Resolve ticket,Value 15,2000-03-14 23:00:00+00:00,08:56.0,Value 1,Value 17,Value 1,Value 1,Value 2,Value 1,Value 1
+14242,Case 3048,Resolve ticket,Value 15,2000-03-14 23:00:00+00:00,09:08.0,Value 1,Value 17,Value 1,Value 1,Value 2,Value 1,Value 1
+14243,Case 3048,Closed,Value 5,2000-03-14 23:00:00+00:00,50:58.0,Value 1,Value 17,Value 1,Value 1,Value 2,Value 1,Value 1
+14269,Case 3053,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,51:50.0,Value 1,Value 185,Value 2,Value 1,Value 3,Value 1,Value 1
+14270,Case 3053,Resolve ticket,Value 13,2000-03-14 23:00:00+00:00,57:05.0,Value 1,Value 185,Value 2,Value 1,Value 3,Value 1,Value 1
+14271,Case 3053,Take in charge ticket,Value 13,2000-03-14 23:00:00+00:00,26:30.0,Value 1,Value 185,Value 2,Value 1,Value 3,Value 1,Value 1
+14272,Case 3053,Resolve ticket,Value 13,2000-03-14 23:00:00+00:00,29:33.0,Value 1,Value 185,Value 2,Value 1,Value 3,Value 1,Value 1
+14273,Case 3053,Closed,Value 5,2000-03-14 23:00:00+00:00,29:49.0,Value 1,Value 185,Value 2,Value 1,Value 3,Value 1,Value 1
+14352,Case 3071,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,21:03.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+14353,Case 3071,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,21:24.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+14354,Case 3071,Create SW anomaly,Value 1,2000-03-14 23:00:00+00:00,25:06.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+14355,Case 3071,Require upgrade,Value 2,2000-03-14 23:00:00+00:00,32:01.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+14356,Case 3071,Resolve ticket,Value 4,2000-03-14 23:00:00+00:00,12:01.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+14357,Case 3071,Closed,Value 3,2000-03-14 23:00:00+00:00,12:21.0,Value 1,Value 104,Value 1,Value 1,Value 3,Value 1,Value 1
+14615,Case 3126,Assign seriousness,Value 13,2000-03-14 23:00:00+00:00,45:20.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+14616,Case 3126,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,21:37.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+14617,Case 3126,Wait,Value 9,2000-03-14 23:00:00+00:00,57:37.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+14618,Case 3126,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,06:37.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+14619,Case 3126,Closed,Value 3,2000-03-14 23:00:00+00:00,06:58.0,Value 1,Value 1,Value 1,Value 1,Value 2,Value 1,Value 1
+15124,Case 3238,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,42:57.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+15125,Case 3238,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,50:53.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+15126,Case 3238,Wait,Value 2,2000-03-14 23:00:00+00:00,50:57.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+15127,Case 3238,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,51:00.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+15128,Case 3238,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,51:06.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+15129,Case 3238,Closed,Value 5,2000-03-14 23:00:00+00:00,51:20.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+15130,Case 3238,Closed,Value 5,2000-03-14 23:00:00+00:00,51:20.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+15179,Case 3250,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,48:02.0,Value 1,Value 174,Value 3,Value 2,Value 2,Value 1,Value 1
+15180,Case 3250,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,48:50.0,Value 1,Value 174,Value 3,Value 2,Value 2,Value 1,Value 1
+15181,Case 3250,Wait,Value 13,2000-03-14 23:00:00+00:00,05:05.0,Value 1,Value 174,Value 3,Value 2,Value 2,Value 1,Value 1
+15182,Case 3250,Wait,Value 2,2000-03-14 23:00:00+00:00,43:40.0,Value 1,Value 174,Value 3,Value 2,Value 2,Value 1,Value 1
+15183,Case 3250,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,47:58.0,Value 1,Value 174,Value 3,Value 2,Value 2,Value 1,Value 1
+15184,Case 3250,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,05:46.0,Value 1,Value 174,Value 3,Value 2,Value 2,Value 1,Value 1
+15185,Case 3250,Closed,Value 5,2000-03-14 23:00:00+00:00,15:32.0,Value 1,Value 174,Value 3,Value 2,Value 2,Value 1,Value 1
+15821,Case 3388,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,45:57.0,Value 1,Value 107,Value 1,Value 2,Value 2,Value 1,Value 1
+15822,Case 3388,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,46:21.0,Value 1,Value 107,Value 1,Value 2,Value 2,Value 1,Value 1
+15823,Case 3388,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,35:54.0,Value 1,Value 107,Value 1,Value 2,Value 2,Value 1,Value 1
+15824,Case 3388,Wait,Value 2,2000-03-14 23:00:00+00:00,08:40.0,Value 1,Value 107,Value 1,Value 2,Value 2,Value 1,Value 1
+15825,Case 3388,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,43:39.0,Value 1,Value 107,Value 1,Value 2,Value 2,Value 1,Value 1
+15826,Case 3388,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,43:54.0,Value 1,Value 107,Value 1,Value 2,Value 2,Value 1,Value 1
+15827,Case 3388,Closed,Value 5,2000-03-14 23:00:00+00:00,44:11.0,Value 1,Value 107,Value 1,Value 2,Value 2,Value 1,Value 1
+16078,Case 3443,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,05:33.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+16079,Case 3443,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,08:00.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+16080,Case 3443,Require upgrade,Value 2,2000-03-14 23:00:00+00:00,48:09.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+16081,Case 3443,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,10:53.0,Value 1,Value 24,Value 1,Value 1,Value 2,Value 1,Value 1
+16301,Case 3490,Assign seriousness,Value 9,2000-03-14 23:00:00+00:00,39:08.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+16302,Case 3490,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,40:21.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+16303,Case 3490,Wait,Value 9,2000-03-14 23:00:00+00:00,40:42.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+16304,Case 3490,Take in charge ticket,Value 5,2000-03-14 23:00:00+00:00,51:06.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+16305,Case 3490,Wait,Value 5,2000-03-14 23:00:00+00:00,51:13.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+16306,Case 3490,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,21:28.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+16307,Case 3490,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,21:52.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+16308,Case 3490,Closed,Value 5,2000-03-14 23:00:00+00:00,11:19.0,Value 1,Value 22,Value 3,Value 1,Value 2,Value 1,Value 1
+16364,Case 3504,Assign seriousness,Value 13,2000-03-14 23:00:00+00:00,19:54.0,Value 1,Value 63,Value 1,Value 2,Value 2,Value 1,Value 1
+16365,Case 3504,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,16:45.0,Value 1,Value 63,Value 1,Value 2,Value 2,Value 1,Value 1
+16366,Case 3504,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,16:52.0,Value 1,Value 63,Value 1,Value 2,Value 2,Value 1,Value 1
+16367,Case 3504,Wait,Value 14,2000-03-14 23:00:00+00:00,29:46.0,Value 1,Value 63,Value 1,Value 2,Value 2,Value 1,Value 1
+16368,Case 3504,Take in charge ticket,Value 14,2000-03-14 23:00:00+00:00,49:04.0,Value 1,Value 63,Value 1,Value 2,Value 2,Value 1,Value 1
+16369,Case 3504,Resolve ticket,Value 14,2000-03-14 23:00:00+00:00,49:18.0,Value 1,Value 63,Value 1,Value 2,Value 2,Value 1,Value 1
+16370,Case 3504,Closed,Value 5,2000-03-14 23:00:00+00:00,49:38.0,Value 1,Value 63,Value 1,Value 2,Value 2,Value 1,Value 1
+16705,Case 3578,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,37:29.0,Value 1,Value 49,Value 1,Value 1,Value 2,Value 1,Value 1
+16706,Case 3578,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,38:01.0,Value 1,Value 49,Value 1,Value 1,Value 2,Value 1,Value 1
+16707,Case 3578,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,54:48.0,Value 1,Value 49,Value 1,Value 1,Value 2,Value 1,Value 1
+16708,Case 3578,Wait,Value 7,2000-03-14 23:00:00+00:00,50:11.0,Value 1,Value 49,Value 1,Value 1,Value 2,Value 1,Value 1
+16709,Case 3578,Wait,Value 2,2000-03-14 23:00:00+00:00,24:16.0,Value 1,Value 49,Value 1,Value 1,Value 2,Value 1,Value 1
+16710,Case 3578,Take in charge ticket,Value 7,2000-03-14 23:00:00+00:00,18:57.0,Value 1,Value 49,Value 1,Value 1,Value 2,Value 1,Value 1
+16711,Case 3578,Resolve ticket,Value 7,2000-03-14 23:00:00+00:00,19:10.0,Value 1,Value 49,Value 1,Value 1,Value 2,Value 1,Value 1
+16712,Case 3578,Closed,Value 5,2000-03-14 23:00:00+00:00,30:43.0,Value 1,Value 49,Value 1,Value 1,Value 2,Value 1,Value 1
+16888,Case 3616,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,09:11.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+16889,Case 3616,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,47:11.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+16890,Case 3616,Create SW anomaly,Value 2,2000-03-14 23:00:00+00:00,17:17.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+16891,Case 3616,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,15:09.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+16892,Case 3616,Closed,Value 5,2000-03-14 23:00:00+00:00,15:34.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+18126,Case 3886,Insert ticket,Value 15,2000-03-14 23:00:00+00:00,53:24.0,Value 1,Value 256,Value 3,Value 1,Value 2,Value 1,Value 1
+18127,Case 3886,Assign seriousness,Value 15,2000-03-14 23:00:00+00:00,53:59.0,Value 1,Value 256,Value 3,Value 1,Value 2,Value 1,Value 1
+18128,Case 3886,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,32:02.0,Value 1,Value 256,Value 3,Value 1,Value 2,Value 1,Value 1
+18129,Case 3886,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,52:55.0,Value 1,Value 256,Value 3,Value 1,Value 2,Value 1,Value 1
+18130,Case 3886,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,53:04.0,Value 1,Value 256,Value 3,Value 1,Value 2,Value 1,Value 1
+18131,Case 3886,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,53:17.0,Value 1,Value 256,Value 3,Value 1,Value 2,Value 1,Value 1
+18132,Case 3886,Closed,Value 5,2000-03-14 23:00:00+00:00,53:37.0,Value 1,Value 256,Value 3,Value 1,Value 2,Value 1,Value 1
+18459,Case 3960,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,52:18.0,Value 1,Value 30,Value 1,Value 2,Value 3,Value 1,Value 1
+18460,Case 3960,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,54:20.0,Value 1,Value 30,Value 1,Value 2,Value 3,Value 1,Value 1
+18461,Case 3960,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,10:53.0,Value 1,Value 30,Value 1,Value 2,Value 3,Value 1,Value 1
+18462,Case 3960,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,43:26.0,Value 1,Value 30,Value 1,Value 2,Value 3,Value 1,Value 1
+18463,Case 3960,Wait,Value 9,2000-03-14 23:00:00+00:00,18:44.0,Value 1,Value 30,Value 1,Value 2,Value 3,Value 1,Value 1
+18464,Case 3960,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,28:05.0,Value 1,Value 30,Value 1,Value 2,Value 3,Value 1,Value 1
+18465,Case 3960,Resolve ticket,Value 9,2000-03-14 23:00:00+00:00,28:32.0,Value 1,Value 30,Value 1,Value 2,Value 3,Value 1,Value 1
+18466,Case 3960,Closed,Value 5,2000-03-14 23:00:00+00:00,28:54.0,Value 1,Value 30,Value 1,Value 2,Value 3,Value 1,Value 1
+18467,Case 3961,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,05:01.0,Value 1,Value 1,Value 3,Value 1,Value 2,Value 1,Value 1
+18468,Case 3961,Assign seriousness,Value 4,2000-03-14 23:00:00+00:00,09:13.0,Value 1,Value 1,Value 3,Value 1,Value 2,Value 1,Value 1
+18469,Case 3961,Take in charge ticket,Value 4,2000-03-14 23:00:00+00:00,05:33.0,Value 1,Value 1,Value 3,Value 1,Value 2,Value 1,Value 1
+18470,Case 3961,Resolve ticket,Value 4,2000-03-14 23:00:00+00:00,15:59.0,Value 1,Value 1,Value 3,Value 1,Value 2,Value 1,Value 1
+18471,Case 3961,Closed,Value 5,2000-03-14 23:00:00+00:00,10:47.0,Value 1,Value 1,Value 3,Value 1,Value 2,Value 1,Value 1
+19049,Case 4085,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,01:14.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19050,Case 4085,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,26:12.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19051,Case 4085,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,28:13.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19052,Case 4085,Closed,Value 5,2000-03-14 23:00:00+00:00,10:43.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19647,Case 4219,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,00:23.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19648,Case 4219,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,00:41.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19649,Case 4219,Take in charge ticket,Value 13,2000-03-14 23:00:00+00:00,51:17.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19650,Case 4219,Wait,Value 13,2000-03-14 23:00:00+00:00,11:13.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19651,Case 4219,Resolve ticket,Value 13,2000-03-14 23:00:00+00:00,08:25.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19652,Case 4219,Closed,Value 5,2000-03-14 23:00:00+00:00,10:34.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+19688,Case 4227,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,01:26.0,Value 1,Value 140,Value 3,Value 1,Value 2,Value 1,Value 1
+19689,Case 4227,Take in charge ticket,Value 14,2000-03-14 23:00:00+00:00,20:09.0,Value 1,Value 140,Value 3,Value 1,Value 2,Value 1,Value 1
+19690,Case 4227,Resolve ticket,Value 14,2000-03-14 23:00:00+00:00,20:18.0,Value 1,Value 140,Value 3,Value 1,Value 2,Value 1,Value 1
+19691,Case 4227,Closed,Value 5,2000-03-14 23:00:00+00:00,10:24.0,Value 1,Value 140,Value 3,Value 1,Value 2,Value 1,Value 1
+19692,Case 4227,Closed,Value 5,2000-03-14 23:00:00+00:00,10:24.0,Value 1,Value 140,Value 3,Value 1,Value 2,Value 1,Value 1
+19961,Case 4285,Insert ticket,Value 15,2000-03-14 23:00:00+00:00,14:32.0,Value 1,Value 97,Value 3,Value 1,Value 2,Value 1,Value 1
+19962,Case 4285,Assign seriousness,Value 15,2000-03-14 23:00:00+00:00,15:14.0,Value 1,Value 97,Value 3,Value 1,Value 2,Value 1,Value 1
+19963,Case 4285,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,48:56.0,Value 1,Value 97,Value 3,Value 1,Value 2,Value 1,Value 1
+19964,Case 4285,Wait,Value 2,2000-03-14 23:00:00+00:00,50:23.0,Value 1,Value 97,Value 3,Value 1,Value 2,Value 1,Value 1
+19965,Case 4285,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,38:40.0,Value 1,Value 97,Value 3,Value 1,Value 2,Value 1,Value 1
+19966,Case 4285,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,38:55.0,Value 1,Value 97,Value 3,Value 1,Value 2,Value 1,Value 1
+19967,Case 4285,Closed,Value 5,2000-03-14 23:00:00+00:00,20:22.0,Value 1,Value 97,Value 3,Value 1,Value 2,Value 1,Value 1
+20364,Case 4375,Insert ticket,Value 12,2000-03-14 23:00:00+00:00,48:29.0,Value 1,Value 63,Value 3,Value 3,Value 4,Value 1,Value 1
+20365,Case 4375,Assign seriousness,Value 2,2000-03-14 23:00:00+00:00,22:20.0,Value 1,Value 63,Value 3,Value 2,Value 2,Value 1,Value 1
+20366,Case 4375,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,10:24.0,Value 1,Value 63,Value 3,Value 2,Value 2,Value 1,Value 1
+20367,Case 4375,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,10:39.0,Value 1,Value 63,Value 3,Value 2,Value 2,Value 1,Value 1
+20368,Case 4375,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,21:26.0,Value 1,Value 63,Value 3,Value 2,Value 2,Value 1,Value 1
+20369,Case 4375,Wait,Value 2,2000-03-14 23:00:00+00:00,53:54.0,Value 1,Value 63,Value 3,Value 2,Value 2,Value 1,Value 1
+20370,Case 4375,Take in charge ticket,Value 2,2000-03-14 23:00:00+00:00,44:01.0,Value 1,Value 63,Value 3,Value 2,Value 2,Value 1,Value 1
+20371,Case 4375,Resolve ticket,Value 2,2000-03-14 23:00:00+00:00,44:07.0,Value 1,Value 63,Value 3,Value 2,Value 2,Value 1,Value 1
+20372,Case 4375,Closed,Value 5,2000-03-14 23:00:00+00:00,44:20.0,Value 1,Value 63,Value 3,Value 2,Value 2,Value 1,Value 1
+20571,Case 4414,Assign seriousness,Value 8,2000-03-14 23:00:00+00:00,35:49.0,Value 1,Value 107,Value 1,Value 1,Value 2,Value 1,Value 1
+20572,Case 4414,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,36:00.0,Value 1,Value 107,Value 1,Value 1,Value 2,Value 1,Value 1
+20573,Case 4414,Take in charge ticket,Value 8,2000-03-14 23:00:00+00:00,36:51.0,Value 1,Value 107,Value 1,Value 1,Value 2,Value 1,Value 1
+20574,Case 4414,Take in charge ticket,Value 13,2000-03-14 23:00:00+00:00,15:54.0,Value 1,Value 107,Value 1,Value 1,Value 2,Value 1,Value 1
+20575,Case 4414,Resolve ticket,Value 13,2000-03-14 23:00:00+00:00,57:40.0,Value 1,Value 107,Value 1,Value 1,Value 2,Value 1,Value 1
+20576,Case 4414,Closed,Value 5,2000-03-14 23:00:00+00:00,40:53.0,Value 1,Value 107,Value 1,Value 1,Value 2,Value 1,Value 1
+21209,Case 4554,Assign seriousness,Value 1,2000-03-14 23:00:00+00:00,58:24.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+21210,Case 4554,Take in charge ticket,Value 9,2000-03-14 23:00:00+00:00,13:24.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+21211,Case 4554,Wait,Value 9,2000-03-14 23:00:00+00:00,55:10.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+21212,Case 4554,Take in charge ticket,Value 1,2000-03-14 23:00:00+00:00,38:31.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+21213,Case 4554,Wait,Value 1,2000-03-14 23:00:00+00:00,38:56.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+21214,Case 4554,Resolve ticket,Value 1,2000-03-14 23:00:00+00:00,31:12.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+21215,Case 4554,Closed,Value 5,2000-03-14 23:00:00+00:00,40:16.0,Value 1,Value 22,Value 1,Value 1,Value 2,Value 1,Value 1
+21266,Case 4565,Insert ticket,Value 15,2000-03-14 23:00:00+00:00,48:50.0,Value 1,Value 92,Value 3,Value 1,Value 2,Value 2,Value 1
+21267,Case 4565,Assign seriousness,Value 15,2000-03-14 23:00:00+00:00,49:35.0,Value 1,Value 92,Value 3,Value 1,Value 2,Value 2,Value 1
+21268,Case 4565,Assign seriousness,Value 15,2000-03-14 23:00:00+00:00,49:39.0,Value 1,Value 92,Value 3,Value 1,Value 2,Value 2,Value 1
+21269,Case 4565,Take in charge ticket,Value 16,2000-03-14 23:00:00+00:00,52:31.0,Value 1,Value 92,Value 3,Value 1,Value 2,Value 2,Value 1
+21270,Case 4565,Resolve ticket,Value 16,2000-03-14 23:00:00+00:00,55:27.0,Value 1,Value 92,Value 3,Value 1,Value 2,Value 2,Value 1
+21271,Case 4565,Closed,Value 5,2000-03-14 23:00:00+00:00,50:28.0,Value 1,Value 92,Value 3,Value 1,Value 2,Value 2,Value 1
+21308,Case 4573,Assign seriousness,Value 14,2000-03-14 23:00:00+00:00,23:53.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+21309,Case 4573,Take in charge ticket,Value 14,2000-03-14 23:00:00+00:00,24:22.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+21310,Case 4573,Wait,Value 14,2000-03-14 23:00:00+00:00,26:37.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+21311,Case 4573,Take in charge ticket,Value 14,2000-03-14 23:00:00+00:00,11:34.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+21312,Case 4573,Resolve ticket,Value 14,2000-03-14 23:00:00+00:00,11:45.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
+21313,Case 4573,Closed,Value 5,2000-03-14 23:00:00+00:00,30:32.0,Value 1,Value 22,Value 3,Value 2,Value 2,Value 1,Value 1
