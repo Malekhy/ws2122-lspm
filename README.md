@@ -9,13 +9,13 @@ A web app which takes(csv/xes) files as an input and produce sampled (xes) files
 * Otherwise follow the instruction of setup and installation of Docker from https://docs.docker.com/docker-for-windows/install/
 
 ## Steps:
-* Clone the project from https://github.com/Malekhy/ws2122-lspm
-* Open the command terminal 'cmd'
-* Move into the directory folder of the project: (project-path)\ws2122-lspm
-* Move into project environment: 
-  - **For Windows users:** .\Scripts\activate
-  - **For Mac users:** source Scripts\activate
-* Run the web app: python manage.py runserver
-* Open the browser and hit the URL: http://localhost:8000/
+* 1- Clone the project from https://github.com/Malekhy/ws2122-lspm
+* 2- Open the command terminal 'cmd'
+* 3- Move into the directory folder of the project: (project-path)\ws2122-lspm
+* 4- Move into project environment: 
+   - **A- For Windows users:** .\Scripts\activate
+   - **B- For Mac users:** source Scripts\activate
+* 5- Run the web app: python manage.py runserver
+* 6- Open the browser and hit the URL: http://localhost:8000/
 * --- Happy Predictive Monitoring ---
 
