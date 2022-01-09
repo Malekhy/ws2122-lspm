@@ -148,6 +148,7 @@ def upload_page(request):
                 file_dir = os.path.join(event_logs_path, filename)
 
 
+
                 log, vars = convert_eventfile_to_log(file_dir)
 
                 # Apply Filters on log
@@ -167,7 +168,7 @@ def upload_page(request):
                 log_attributes['ColumnNamesValues'] = convert_eventlog_to_json(log)
 
                 eventlogs = [f for f in listdir(event_logs_path) if isfile(join(event_logs_path, f))]
-
+                xes_log = log
 
                 #Get all the log statistics
                 no_cases, no_events, no_variants, total_case_duration, avg_case_duration, median_case_duration = get_Log_Statistics(log)
@@ -180,7 +181,7 @@ def upload_page(request):
 
 
                 return render(request, 'upload.html',
-                              {'eventlog_list': eventlogs, 'log_name': filename, 'vars': vars, 'log_attributes': log_attributes})
+                              {'eventlog_list': eventlogs, 'log_name': filename, 'vars': vars, 'log_attributes': log_attributes, 'file_dir':file_dir})
         
 
             elif "downloadButton" in request.POST:  # for event logs
@@ -362,9 +363,13 @@ def convert_eventfile_to_log(file_path):
         log = xes_importer_factory.apply(file_path)
         df1 = log_to_data_frame.apply(log)
 
-        charcteristic = list(df1.columns.values)
-        vars = charcteristic
+     
 
+        charcteristic = list(df1.columns.values)
+        
+
+        vars = charcteristic
+       
         """ list_of_column_names = []
 
         for row in log:
@@ -533,7 +538,6 @@ def get_Log_Statistics(log):
     avg_case_duration = days_hours_minutes(avg_case_duration)
     
     median_case_duration = days_hours_minutes(median_case_duration)
-
     print(no_cases, no_events, no_variants, total_case_duration, avg_case_duration, median_case_duration)
 
     return no_cases, no_events, no_variants, total_case_duration, avg_case_duration, median_case_duration
