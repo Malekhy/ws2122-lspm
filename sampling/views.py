@@ -12,7 +12,7 @@ from pm4py.algo.filtering.pandas.variants import variants_filter
 from pm4py.objects.log.util import dataframe_utils
 from pm4py.objects.conversion.log import converter as log_converter
 from pm4py.util import constants
-from pm4py.statistics.traces.pandas import case_statistics
+from pm4py.statistics.traces.generic.pandas import case_statistics
 
 from pm4py.algo.filtering.log.attributes import attributes_filter
 from numpy.linalg import norm
@@ -33,6 +33,14 @@ from django.conf import settings
 from django.shortcuts import render
 from pm4py.objects.log.importer.xes import importer as xes_importer_factory
 from pm4py.objects.conversion.log.variants import to_data_frame as log_to_data_frame
+from django.http import HttpResponse, HttpResponseRedirect
+import json
+from pm4py.statistics.traces.generic.log import case_statistics as case_stat
+import datetime
+
+
+
+
 
 
 
@@ -384,18 +392,9 @@ def filter_catcols(logdf, ci):
     
     #returns the categorical column index of each column
     ccols = [c for c in range(len(list(logdf.columns))) if ptypes.is_numeric_dtype(logdf[list(logdf.columns)[c]]) != True]
-    print("+++++++++++++++++++++++++++++ccols")
-    print(type(ccols))
-    print(ccols)
 
-    print("+++++++++++++++++++++++++++++ci")
-    print(type(ci))
-    print(ci)
 
-    print("+++++++++++++++++++++++++++++logdf")
-    print(type(logdf))
-    print(logdf)
-
+    
 
     caseid_index = logdf.columns.get_loc(str(ci))
     #.columns.get_loc("case:concept:name")
@@ -475,11 +474,15 @@ def filterdf1(logdf, caseid, col_name):
     return logdf.loc[logdf[col_name].isin(caseid)]
 
 
-def filterdf(logdf, caseid, col_name):
+def filterdf222(logdf, caseid, col_name):
 
     log = logdf.loc[logdf[case_id].isin(caseid)]
 
     return log
+
+def filterdf(logdf, caseid, col_name):
+
+    return logdf.loc[logdf[col_name].isin(caseid)]
 
 #logdf : dataframe to be splitted
 #caseids : list of caseid (variant_caseid) will be used
@@ -697,9 +700,9 @@ def export_file(df, caseids, s_vci, ci, ac, n ,selected_method, log_name):
 
 
 
-    exported_file= str("SAMPLEDFILE") + filename
-    print(" exported file is")
-    print(exported_file)
+    exported_file=  str("LSPM - ") + selected_method + filename
+ 
+
 
 
     
@@ -855,9 +858,6 @@ def run(request):
 
     # log = importer.apply(event_log)
 
-    print("+++++++++++++++++++++++++++++event_logs_path")
-    print(type(event_logs_path))
-    print(event_logs_path)
 
 
 
@@ -871,65 +871,88 @@ def run(request):
 
 
 
+        param_keys = {constants.PARAMETER_CONSTANT_CASEID_KEY: case_id,
+                    constants.PARAMETER_CONSTANT_ACTIVITY_KEY: activity_name,
+                    constants.PARAMETER_CONSTANT_TIMESTAMP_KEY: timestamp_time
+                    }
 
-
-    # log = request.session['log']
-    # print(log)
-    # selected_method = request.Get.get("selected_method")
-    # read the csv file
-
-
-    #log_csv = pd.read_csv('./media/event_logs/ItalianHelpdeskFinal.csv', sep=',')
-
-    #log_csv = pd.read_csv(event_log, sep=',')
-    # fill the csv file with the most frequent values of each column
-    #log_csv = log_csv.fillna(log_csv.mode().iloc[0])
-    #log_csv = dataframe_utils.convert_timestamp_columns_in_df(log_csv)
-
-    param_keys = {constants.PARAMETER_CONSTANT_CASEID_KEY: case_id,
-                  constants.PARAMETER_CONSTANT_ACTIVITY_KEY: activity_name,
-                  constants.PARAMETER_CONSTANT_TIMESTAMP_KEY: timestamp_time
-                  }
-
-    event_log = convert_eventfile_to_log(file_dir, timestamp_time, param_keys, activity_name, case_id)
-
-
-  
-
-
-    #preprocessing_caseid(event_log, case_id)
-
-    print("selected_method is " + selected_method)
-    print("Selected Case id = " + case_id)
-    print("Selected Activity name = " + activity_name)
-
-
-    if selected_method == "Division":
-
-        x = 0
-
-    elif selected_method == "Unique-Selection":
-        x = 1
-
-    elif selected_method == "Logarithmic-distribution":
-        x = 2
+        event_log = convert_eventfile_to_log(file_dir, timestamp_time, param_keys, activity_name, case_id)
 
 
 
-    ci = case_id
-    ac = activity_name
 
-    # case:concept:name
+        print("selected_method is " + selected_method)
+        print("Selected Case id = " + case_id)
+        print("Selected Activity name = " + activity_name)
 
-    # this method will preprocess the given log_csv
-    # it means it will organize the dataframe such that
 
-    samppled_file, exported_file = computation_sampling(event_log, ci, ac, x, selected_method, log_name)
-    print("-----------------------------------")
-    print(exported_file)
+        if selected_method == "Division":
 
-    #Slog_attributes = statistics(sam)
-    return render(request, 'upload.html', {'Slog_attributes': Slog_attributes, 'exported_file':exported_file})
+            x = 0
+
+        elif selected_method == "Unique-Selection":
+            x = 1
+
+        elif selected_method == "Logarithmic-distribution":
+            x = 2
+
+
+
+        ci = case_id
+        ac = activity_name
+        # case:concept:name
+
+        # this method will preprocess the given log_csv
+        # it means it will organize the dataframe such that
+
+        samppled_file, exported_file = computation_sampling(event_log, ci, ac, x, selected_method, log_name)
+        print("+++++++++++++++++++++++++++++exported_file")
+        print(exported_file)
+
+
+
+        file_dir_log = os.path.join(event_logs_path, exported_file)
+       
+       
+
+
+        #log = xes_importer_factory.apply(file_dir)
+        
+        log = convert_exported_to_log(file_dir_log)
+
+
+       
+
+
+        exported_file = json.dumps(exported_file)
+
+        Slog_attributes['exported_file'] = exported_file
+
+        # Get all the column names and respective values
+        #log_attributes['ColumnNamesValues'] = convert_eventlog_to_json(log)
+
+        #eventlogs = [f for f in listdir(event_logs_path) if isfile(join(event_logs_path, f))]
+        #xes_log = log
+
+        #Get all the log statistics
+
+
+        Sno_cases, Sno_events, Sno_variants, Stotal_case_duration, Savg_case_duration, Smedian_case_duration = get_Log_Statistics(log, timestamp_time)
+        Slog_attributes['Sno_cases'] = Sno_cases
+        Slog_attributes['Sno_events'] = Sno_events
+        Slog_attributes['Sno_variants'] = Sno_variants
+        Slog_attributes['Stotal_case_duration'] = Stotal_case_duration
+        Slog_attributes['Savg_case_duration'] = Savg_case_duration
+        Slog_attributes['Smedian_case_duration'] = Smedian_case_duration
+
+
+        new_log_attributes = {'Slog_attributes': Slog_attributes}
+
+
+        return HttpResponse(json.dumps(new_log_attributes), content_type="application/json")
+
+    else:
+        return render( 'upload.html', locals()) 
 
 
 
@@ -941,7 +964,7 @@ def convert_eventfile_to_log(file_path, timestamp_time_col, param_keys_h, activi
 
     if file_extension == '.csv':
 
-        log = pd.read_csv(file_path)
+        log = pd.read_csv(file_path, sep=',')
         log = dataframe_utils.convert_timestamp_columns_in_df(log) 
         log = log.sort_values(timestamp_time_col)
         log = log_converter.apply(log, variant=log_converter.Variants.TO_DATA_FRAME, parameters=param_keys_h)
@@ -957,3 +980,119 @@ def convert_eventfile_to_log(file_path, timestamp_time_col, param_keys_h, activi
     return log
 
 
+def convert_exported_to_log(file_path):
+
+    file_name, file_extension = os.path.splitext(file_path)
+
+    if file_extension == '.csv':
+
+        log = pd.read_csv(file_path, sep=',')
+
+        log = dataframe_utils.convert_timestamp_columns_in_df(log)  
+        log = log_converter.apply(log) 
+
+    else:
+
+        log = xes_importer_factory.apply(file_path)
+     
+    return log
+
+
+
+
+
+def statistics(log):
+    Slog_attributes = {}
+
+    Slog_attributes['SColumnNamesValues'] = convert_eventlog_to_json(log)
+
+#    eventlogs = [f for f in listdir(event_logs_path) if isfile(join(event_logs_path, f))]
+
+
+                #Get all the log statistics
+    Sno_cases, Sno_events, Sno_variants, Stotal_case_duration, Savg_case_duration, Smedian_case_duration= get_Log_Statistics(log)
+    Slog_attributes['Sno_cases'] = Sno_cases
+    Slog_attributes['Sno_events'] = Sno_events
+    Slog_attributes['Sno_variants'] = Sno_variants
+    Slog_attributes['Stotal_case_duration'] = Stotal_case_duration
+    Slog_attributes['Savg_case_duration'] = Savg_case_duration
+    Slog_attributes['Smedian_case_duration'] = Smedian_case_duration
+
+
+    
+   
+
+    return {Slog_attributes}
+
+
+
+def convert_eventlog_to_json(log):
+    df = log_to_data_frame.apply(log)
+
+    firstIteration = True
+    jsonstr = "{ "
+    for col in df:
+
+        if not firstIteration:
+            jsonstr += ", "
+        else:
+            firstIteration = False
+
+        jsonstr += "\"" + col + "\"" + ": "
+
+        uniqueSortedData = pd.Series(df[col].unique()).sort_values(ascending=True)
+        uniqueSortedData = uniqueSortedData.reset_index(drop=True)
+        jsonstr += uniqueSortedData.to_json(orient="columns", date_format='iso')
+
+    jsonstr += " }"
+
+    return jsonstr
+
+
+def get_Log_Statistics(log, timestamp_time):
+
+    no_cases = len(log)
+
+    no_events = sum([len(trace) for trace in log])
+
+   
+
+    
+    variants = case_stat.variants_get.get_variants(log)
+    no_variants = len(variants)
+
+    all_case_durations = case_stat.get_all_casedurations(log, parameters={
+    case_stat.Parameters.TIMESTAMP_KEY: timestamp_time})
+
+    total_case_duration = (sum(all_case_durations))
+
+    if no_cases <= 0:
+        avg_case_duration = 0
+    else:
+        avg_case_duration = total_case_duration/no_cases
+
+    median_case_duration = (case_stat.get_median_caseduration(log, parameters={
+        case_stat.Parameters.TIMESTAMP_KEY: timestamp_time
+    }))
+
+    total_case_duration = days_hours_minutes(total_case_duration)
+
+    avg_case_duration = days_hours_minutes(avg_case_duration)
+    
+    median_case_duration = days_hours_minutes(median_case_duration)
+    print(no_cases, no_events, no_variants, total_case_duration, avg_case_duration, median_case_duration)
+
+    return no_cases, no_events, no_variants, total_case_duration, avg_case_duration, median_case_duration
+
+
+
+def days_hours_minutes(totalSeconds):
+    
+    td = datetime.timedelta(seconds = totalSeconds)
+
+    days = td.days
+    hours = td.seconds//3600
+    minutes = (td.seconds//60)%60
+    seconds = td.seconds - hours*3600 - minutes*60
+
+    return str(days) + "d " + str(hours) + "h " + str(minutes) + "m " + str(seconds) + "s"

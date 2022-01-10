@@ -29,8 +29,8 @@
         position: relative;
         float: left;
     }
-    
-    
+
+
 
     .canvas {
         width: 800px;
@@ -106,7 +106,6 @@
         top: -1px;
         left: 50%;
     }
-    
 </style>
 
 <script>
@@ -125,6 +124,7 @@
         var Scol_data = "{{Slog_attributes.SColumnNamesValues}}";
 
         col_data_parsed = JSON.parse(col_data.replace(/&quot;/g, '"'));
+
         var Events = 0;
         var Traces = 0;
         var selectId = 0;
@@ -138,17 +138,26 @@
         var LDict = new Object();
         var RDict = new Object();
         var filename = new Object();
+        var SEvents = new Object();
         var selected_method = "Unique-Selection";
+        var sampled = [];
+
+        SEvents = "{{Slog_attributes.Sno_events}}";
+        SCases = "{{Slog_attributes.Sno_cases}}";
+        Sno_variants = "{{Slog_attributes.Sno_variants}}";
+        Stotal_case_duration = "{{Slog_attributes.Stotal_case_duration}}";
+        Savg_case_duration = "{{Slog_attributes.Savg_case_duration}}";
+        Smedian_case_duration = "{{Slog_attributes.Smedian_case_duration}}";
 
 
 
 
 
         $(document).ready(function () {
-            var characters = {{ vars | safe}}
+            var characters = {{vars | safe}}
+       
 
             console.log("{{log_name}}")
-
 
             $('#case_id').empty();
             $.each(characters, function (i, p) {
@@ -187,29 +196,42 @@
                 $.ajax({
                     method: 'POST',
                     url: 'http://127.0.0.1:8000/sampling',
+                    dataType: "json",
                     data: {
                         case_id: $("#case_id").val(),
                         activity_name: $("#activity_name").val(),
                         timestamp_time: $("#timestamp_time").val(),
                         selected_method: selected_method,
-                        log_name:"{{log_name}}",
-                        file_dir:"{{file_dir}}",
-                        'StartSampling' : 'StartSampling',
+                        log_name: "{{log_name}}",
+                        file_dir: "{{file_dir}}",
+                        'StartSampling': 'StartSampling',
                         csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
                     },
-                    success: function () {
-                        alert('Event log sampled successfully using ' + selected_method +
-                            ' method');
+                    success: function (data) {
+                        console.log(data)
+
+                        alert('Event log sampled successfully using ' + selected_method + ' method');
+                        document.getElementById("Savg_case_duration").innerHTML = data.Slog_attributes.Savg_case_duration;
+                        document.getElementById("Sno_cases").innerHTML = data.Slog_attributes.Sno_cases;
+                        document.getElementById("Sno_events").innerHTML = data.Slog_attributes.Sno_events;
+                        document.getElementById("Sno_variants").innerHTML = data.Slog_attributes.Sno_variants;
+                        document.getElementById("Stotal_case_duration").innerHTML = data.Slog_attributes.Stotal_case_duration;
+                        document.getElementById("exported_file").innerHTML = data.Slog_attributes.exported_file;
+
+                        x1 = getPercentageChange("{{log_attributes.no_events}}", data.Slog_attributes.Sno_events);
+                        x2 = getPercentageChange("{{log_attributes.no_cases}}", data.Slog_attributes.Sno_cases);
+                        x3 = getPercentageChange("{{log_attributes.no_variants}}", data.Slog_attributes.Sno_variants);
+
+                        document.getElementById("PSno_events").innerHTML = x1;
+                        document.getElementById("PSno_cases").innerHTML = x2;
+                        document.getElementById("PSno_variants").innerHTML = x3;
+                        return data
                     },
                     failure: function (data) {
                         alert('Got an error dude');
                     }
                 });
-
-
-
             });
-
 
             $('#SwitchToCompare').click(function () {
                 $('#CompareModel-tab').trigger('click');
@@ -218,8 +240,6 @@
             $('#SwitchToSampling').click(function () {
                 $('#SampleModel-tab').trigger('click');
             });
-
-
             $(document).on("click", "button", function () {
                 var buttonId = $(this).attr('id');
                 selectId = buttonId.slice(-1);
@@ -350,6 +370,12 @@
 
 
         });
+
+        function getPercentageChange(newNumber, oldNumber) {
+            var decreaseValue = oldNumber - newNumber;
+
+            return (decreaseValue / oldNumber) * 100;
+        }
 
         function AjaxDownload(div) {
             $.ajax({
@@ -781,6 +807,16 @@
             median_case_duration = "{{log_attributes.median_case_duration}}";
 
 
+            SEvents = "{{Slog_attributes.Sno_events}}";
+            SCases = "{{Slog_attributes.Sno_cases}}";
+            Sno_variants = "{{Slog_attributes.Sno_variants}}";
+            Stotal_case_duration = "{{Slog_attributes.Stotal_case_duration}}";
+            Savg_case_duration = "{{Slog_attributes.Savg_case_duration}}";
+            Smedian_case_duration = "{{Slog_attributes.Smedian_case_duration}}";
+
+
+
+
             var DisplayAttributes = document.createElement("Div");
             DisplayAttributes.setAttribute("style", "width: 100%;height:250px;overflow-y:scroll");
             DisplayAttributes.setAttribute("id", "Att" + clicks);
@@ -798,8 +834,7 @@
 
 
 
-        function ShowAttributes(divElement) {
-            var br = document.createElement("br");
+        function ShowSAttributes(divElement) {
             SEvents = "{{Slog_attributes.Sno_events}}";
             SCases = "{{Slog_attributes.Sno_cases}}";
             Sno_variants = "{{Slog_attributes.Sno_variants}}";
@@ -1012,6 +1047,7 @@
 </head>
 
 
+
 <div class="select">
 
     <ul class="nav nav-tabs" id="myTab" role="tablist" data-tabs="tabs">
@@ -1019,7 +1055,7 @@
             <a class="nav-link active" id="eventlogs-tab" data-toggle="tab" href="#eventlogs" role="tab"
                 aria-controls="eventlogs" aria-selected="true">Home</a>
         </li>
-        
+
         <li class="nav-item">
             <a class="nav-link " id="SampleModel-tab" data-toggle="tab" href="#SampleModel" role="tab"
                 aria-controls="SampleModel" aria-selected="true">Sample Model</a>
@@ -1075,10 +1111,10 @@
 
 
                             {% if log_name != null %}
-                            
+
                             <input style="margin-top: 10px;" data-toggle="tooltip" data-placement="top"
-                            title="Start sampling computation" type="button" class="btn btn-primary"
-                                value="Start Sampling" name= "StartSampling" id="StartSampling" />
+                                title="Start sampling computation" type="button" class="btn btn-primary"
+                                value="Start Sampling" name="StartSampling" id="StartSampling" />
 
                             <input style="margin-top: 10px;" type="button" class="btn btn-warning"
                                 value="Sample Model Tab" id="SwitchToSampling" />
@@ -1187,141 +1223,138 @@
             </div>
         </div>
 
+
+
+
+
         <div class="tab-pane fade show" id="SampleModel" role="tabpanel" aria-labelledby="SampleModel-tab">
             <div class="container-fluid">
                 <h3 class="mt-4" style="color:#00529F;">Sample model window</h3>
-                {% if log_name != null  %} 
-
-
-
+                {% if log_name != null  %}
                 <div class="row">
                     <div class="col-xl-8">
-                      <div class="card mm">
-                        <div class="card-header border-0">
-                          <div class="row align-items-center">
-                            <div class="col">
-                              <h3 class="mb-0">Original eventlog and sampled one some statistics</h3>
+                        <div class="card mm">
+                            <div class="card-header border-0">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h3 class="mb-0">Original eventlog and sampled one some statistics</h3>
+                                    </div>
+                                    <div class="col text-right">
+                                        <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col text-right">
-                              <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                            <div class="table-responsive">
+                                <!-- Projects table -->
+                                <table class="table align-items-center table-flush">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">ATTRIBUTE</th>
+                                            <th scope="col">ORIGINAL</th>
+                                            <th scope="col">SAMPLED</th>
+                                            <th scope="col">Bounce rate</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                Event log name
+                                            </th>
+                                            <td>
+                                                {{log_name}}
+                                            </td>
+                                            <td id="exported_file">
+                                                {{exported_file}} Calculating the results..
+                                            </td>
+                                            <td>
+                                                -
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Number of cases
+                                            </th>
+                                            <td>
+                                                {{log_attributes.no_cases}}
+                                            </td>
+                                            <td id="Sno_cases">
+                                                {{data.Slog_attributes.Sno_cases}}Calculating the results..
+                                            </td>
+                                            <td>
+                                                <i class="fas  text-success mr-3" id="PSno_cases"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Number of events
+                                            </th>
+                                            <td>
+                                                {{log_attributes.no_events}}
+                                            </td>
+                                            <td id="Sno_events">
+                                                {{Slog_attributes.Sno_events}}Calculating the results..
+                                            </td>
+                                            <td>
+                                                <i class="fas  text-success mr-3" id="PSno_events"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Average case duration
+                                            </th>
+                                            <td>
+                                                {{log_attributes.avg_case_duration}}
+                                            </td>
+                                            <td id="Savg_case_duration">
+                                                {{Slog_attributes.Savg_case_duration}}Calculating the results..
+                                            </td>
+                                            <td>
+                                                -
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Number of variants
+                                            </th>
+                                            <td>
+                                                {{log_attributes.no_variants}}
+                                            </td>
+                                            <td id="Sno_variants">
+                                                {{Slog_attributes.Sno_variants}}Calculating the results..
+                                            </td>
+                                            <td>
+                                                <i class="fas text-success mr-3" id="PSno_variants"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                Total case duration
+                                            </th>
+                                            <td>
+                                                {{log_attributes.total_case_duration}}
+                                            </td>
+                                            <td id="Stotal_case_duration">
+                                                {{Slog_attributes.Stotal_case_duration}}Calculating the results..
+                                            </td>
+                                            <td>
+                                                -
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                          </div>
                         </div>
-                        <div class="table-responsive">
-                          <!-- Projects table -->
-                          <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
-                              <tr>
-                                <th scope="col">ATTRIBUTE</th>
-                                <th scope="col">ORIGINAL</th>
-                                <th scope="col">SAMPLED</th>
-                                <th scope="col">Bounce rate</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">
-                                  Event log name
-                                </th>
-                                <td>
-                                    {{log_name}}
-                                </td>
-                                <td>
-                                    {{exported_file}}
-                                </td>
-                                <td>
-                                  <i class="fas fa-arrow-up text-success mr-3"></i> 
-                                </td>
-                              </tr>
-                              <tr>
-                                <th scope="row">
-                                    Number of cases
-                                </th>
-                                <td>
-                                    {{log_attributes.no_cases}}
-                                </td>
-                                <td>
-                                    {{log_attributes.no_cases}}
-                                </td>
-                                <td>
-                                  <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%
-                                </td>
-                              </tr>
-                              <tr>
-                                <th scope="row">
-                                    Number of events
-                                </th>
-                                <td>
-                                    {{log_attributes.no_events}}
-                                </td>
-                                <td>
-                                    {{log_attributes.no_events}}
-                                </td>
-                                <td>
-                                  <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
-                                </td>
-                              </tr>
-                              <tr>
-                                <th scope="row">
-                                    Average case duration
-                                </th>
-                                <td>
-                                    {{log_attributes.avg_case_duration}}
-                                </td>
-                                <td>
-                                    {{log_attributes.avg_case_duration}}
-                                </td>
-                                <td>
-                                  <i class="fas fa-arrow-down text-success mr-3"></i> 50,87%
-                                </td>
-                              </tr>
-                              <tr>
-                                <th scope="row">
-                                    Number of variants
-                                </th>
-                                <td>
-                                    {{log_attributes.no_variants}}
-                                </td>
-                                <td>
-                                    {{log_attributes.no_variants}}
-                                </td>
-                                <td>
-                                  <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
-                                </td>
-                              </tr>
-                              <tr>
-                                <th scope="row">
-                                    Total case duration
-                                </th>
-                                <td>
-                                    {{log_attributes.total_case_duration}}
-                                </td>
-                                <td>
-                                    {{log_attributes.total_case_duration}}
-                                </td>
-                                <td>
-                                  <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-
-
-
-
-
+                </div>
                 <br />
-                <h3 style="margin:2%;text-align:center;">Please navigate to Home tab for changing the selected log</h3>
+                <h3 id="resultss" style="margin:2%;text-align:center;">Please navigate to Home tab to choose another sampling method or change event log</h3>
                 <br />
                 <br />
                 <br />
                 {% else %}
                 <br />
-                <h3 style="margin:2%;text-align:center; fontSize: 15">Please navigate to Home tab and select an event log to compute
+                <h3 style="margin:2%;text-align:center; fontSize: 15">Please navigate to Home tab and select an event
+                    log to compute
                     sampling model</h3><br />
 
                 {% endif %}
@@ -1330,6 +1363,8 @@
 
             </div>
         </div>
+
+
 
         <div class="tab-pane fade show" id="Help" role="tabpanel" aria-labelledby="Help-tab">
             <div class="container-fluid">
@@ -1355,27 +1390,29 @@
                 <h3 style="margin:2%;text-align:center;">Start computation and check results</h3><br />
                 <ol>
                     <li>
-                        <p>Select the event log that you want to sample then chose the charactaristics and sampling methods and click Start Sampling </p><img src="{% static 'images/sampleing.png' %}" /><br />
+                        <p>Select the event log that you want to sample then chose the charactaristics and sampling
+                            methods and click Start Sampling </p><img src="{% static 'images/sampleing.png' %}" /><br />
                     </li>
                     <li>
                         <p>After you have selected the event log, an Comparison Model Tab button will appear. Press this
                             button to navigate to the Compare Model Tab</p><img
                             src="{% static 'images/sampleing.png' %}" /><br />
                     </li>
-                  
+
                     <li>
                         <p>You will able to see two unfiltered Directly Folowed Graphs (DFGs) on the left and right hand
                             side of the window</p><img src="{% static 'images/results.PNG' %}" /><br />
-                       
+
                     </li>
-                <h3 style="margin:2%;text-align:center;">Deleting the uploaded event log</h3><br />
-                <ol>
-                    <li>
-                        <p>After you have performed your comparisons, you can also delete the event log from the server
-                            by selecting the event log and pressing the Delete button</p><img
-                            src="{% static 'images/DeleteLogs.png' %}" /><br />
-                    </li>
-                </ol>
+                    <h3 style="margin:2%;text-align:center;">Deleting the uploaded event log</h3><br />
+                    <ol>
+                        <li>
+                            <p>After you have performed your comparisons, you can also delete the event log from the
+                                server
+                                by selecting the event log and pressing the Delete button</p><img
+                                src="{% static 'images/DeleteLogs.png' %}" /><br />
+                        </li>
+                    </ol>
             </div>
         </div>
 

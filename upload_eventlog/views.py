@@ -42,9 +42,17 @@ def upload_page(request):
         if request.is_ajax():  # currently is not being used (get commented in html file)
             filename = request.POST["log_name"]
             print('filename = ', filename)
+
+
+
             file_dir = os.path.join(event_logs_path, filename)
+            
+
             eventlogs = [f for f in listdir(
                 event_logs_path) if isfile(join(event_logs_path, f))]
+
+           
+            
 
             log = xes_importer_factory.apply(file_dir)
             no_traces = len(log)
@@ -114,29 +122,6 @@ def upload_page(request):
                 os.remove(file_dir)
                 return render(request, 'upload.html', {'eventlog_list': eventlogs, 'n_eventlog_list': n_eventlogs})
 
-            elif "setButtonN" in request.POST:
-                if "log_list" not in request.POST:
-                    return HttpResponseRedirect(request.path_info)
-
-                filename = request.POST["log_list"]
-                settings.EVENT_LOG_NAME = filename
-
-                file_dir = os.path.join(event_logs_path, filename)
-                print("File_dir --------------------" + file_dir)
-
-                log, vars = convert_eventfile_to_log(file_dir)
-
-               
-                log_attributes['ColumnNamesValues'] = convert_eventlog_to_json(
-                    log)
-
-                eventlogs = [f for f in listdir(
-                    event_logs_path) if isfile(join(event_logs_path, f))]
-
-                # Get all the log statistics
-
-                return render(request, 'upload.html',
-                              {'eventlog_list': eventlogs, 'log_name': filename, 'vars': vars, 'log_attributes': log_attributes})
 
             elif "setButton" in request.POST:
                 if "log_list" not in request.POST:
@@ -351,23 +336,14 @@ def convert_eventfile_to_log(file_path):
         charcteristic = list(log.columns.values)
 
         log = dataframe_utils.convert_timestamp_columns_in_df(log)  
-
-
-
         log = log_converter.apply(log)  # convert to eventlog
-
         vars = charcteristic
 
     else:
 
         log = xes_importer_factory.apply(file_path)
         df1 = log_to_data_frame.apply(log)
-
-     
-
         charcteristic = list(df1.columns.values)
-        
-
         vars = charcteristic
        
         """ list_of_column_names = []
@@ -515,7 +491,7 @@ def get_Log_Statistics(log):
     no_cases = len(log)
 
     no_events = sum([len(trace) for trace in log])
-    
+   
     variants = case_statistics.variants_get.get_variants(log)
     no_variants = len(variants)
 
