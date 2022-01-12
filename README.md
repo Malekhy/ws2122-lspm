@@ -11,7 +11,7 @@ A web app which takes(csv/xes) files as an input and produce sampled (xes) files
 ## A - Run Using Virtual Environment:
 * 1- Clone the project from https://github.com/Malekhy/ws2122-lspm
 * 2- Open the command terminal 'cmd'
-* 3- Move into the directory folder of the project: `(project-path)\ws2122-lspm`
+* 3- Move into the directory folder of the project: `(project-path)/ws2122-lspm`
 * 4- Move into project environment: 
    - **A - For Windows users:** `.\Scripts\activate`
    - **B - For Mac users:** `source Scripts\activate`
