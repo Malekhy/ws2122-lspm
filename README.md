@@ -22,7 +22,7 @@ A web app which takes(csv/xes) files as an input and produce sampled (xes) files
 ## B - Run Using Docker Image:
 * 1- Clone the project from https://github.com/Malekhy/ws2122-lspm
 * 2- Open the command terminal 'cmd'
-* 3- Move into the directory folder of the project: `(project-path)\`
+* 3- Move into the directory folder of the project: `(project-path)/`
 * 4- Build the docker image using this command: `docker build --tag lspm .` 
 * 5- Run the docker container using this command: `docker-compose up`
 * 6- Open the browser and enter this URL: `http://localhost:8000/`
