@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - static_data:/vol/web
+    environment:
+      - SECRET_KEY=samplesecret123
+      - ALLOWED_HOSTS=127.0.0.1,localhost
+
+
+volumes:
+  static_data:

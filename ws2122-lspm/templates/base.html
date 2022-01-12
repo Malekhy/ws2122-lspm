@@ -1,0 +1,148 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tool for Process Mining</title>
+
+  <link href="{% static 'css/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="canonical" href="https://appseed.us/admin-dashboards/django-dashboard-argon">
+
+
+
+  <!-- Favicon - loaded as static -->
+  <link rel="icon" href="/static/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <!-- Page plugins -->
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="/static/css/argon.css?v=1.2.0" type="text/css">
+  {% comment %} <link rel="stylesheet" href="/static/css/fontawesome.min.css"> {% endcomment %}
+
+
+
+
+  <!-- Specific CSS goes HERE -->
+  {% block stylesheets %}{% endblock stylesheets %}
+
+  <style type="text/css">
+    .footer-lspm-f {
+      width: 100%;
+      height: 6vh;
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 15vw;
+      padding-bottom: 1.3vw;
+      border-top: solid 1px #c0c0c0;
+      background-color: #f8f9fe;
+
+    }
+
+    .main-section-lspm {
+      height: 100%;
+
+    }
+
+    body {
+      height: 100%;
+    }
+
+    .emmo {
+      width: 30vw;
+      height: 1vh;
+    }
+
+    body {
+      overflow-y: scroll;
+
+    }
+
+    .zrr {
+      margin-bottom: 10vh;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+
+
+  <div class="main-section-lspm">
+    <div style="height:150px; width:100%; "><img style='height: 100%; width:100%;object-fit: contain '
+        src="{% static 'images/PADSLOGO.png' %}" /> </div>
+    <div>
+      <p style="text-align:center;  font-size:1.3rem; font-weight:bold">
+        Log Sampling for Predictive Monitoring
+      </p>
+    </div>
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+  </div>
+
+
+
+  <!-- /#page-content-wrapper -->
+
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'css/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'css/vendor/jquery/popper.min.js' %}"></script>
+  <script src="{% static 'css/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'css/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- Menu Toggle Script -->
+
+  {% block script %}
+
+  {% endblock %}
+
+
+
+  <footer class="footer-lspm-f">
+    <div class="emmo">
+      <p >LSPM - <a href="https://www.pads.rwth-aachen.de/" target="_blank">Pads</a> @ <a
+          href="https://www.rwth-aachen.de/" target="_blank">RWTH University</a></p>
+    </div>
+    <div class="emmo">
+      <a href="https://github.com/Malekhy/ws2122-lspm" target="_blank">
+        <i class="fab fa-github"></i>
+        <span class="name">GitHub</span>
+      </a>
+    </div>
+
+
+
+
+  </footer>
+
+
+
+</body>
+
+
+</html>

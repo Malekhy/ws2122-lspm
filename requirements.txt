@@ -35,12 +35,12 @@ lazy-object-proxy==1.4.3
 lunardate==0.2.0
 lxml==4.7.1
 MarkupSafe==2.0.1
-matplotlib==3.5.1
-matplotlib-inline==0.1.3
+matplotlib
+matplotlib-inline
 mccabe==0.6.1
 mpmath==1.2.1
 networkx==2.6.3
-numpy==1.22.0
+numpy
 packaging==21.3
 pandas==1.3.5
 parso==0.8.3
@@ -86,3 +86,5 @@ wcwidth==0.2.5
 workalendar==16.2.0
 wrapt==1.12.1
 youtube-dl==2021.6.6
+uWSGI>=2.0.18,<2.1
+

@@ -1,17 +1,36 @@
-# pull official base image
-FROM python:3.9.6-alpine
+FROM python:3.7.9   
 
-# set work directory
-WORKDIR /usr/src/app
-
-# set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# install dependencies
-RUN pip install --upgrade pip
-COPY ./requirements.txt .
-RUN pip install -r requirements.txt
+COPY ./requirements.txt /requirements.txt
+RUN /usr/local/bin/python -m pip install --upgrade pip
 
-# copy project
-COPY . .
+RUN pip install -r /requirements.txt
+
+RUN mkdir -p /ws2122-lspm/media/event_logs/
+COPY ./ws2122-lspm /ws2122-lspm
+WORKDIR /ws2122-lspm
+COPY ./scripts /scripts
+
+RUN chmod +x /scripts/*
+
+RUN mkdir -p /media
+RUN mkdir -p /static
+
+ADD ./ws2122-lspm ws2122-lspm/
+RUN mkdir /media/event_logs/
+RUN chmod -R 777 /media/event_logs/
+RUN ls -ltr
+
+
+
+
+CMD ["entrypoint.sh"]
+
+
+
+
+
+
+
