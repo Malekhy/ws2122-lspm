@@ -28,6 +28,8 @@ from django.http import HttpResponse
 import json
 from pm4py.statistics.traces.generic.log import case_statistics as case_stat
 import datetime
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 
@@ -836,6 +838,7 @@ unnecessaries = ["time:timestamp",
                  "org:resource"]
 
 
+@csrf_exempt 
 
 def run(request):
     Slog_attributes = {}
