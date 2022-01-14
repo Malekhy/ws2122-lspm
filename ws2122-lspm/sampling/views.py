@@ -36,16 +36,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 
-case_id = "case:concept:name"
-activity_name = "concept:name"
-timestamp_time = "time:timestamp"
-log_csv = "log"
-exported_file = ""
-ci = case_id
-ac = activity_name
+
 pd.set_option('display.max_columns', None)
 pd.options.mode.chained_assignment = None  # default='warn'
-
 
 
 
@@ -54,7 +47,7 @@ def rename_caseid(x):
     
     x = str(x)
     
-    if 'Case' in x:
+    if "Case" in x:
         
         if x.startswith('Case') == False:
             
@@ -65,7 +58,7 @@ def rename_caseid(x):
             #remove all the whitespace from x "".join(x.split())
             x = "".join(x.split())
             
-            #remove all the slash from the x 
+            #remove all the slash from the x
             x = x.replace("\\", "")
             x = x.replace("/", "")
         
@@ -75,13 +68,14 @@ def rename_caseid(x):
             
     else :
         
-        x = str("Case ") + str(x) 
+        x = str("Case ") + str(x)
     
     return str(x)
 
 def abs_numcols(x):
     
     return abs(x)
+
 
 #how to use this function:
 #1. grab the column name of the case id(in this example, it is CustomerID)
@@ -105,85 +99,19 @@ def preprocessing_caseid1(df, col_name):
     
     return df
 
+#how to use this function:
+#1. grab the column name of the case id(in this example, it is CustomerID)
+#2. assing the applied column to the original column like below
+#Example : cops["CustomerID"] = cops["CustomerID"].apply(rename_caseid)
+
+def preprocessing_caseid(df, case_column):
+    
+    df[case_column] = df[case_column].apply(rename_caseid)
+    
+    return df
 
 
-#convert log file(in csv) to pandas dataframe
 
-"""
-QUESTIONS!
-importing scheme
-
-1.the major attributes : Case ID, Activity, Complete Timestamp, and org(resource or something)
-They should be ordered such that the rest can be considered as case attributes
-!!!!!!!this should be done either for xes or csv, also how to parse the given event log file such that
-they can be managed in the form Case ID, Acitivity, Timestamp, and resource? is there any scheme to detect which colume
-corresponds to which attribute?
-
-2.importing method should deliver also the file path such that this program
-can choose either xes or csv file converting
-
-3. what is an empty value exists?
-
-4. organize log file such that
-caseid should be the first column
-the others resource, timestamp
-
-#It could make the whole process easy
-5. allow user to select/organize columns by checking the name
-??
-
-Weakness:
-
-1. still depending on the column orders
-2. to often used the Case ID
-3. def export_file(df, caseids, s_vci, n = 1): find the scheme s.t. 
-n indicates unique selection, logarithmic, and division selection
-
-"""
-
-#read the csv file
-
-#event_log = log_converter.apply(log_csv,parameters=param_keys)
-
-
-#import xes file
-#q = xes_importer.apply('../eventlogs/repairExample.xes')
-
-#convert xes to dataframe
-#dataframe = log_converter.apply(q, variant=log_converter.Variants.TO_DATA_FRAME)
-
-#ci is necessary for access the original case id of log file
-#this should be differ from the "Case IDs" which contains the list of case ids
-
-
-#this method will preprocess the given log_csv
-#it means it will organize the dataframe such that
-"""
-            Case ID
-variant
-abc         ["Case 1", "Case 23", ...]
-acc         ["Case 10", "Case 22", ...]
-adc         ["Case 5", "Case 6", ...]
-.
-.
-.
-.
-.
-.
-
-"""
-#log_csv
-#mys.isnull().all()
-#df.columns[df.isna().any()].tolist()
-
-"""
-Idea
-drop columns thatsdfsd
-contains nan
-and # unique value =< 2
-the others fill na with the most frequent value
-"""
-#df.name.mode() ECMO
 def fill_mode(df):
     
     df = df.fillna(df.mode().iloc[0])
@@ -191,7 +119,6 @@ def fill_mode(df):
     return df
 
 def preprocessing_caseid_nan(df, col_name):
-    
     
     droppings = df.columns[df.isna().any()].tolist()
     fillnas = []
@@ -212,6 +139,7 @@ def preprocessing_caseid_nan(df, col_name):
     df = df.apply(lambda col:fill_mode(col))
     
     return df
+    
 ## 1-Traversing the event log:
 
 def preprocessing_csv(log_csv, caseid, activity):
@@ -257,6 +185,7 @@ def preprocessing_csv(log_csv, caseid, activity):
     #statistics is the organized dataframe to represent the statistics
     return variant_caseid, variant_caseid_statistics
     
+    
 ## 2-Distribution Computation:
 ############################################################################################################
 ############################################################################################################
@@ -281,14 +210,13 @@ unnecessaries=["concept:name",
 """
 
 
-#df.drop(columns, inplace=True, axis=1)
-def intersection(lst1, lst2):
-   
+## 2-Distribution Computation:
 
+def intersection(lst1, lst2):
     lst3 = [value for value in lst1 if value in lst2]
     return lst3
 
-def get_last_activities1(logdf, ci, unnecessaries = []):
+def get_last_activities(logdf, ci, unnecessaries = []):
     
     #copy the dataframe
     log_csv2 = logdf.copy()
@@ -303,24 +231,6 @@ def get_last_activities1(logdf, ci, unnecessaries = []):
     last_activities = last_activities.drop(unnecessaries, axis = 1)
     
     return last_activities
-
-
-def get_last_activities(logdf, ci):
-
-    # copy the dataframe
-    
-    log_csv2 = logdf.copy()
-
-    # just keep the last activity record
-    last_activities = log_csv2.drop_duplicates(subset=[str(ci)], keep="last")
-
-    # drop unnecessary columns such as timestamp and resource
-    # 1:4 means determined index that are not necessary
-    last_activities = last_activities.drop(
-        list(last_activities.columns)[1:4], axis=1)
-
-    return last_activities
-
 
 #this function splits the given list a in n parts
 #such that splitted sublists have roughly same length
@@ -347,7 +257,7 @@ def filtersingles(l):
     # in other words, the collection of case ids of each variant
     return [x for x in l if x not in singles], singles
 
-#this function uses multiprocessing to apply parallel programming paradigm 
+#this function uses multiprocessing to apply parallel programming paradigm
 def filtersingles_mp(a_list):
     
     #multiprocessing with 4 processes
@@ -368,23 +278,24 @@ def filtersingles_mp(a_list):
     return nonsingles, singles
 
 
-def modifyindex(df, ci): 
+def modifyindex(df, ci):
+    
     df = df.set_index(ci)
     
     return df
+    
 def filter_catcols(logdf, ci):
     
     #returns the categorical column index of each column
     ccols = [c for c in range(len(list(logdf.columns))) if ptypes.is_numeric_dtype(logdf[list(logdf.columns)[c]]) != True]
-    
 
-    caseid_index = logdf.columns.get_loc(str(ci))
+    caseid_index = logdf.columns.get_loc(ci)
     #.columns.get_loc("case:concept:name")
     
     if isinstance(ccols, list):
         
         if len(ccols) >= 1:
-            
+    
             if caseid_index in ccols:
             
                 ccols.remove(caseid_index)
@@ -392,33 +303,18 @@ def filter_catcols(logdf, ci):
     return ccols
 
 
-
-
-
-def filter_catcols1(logdf, ci):
-
-    # returns the categorical column index of each column
-    ccols = [c for c in range(len(list(logdf.columns))) if ptypes.is_numeric_dtype(
-        list(logdf.columns)[c]) != True]
-
-  
-
-    return ccols
 #multiply 1 to whole column such that they can be numeric
-
-
 def preprocessig_df(logdf, ci):
     
     result_df = logdf.copy()
     
-
     for c in range(len(list(result_df.columns))):
         
         #check if the column is boolean
         if ptypes.is_bool_dtype(list(result_df.columns)[c]) == True:
             
             #then multiply 1 to whole column such that they can be numeric
-            #used if else such that each column can be checked with on condition 
+            #used if else such that each column can be checked with on condition
             result_df.iloc[:, c].apply(lambda x: x*1)
         
         #check if the column is numeric
@@ -436,8 +332,6 @@ def preprocessig_df(logdf, ci):
     return result_df, ccols
 
 
-
-
 def is_nested_list(l):
     
     try:
@@ -448,33 +342,26 @@ def is_nested_list(l):
     
     return True
 
-#this function returns the dataframe part regarding the given caseid
+#this function returns the dataframe part regarding the given caseid list
 #be used : splits the log dataframe corresponding the given caseid
-#col_name : name of the caseid
-def filterdf1(logdf, caseid, col_name):
-
-    return logdf.loc[logdf[col_name].isin(caseid)]
-
-
-def filterdf222(logdf, caseid, col_name):
-
-    log = logdf.loc[logdf[case_id].isin(caseid)]
-
-    return log
-
+#col_name : column name of the caseid
+#caseid = list of the case ids the corresponding variant
 def filterdf(logdf, caseid, col_name):
 
     return logdf.loc[logdf[col_name].isin(caseid)]
 
+
 #logdf : dataframe to be splitted
 #caseids : list of caseid (variant_caseid) will be used
 def splitdf(logdf, caseids, col_name):
-    
-    dfs = [filterdf(logdf, ci, col_name) for ci in caseids]    
-    
+
+    dfs = [filterdf(logdf, ci, col_name) for ci in caseids]
+       
     return dfs
+    
+    
 #One hot encoding
-#now apply one hot encoding using every categorical colum from the catcols     
+#now apply one hot encoding using every categorical colum from the catcols
 #check every list of case id of each variant
 
 #this function applies one hot encoding to the given dataframe regarding the given column names
@@ -530,8 +417,6 @@ def euclidean_distance(df, ci):
     return df['dist_order']
 
 def euclidean_distance_list(dfs, ci):
-    
-
 
     new_dfs = [euclidean_distance(df, str(ci)) for df in dfs]
         
@@ -543,6 +428,7 @@ def euclidean_distance_map(dfs, ci):
     new_dfs = [euclidean_distance_list(df_l, ci) for df_l in dfs]
     
     return new_dfs
+
 #returns the list of ones with length n
 #whereby n means the number of dataframes in a list
 #aims def final_caseids(tp):
@@ -622,16 +508,21 @@ def division_selection(dfs):
     return list(map(division_selection_df_cop, dfs))
 
 
+
 #unique_selection_map
 #logarithmic_selection
 #division_selection
-#return the final case ids
-#depending on the selection method, n has different values s.t
-# unique selection n -> 1 (default setting)
-# logarithmic selection n -> log2( number of traces of each variant)
-# division selection n -> round(number of traces of each variant / 2)
 
-#this function takes a tuple of 
+#this function takes a tuple of
+# (pandas.core.series.Series, n)
+# n : the number of cases that should be returned
+def final_caseids_single(tp):
+    
+    df = tp[0].to_frame()
+    return list(df.head(tp[1]).index)
+    
+
+#this function takes a tuple of
 # (pandas.core.series.Series, n)
 # n : the number of cases that should be returned
 def final_caseids_single(tp):
@@ -641,7 +532,7 @@ def final_caseids_single(tp):
     
 
 def flatten(t):
-    return [item for sublist in t for item in sublist]
+    return [item for sublist in t  for item in sublist]
 
 def final_caseids_mp(dfs, n = 1):
     
@@ -663,24 +554,29 @@ def final_caseids_mp(dfs, n = 1):
 def final_caseids(tps):
     
     return flatten(list(map(final_caseids_single, tps)))
-def export_file(df, caseids, s_vci, ci, ac, n ,selected_method, log_name, event_logs_path):
     
-    if (s_vci) and (isinstance(s_vci[0], list)):
+def export_file(df, caseids, s_vci, ci, ac, n ,selected_method, log_name, event_logs_path = ""):
     
-        s_vci = flatten(s_vci)
+    if len(s_vci) != 0:
+        
+        if isinstance(s_vci[0], list):
     
-    if n != 2: 
+            while isinstance(s_vci[0], list):
+    
+                s_vci = flatten(s_vci)
+    
+    if n != 2:
         
         caseids = caseids + s_vci
 
-    export_csv = df[df[case_id].isin(caseids)]
+    export_csv = df[df[ci].isin(caseids)]
     export_csv_cop = export_csv.copy()
     #filename = str(" - ") + str(log_name) + str(time.strftime("-%H%M%S")) + str(".csv")
     #export_csv.to_csv(".\media\event_logs\LSPM - " + selected_method + filename, index=True, header=True)
 
     filename = str("LSPM - ") + selected_method +  str(" - ") + str(log_name) + str(time.strftime("-%H%M%S")) + str(".csv")
 
-    file_dir = os.path.join(event_logs_path, filename)
+    file_dir = str(os.path.join(event_logs_path, filename))
     export_csv.to_csv(file_dir, index=True, header=True)
 
 
@@ -703,7 +599,7 @@ def export_file(df, caseids, s_vci, ci, ac, n ,selected_method, log_name, event_
 
 #this function shows statistics and saves an image file
 
-def showstats(stat1,stat2, selected_method, log_name, event_logs_path):
+def showstats(stat1,stat2, selected_method, log_name, event_logs_path ):
     
     st1 = stat1.drop(columns=["Case IDs"])
     stat2.head(10)
@@ -746,18 +642,37 @@ def showstats(stat1,stat2, selected_method, log_name, event_logs_path):
 #the unnecessaries is the list for the activity, timestamp and resources
 def computation_sampling(log_csv, ci, ac,  n, selected_method, log_name, event_logs_path):
     
-    #log_csv_for_final = preprocessing_caseid(log_csv, ci)
+    print("\n\n given log file:\n\n", log_csv)
+    
+    #print("\n\n given case id:\n\n", ci)
+    
+    #print("\n\n given activity column:\n\n", ac)
+    
+    #print("\n\n given selected method:\n\n", selected_method)
+    
+    print("\n\n given event log path:\n\n", event_logs_path)
+    
+    #print("\n\nstart preprocessing caseid\n\n")
+    
+    log_csv_for_final = preprocessing_caseid(log_csv, ci)
+        
+    #print("\n\nstart preprocessing NaN\n\n")
     
     log_csv = preprocessing_caseid_nan(log_csv, ci)
     
+    #print("\n\n start Variant Caeid\n\n")
+    
     variant_caseid, stat1 = preprocessing_csv(log_csv, ci, ac)
 
-    #separate variants between
-    #ns_vci : NonSingle Variant Case ID
-    #s_vci : Single Variant Case ID
+    #print("\n\n start filter single ids\n\n")
+    
     ns_vci, s_vci = filtersingles_mp(variant_caseid)
     
+    #print("\n\n start get last activities\n\n")
+    
     last_activities_raw = get_last_activities(log_csv, ci)
+
+    #print("\n\n start get cat cols and last acvitieis\n\n")
 
     
 
@@ -771,11 +686,8 @@ def computation_sampling(log_csv, ci, ac,  n, selected_method, log_name, event_l
     
     
     dfs_variant = []
-    #if ns_vci -> list(list(list))
-    # is_nested_list(ns_vci[0]) true
-    # else 
-    # false
     
+    #print("\n\n check nested list \n\n")
 
     if is_nested_list(ns_vci[0]):
         
@@ -787,23 +699,18 @@ def computation_sampling(log_csv, ci, ac,  n, selected_method, log_name, event_l
         
         dfs_variant = splitdf(last_activities, ns_vci, ci)
     
-    #print("Variant:")
-    #print(dfs_variant) not ok
-
-    #One hot encoding
     
-
+    #print("\n\n one hot encoding \n\n")
+    
     dfs_variant_encoded = map_one_hotenc(dfs_variant, ccols)
 
-  
-
-    
-    #print(dfs_variant_encoded)
+    #print("\n\n euclidean dist\n\n")
 
     #euclidean distance is computed and ranked by this
     euclidean_dist = euclidean_distance_list(dfs_variant_encoded, ci)
     
     #print(euclidean_dist)
+    #print("\n\n method select \n\n")
 
     if n == 1:
         
@@ -820,17 +727,21 @@ def computation_sampling(log_csv, ci, ac,  n, selected_method, log_name, event_l
         #computed euclidean distance, sort them and return the rank til based on division / 2
         distances = division_selection(euclidean_dist) 
     
-    
+    #print("\n\n get the final case ids \n\n")
     #extract final case ids that passed the euclidean_distance_mp
     final_caseid_list = final_caseids(distances)
     
-    print(final_caseid_list)
+    #print("\n\n export files \n\n")
 
     #export the csv file corresponding to the imported csv file
     sampled_csv, _, stat2,exported_file = export_file(log_csv, final_caseid_list, s_vci, ci, ac, n, selected_method, log_name, event_logs_path)
 
+    #print("\n\n stats \n\n")
+
     #show statistic and saves the image file of it automatically
-    showstats(stat1, stat2, selected_method, log_name, event_logs_path)
+    showstats(stat1, stat2, selected_method, log_name,event_logs_path)
+    
+    #print("\n\n finish \n\n")
     
     return sampled_csv, exported_file
 
@@ -847,6 +758,8 @@ def run(request):
     n_event_logs_path = os.path.join(settings.MEDIA_ROOT, "none_event_logs")
 
     # log = importer.apply(event_log)
+    print("event_logs_path:")
+    print(event_logs_path)
 
 
 
@@ -903,6 +816,8 @@ def run(request):
         samppled_file, exported_file = computation_sampling(event_log, case_id, activity_name, x, selected_method, log_name, event_logs_path)
         print("+++++++++++++++++++++++++++++exported_file")
         print(exported_file)
+        
+        
 
 
 
