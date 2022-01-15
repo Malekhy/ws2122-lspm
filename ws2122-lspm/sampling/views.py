@@ -577,7 +577,7 @@ def export_file(df, caseids, s_vci, ci, ac, n ,selected_method, log_name, event_
     filename = str("LSPM - ") + selected_method +  str(" - ") + str(log_name) + str(time.strftime("-%H%M%S")) + str(".csv")
 
     file_dir = str(os.path.join(event_logs_path, filename))
-    export_csv.to_csv(file_dir, index=True, header=True)
+    export_csv.to_csv(file_dir, index=False, header=True)
 
 
     exported_file= filename

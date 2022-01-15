@@ -336,6 +336,7 @@ def convert_eventfile_to_log(file_path):
 
         log = dataframe_utils.convert_timestamp_columns_in_df(log)  
         log = log_converter.apply(log)  # convert to eventlog
+        
         vars = charcteristic
 
     else:

@@ -107,6 +107,16 @@
         left: 50%;
     }
 
+
+    .image-center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        height: 60%;
+
+    }
+
   
     
 
@@ -170,16 +180,40 @@
             $.each(characters, function (i, p) {
                 $('#case_id').append($('<option></option>').val(p).html(p));
             });
+            var temp = "case:concept:name";
+            var mySelect = document.getElementById('case_id');
+            for(var i, j = 0; i = mySelect.options[j]; j++) {
+                if(i.value == temp) {
+                    mySelect.selectedIndex = j;
+                    break;
+                }
+            }
 
             $('#activity_name').empty();
             $.each(characters, function (i, p) {
                 $('#activity_name').append($('<option></option>').val(p).html(p));
             });
 
+            var temp = "concept:name";
+            var mySelect = document.getElementById('activity_name');
+            for(var i, j = 0; i = mySelect.options[j]; j++) {
+                if(i.value == temp) {
+                    mySelect.selectedIndex = j;
+                    break;
+                }
+            }
             $('#timestamp_time').empty();
             $.each(characters, function (i, p) {
                 $('#timestamp_time').append($('<option></option>').val(p).html(p));
             });
+            var temp = "time:timestamp";
+            var mySelect = document.getElementById('timestamp_time');
+            for(var i, j = 0; i = mySelect.options[j]; j++) {
+                if(i.value == temp) {
+                    mySelect.selectedIndex = j;
+                    break;
+                }
+            }
 
 
 
@@ -1144,14 +1178,14 @@
                             <form>
                                 <label for="case_id">Please choose the Case ID:</label>
                                 <select id="case_id" name="case_id">
-                                    <option> Set an Eventlog first</option>
+                                    <option value="case:concept:name" selected> Set an Eventlog first</option>
                                 </select>
                             </form>
 
                             <form>
                                 <label for="activity_name">Please choose the Activity Name:</label>
                                 <select id="activity_name" name="activity_name">
-                                    <option>Set an Eventlog first</option>
+                                    <option  selected = "case:concept">Set an Eventlog first</option>
                                 </select>
                             </form>
                             <form>
@@ -1383,52 +1417,33 @@
 
 
         <div class="tab-pane fade show" id="Help" role="tabpanel" aria-labelledby="Help-tab">
-            <div class="container-fluid">
+            <div class="container-fluid ">
                 <br />
-                <h3 style="margin:2%;text-align:center;">Uploading Event log</h3><br />
-                <ol>
+                <h3 style="margin:2%;text-align:center;">Upload/Download & Delete event log page</h3>
+                <ul style="list-style: none;">
                     <li>
-                        <p>Press the Choose File button</p><img src="{% static 'images/UploadEventLog.png' %}" /><br />
+                       <img src="{% static 'images/1-upload.png' %}" class="image-center"/><br />
                     </li>
+                </ul>
+                
+                <h3 style="margin:2%;text-align:center;">Setting the log charactaristics and sampling methods</h3>
+                <ul style="list-style: none;">
+                <li>
+                    <img src="{% static 'images/2-settings.png' %}" class="image-center"/><br />
+                </li>
+                </ul>
+                <h3 style="margin:2%;text-align:center;">Confirmation of Computation success page</h3>
+                <ul style="list-style: none;">
                     <li>
-                        <p>Select the event log file you want to upload and press Open</p><img
-                            src="{% static 'images/OpenUploadEventLog.png' %}" /><br />
+                        <img src="{% static 'images/3-confirm.png' %}" class="image-center"/><br />
                     </li>
+                </ul>
+                <h3 style="margin:2%;text-align:center;">Results page</h3>
+                <ul style="list-style: none;">
                     <li>
-                        <p>After the event log file has been selected, press the Upload Eventlog button to upload it to
-                            the server</p><img src="{% static 'images/UploadLog.png' %}" /><br />
+                       <img src="{% static 'images/4-results.png' %}" class="image-center" style="margin-bottom: 100px;"/><br />
                     </li>
-                    <li>
-                        <p>You will be able to see the uploaded event log in the event log selection menu</p><img
-                            src="{% static 'images/UploadedEventLog.png' %}" /><br />
-                    </li>
-                </ol>
-                <h3 style="margin:2%;text-align:center;">Start computation and check results</h3><br />
-                <ol>
-                    <li>
-                        <p>Select the event log that you want to sample then chose the charactaristics and sampling
-                            methods and click Start Sampling </p><img src="{% static 'images/sampleing.png' %}" /><br />
-                    </li>
-                    <li>
-                        <p>After you have selected the event log, an Comparison Model Tab button will appear. Press this
-                            button to navigate to the Compare Model Tab</p><img
-                            src="{% static 'images/sampleing.png' %}" /><br />
-                    </li>
-
-                    <li>
-                        <p>You will able to see two unfiltered Directly Folowed Graphs (DFGs) on the left and right hand
-                            side of the window</p><img src="{% static 'images/results.PNG' %}" /><br />
-
-                    </li>
-                    <h3 style="margin:2%;text-align:center;">Deleting the uploaded event log</h3><br />
-                    <ol>
-                        <li>
-                            <p>After you have performed your comparisons, you can also delete the event log from the
-                                server
-                                by selecting the event log and pressing the Delete button</p><img
-                                src="{% static 'images/DeleteLogs.png' %}" /><br />
-                        </li>
-                    </ol>
+                </ul>
             </div>
         </div>
 
