@@ -30,6 +30,8 @@ from pm4py.statistics.traces.generic.log import case_statistics as case_stat
 import datetime
 from django.views.decorators.csrf import csrf_exempt
 
+from pandas.core.common import flatten
+
 
 
 
@@ -546,28 +548,22 @@ def final_caseids_mp(dfs, n = 1):
         #.starmap(f_sum, data)
         results = pool.map(final_caseids_list, dfs)
         
-    results = flatten(flatten(results))
+    results = list(flatten(flatten(results)))
     
     #results = [item for sublist in dfs for item in sublist]
     return results
 
 def final_caseids(tps):
     
-    return flatten(list(map(final_caseids_single, tps)))
+    return list(flatten(list(map(final_caseids_single, tps))))
     
 def export_file(df, caseids, s_vci, ci, ac, n ,selected_method, log_name, event_logs_path = ""):
     
-    if len(s_vci) != 0:
-        
-        if isinstance(s_vci[0], list):
-    
-            while isinstance(s_vci[0], list):
-    
-                s_vci = flatten(s_vci)
+    s_vci = list(flatten(s_vci))
     
     if n != 2:
         
-        caseids = caseids + s_vci
+        caseids = list(caseids) + list(s_vci)
 
     export_csv = df[df[ci].isin(caseids)]
     export_csv_cop = export_csv.copy()
@@ -642,17 +638,6 @@ def showstats(stat1,stat2, selected_method, log_name, event_logs_path ):
 #the unnecessaries is the list for the activity, timestamp and resources
 def computation_sampling(log_csv, ci, ac,  n, selected_method, log_name, event_logs_path):
     
-    print("\n\n given log file:\n\n", log_csv)
-    
-    #print("\n\n given case id:\n\n", ci)
-    
-    #print("\n\n given activity column:\n\n", ac)
-    
-    #print("\n\n given selected method:\n\n", selected_method)
-    
-    print("\n\n given event log path:\n\n", event_logs_path)
-    
-    #print("\n\nstart preprocessing caseid\n\n")
     
     log_csv_for_final = preprocessing_caseid(log_csv, ci)
         
