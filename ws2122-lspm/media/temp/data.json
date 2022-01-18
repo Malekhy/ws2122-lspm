@@ -2,28 +2,6 @@
     "nodes": [
         {
             "id": "node_0",
-            "name": "Closed",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "Closed"
-                }
-            ]
-        },
-        {
-            "id": "node_1",
-            "name": "Wait",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "Wait"
-                }
-            ]
-        },
-        {
-            "id": "node_2",
             "name": "Resolve ticket",
             "isUnique": false,
             "conf": [
@@ -34,51 +12,7 @@
             ]
         },
         {
-            "id": "node_3",
-            "name": "Insert ticket",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "Insert ticket"
-                }
-            ]
-        },
-        {
-            "id": "node_4",
-            "name": "Take in charge ticket",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "Take in charge ticket"
-                }
-            ]
-        },
-        {
-            "id": "node_5",
-            "name": "Schedule intervention",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "Schedule intervention"
-                }
-            ]
-        },
-        {
-            "id": "node_6",
-            "name": "RESOLVED",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "RESOLVED"
-                }
-            ]
-        },
-        {
-            "id": "node_7",
+            "id": "node_1",
             "name": "Assign seriousness",
             "isUnique": false,
             "conf": [
@@ -89,7 +23,18 @@
             ]
         },
         {
-            "id": "node_8",
+            "id": "node_2",
+            "name": "Insert ticket",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Insert ticket"
+                }
+            ]
+        },
+        {
+            "id": "node_3",
             "name": "DUPLICATE",
             "isUnique": false,
             "conf": [
@@ -100,18 +45,18 @@
             ]
         },
         {
-            "id": "node_9",
-            "name": "INVALID",
+            "id": "node_4",
+            "name": "Wait",
             "isUnique": false,
             "conf": [
                 {
                     "label": "Name",
-                    "value": "INVALID"
+                    "value": "Wait"
                 }
             ]
         },
         {
-            "id": "node_10",
+            "id": "node_5",
             "name": "Resolve SW anomaly",
             "isUnique": false,
             "conf": [
@@ -122,7 +67,73 @@
             ]
         },
         {
+            "id": "node_6",
+            "name": "INVALID",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "INVALID"
+                }
+            ]
+        },
+        {
+            "id": "node_7",
+            "name": "RESOLVED",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "RESOLVED"
+                }
+            ]
+        },
+        {
+            "id": "node_8",
+            "name": "Create SW anomaly",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Create SW anomaly"
+                }
+            ]
+        },
+        {
+            "id": "node_9",
+            "name": "Take in charge ticket",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Take in charge ticket"
+                }
+            ]
+        },
+        {
+            "id": "node_10",
+            "name": "Closed",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Closed"
+                }
+            ]
+        },
+        {
             "id": "node_11",
+            "name": "Schedule intervention",
+            "isUnique": false,
+            "conf": [
+                {
+                    "label": "Name",
+                    "value": "Schedule intervention"
+                }
+            ]
+        },
+        {
+            "id": "node_12",
             "name": "Require upgrade",
             "isUnique": false,
             "conf": [
@@ -133,7 +144,7 @@
             ]
         },
         {
-            "id": "node_12",
+            "id": "node_13",
             "name": "VERIFIED",
             "isUnique": false,
             "conf": [
@@ -142,23 +153,12 @@
                     "value": "VERIFIED"
                 }
             ]
-        },
-        {
-            "id": "node_13",
-            "name": "Create SW anomaly",
-            "isUnique": false,
-            "conf": [
-                {
-                    "label": "Name",
-                    "value": "Create SW anomaly"
-                }
-            ]
         }
     ],
     "edges": [
         {
-            "source": "node_7",
-            "target": "node_4",
+            "source": "node_1",
+            "target": "node_9",
             "label": 4159,
             "style": {
                 "lineWidth": 18.42756804214223,
@@ -166,8 +166,8 @@
             }
         },
         {
-            "source": "node_4",
-            "target": "node_4",
+            "source": "node_9",
+            "target": "node_9",
             "label": 99,
             "style": {
                 "lineWidth": 2.3871817383669884,
@@ -175,8 +175,8 @@
             }
         },
         {
-            "source": "node_4",
-            "target": "node_2",
+            "source": "node_9",
+            "target": "node_0",
             "label": 3562,
             "style": {
                 "lineWidth": 16.068920105355573,
@@ -184,8 +184,8 @@
             }
         },
         {
-            "source": "node_2",
-            "target": "node_0",
+            "source": "node_0",
+            "target": "node_10",
             "label": 4557,
             "style": {
                 "lineWidth": 20.0,
@@ -193,8 +193,8 @@
             }
         },
         {
-            "source": "node_2",
-            "target": "node_4",
+            "source": "node_0",
+            "target": "node_9",
             "label": 154,
             "style": {
                 "lineWidth": 2.6044776119402986,
@@ -202,8 +202,8 @@
             }
         },
         {
-            "source": "node_7",
-            "target": "node_7",
+            "source": "node_1",
+            "target": "node_1",
             "label": 437,
             "style": {
                 "lineWidth": 3.7225636523266026,
@@ -211,8 +211,8 @@
             }
         },
         {
-            "source": "node_3",
-            "target": "node_7",
+            "source": "node_2",
+            "target": "node_1",
             "label": 111,
             "style": {
                 "lineWidth": 2.43459174714662,
@@ -220,8 +220,8 @@
             }
         },
         {
-            "source": "node_2",
-            "target": "node_2",
+            "source": "node_0",
+            "target": "node_0",
             "label": 254,
             "style": {
                 "lineWidth": 2.999561018437226,
@@ -229,8 +229,8 @@
             }
         },
         {
-            "source": "node_4",
-            "target": "node_1",
+            "source": "node_9",
+            "target": "node_4",
             "label": 1265,
             "style": {
                 "lineWidth": 6.993854258121159,
@@ -238,8 +238,8 @@
             }
         },
         {
-            "source": "node_1",
-            "target": "node_2",
+            "source": "node_4",
+            "target": "node_0",
             "label": 773,
             "style": {
                 "lineWidth": 5.050043898156277,
@@ -247,8 +247,8 @@
             }
         },
         {
-            "source": "node_1",
-            "target": "node_4",
+            "source": "node_4",
+            "target": "node_9",
             "label": 558,
             "style": {
                 "lineWidth": 4.200614574187885,
@@ -256,8 +256,8 @@
             }
         },
         {
-            "source": "node_4",
-            "target": "node_13",
+            "source": "node_9",
+            "target": "node_8",
             "label": 53,
             "style": {
                 "lineWidth": 2.205443371378402,
@@ -265,8 +265,8 @@
             }
         },
         {
-            "source": "node_13",
-            "target": "node_11",
+            "source": "node_8",
+            "target": "node_12",
             "label": 11,
             "style": {
                 "lineWidth": 2.0395083406496926,
@@ -274,8 +274,8 @@
             }
         },
         {
-            "source": "node_11",
-            "target": "node_11",
+            "source": "node_12",
+            "target": "node_12",
             "label": 16,
             "style": {
                 "lineWidth": 2.059262510974539,
@@ -283,8 +283,8 @@
             }
         },
         {
-            "source": "node_11",
-            "target": "node_2",
+            "source": "node_12",
+            "target": "node_0",
             "label": 82,
             "style": {
                 "lineWidth": 2.320017559262511,
@@ -292,8 +292,8 @@
             }
         },
         {
-            "source": "node_1",
-            "target": "node_1",
+            "source": "node_4",
+            "target": "node_4",
             "label": 113,
             "style": {
                 "lineWidth": 2.4424934152765583,
@@ -301,8 +301,8 @@
             }
         },
         {
-            "source": "node_7",
-            "target": "node_2",
+            "source": "node_1",
+            "target": "node_0",
             "label": 258,
             "style": {
                 "lineWidth": 3.0153643546971027,
@@ -310,8 +310,8 @@
             }
         },
         {
-            "source": "node_7",
-            "target": "node_13",
+            "source": "node_1",
+            "target": "node_8",
             "label": 4,
             "style": {
                 "lineWidth": 2.0118525021949076,
@@ -319,8 +319,8 @@
             }
         },
         {
-            "source": "node_7",
-            "target": "node_1",
+            "source": "node_1",
+            "target": "node_4",
             "label": 69,
             "style": {
                 "lineWidth": 2.2686567164179103,
@@ -328,8 +328,8 @@
             }
         },
         {
-            "source": "node_4",
-            "target": "node_11",
+            "source": "node_9",
+            "target": "node_12",
             "label": 72,
             "style": {
                 "lineWidth": 2.2805092186128184,
@@ -337,8 +337,8 @@
             }
         },
         {
-            "source": "node_13",
-            "target": "node_2",
+            "source": "node_8",
+            "target": "node_0",
             "label": 42,
             "style": {
                 "lineWidth": 2.1619841966637403,
@@ -346,8 +346,8 @@
             }
         },
         {
-            "source": "node_0",
-            "target": "node_0",
+            "source": "node_10",
+            "target": "node_10",
             "label": 14,
             "style": {
                 "lineWidth": 2.0513608428446006,
@@ -355,134 +355,53 @@
             }
         },
         {
-            "source": "node_11",
-            "target": "node_1",
+            "source": "node_12",
+            "target": "node_4",
             "label": 8,
             "style": {
                 "lineWidth": 2.027655838454785,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_10",
+            "target": "node_9",
+            "label": 2,
+            "style": {
+                "lineWidth": 2.003950834064969,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_2",
+            "target": "node_9",
+            "label": 3,
+            "style": {
+                "lineWidth": 2.0079016681299384,
                 "endArrow": true
             }
         },
         {
             "source": "node_0",
             "target": "node_4",
-            "label": 2,
+            "label": 3,
             "style": {
-                "lineWidth": 2.003950834064969,
+                "lineWidth": 2.0079016681299384,
                 "endArrow": true
             }
         },
         {
-            "source": "node_3",
-            "target": "node_4",
-            "label": 3,
+            "source": "node_4",
+            "target": "node_12",
+            "label": 7,
             "style": {
-                "lineWidth": 2.0079016681299384,
+                "lineWidth": 2.0237050043898157,
                 "endArrow": true
             }
         },
         {
             "source": "node_2",
-            "target": "node_1",
-            "label": 3,
-            "style": {
-                "lineWidth": 2.0079016681299384,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_1",
-            "target": "node_11",
-            "label": 7,
-            "style": {
-                "lineWidth": 2.0237050043898157,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_3",
-            "target": "node_1",
-            "label": 4,
-            "style": {
-                "lineWidth": 2.0118525021949076,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_1",
-            "target": "node_7",
-            "label": 2,
-            "style": {
-                "lineWidth": 2.003950834064969,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_13",
             "target": "node_4",
-            "label": 3,
-            "style": {
-                "lineWidth": 2.0079016681299384,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_11",
-            "target": "node_12",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_12",
-            "target": "node_8",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_8",
-            "target": "node_2",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_7",
-            "target": "node_11",
-            "label": 8,
-            "style": {
-                "lineWidth": 2.027655838454785,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_13",
-            "target": "node_10",
-            "label": 7,
-            "style": {
-                "lineWidth": 2.0237050043898157,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_10",
-            "target": "node_10",
-            "label": 5,
-            "style": {
-                "lineWidth": 2.0158033362598773,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_10",
-            "target": "node_2",
             "label": 4,
             "style": {
                 "lineWidth": 2.0118525021949076,
@@ -491,6 +410,69 @@
         },
         {
             "source": "node_4",
+            "target": "node_1",
+            "label": 2,
+            "style": {
+                "lineWidth": 2.003950834064969,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_8",
+            "target": "node_9",
+            "label": 3,
+            "style": {
+                "lineWidth": 2.0079016681299384,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_12",
+            "target": "node_13",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_13",
+            "target": "node_3",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_3",
+            "target": "node_0",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_1",
+            "target": "node_12",
+            "label": 8,
+            "style": {
+                "lineWidth": 2.027655838454785,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_8",
+            "target": "node_5",
+            "label": 7,
+            "style": {
+                "lineWidth": 2.0237050043898157,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_5",
             "target": "node_5",
             "label": 5,
             "style": {
@@ -500,7 +482,25 @@
         },
         {
             "source": "node_5",
-            "target": "node_4",
+            "target": "node_0",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_9",
+            "target": "node_11",
+            "label": 5,
+            "style": {
+                "lineWidth": 2.0158033362598773,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_11",
+            "target": "node_9",
             "label": 1,
             "style": {
                 "lineWidth": 2.0,
@@ -508,7 +508,16 @@
             }
         },
         {
-            "source": "node_2",
+            "source": "node_0",
+            "target": "node_7",
+            "label": 2,
+            "style": {
+                "lineWidth": 2.003950834064969,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_7",
             "target": "node_6",
             "label": 2,
             "style": {
@@ -518,19 +527,64 @@
         },
         {
             "source": "node_6",
-            "target": "node_9",
-            "label": 2,
+            "target": "node_10",
+            "label": 1,
             "style": {
-                "lineWidth": 2.003950834064969,
+                "lineWidth": 2.0,
                 "endArrow": true
             }
         },
         {
-            "source": "node_9",
-            "target": "node_0",
+            "source": "node_10",
+            "target": "node_13",
             "label": 1,
             "style": {
                 "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_11",
+            "target": "node_0",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_8",
+            "target": "node_8",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_5",
+            "target": "node_12",
+            "label": 4,
+            "style": {
+                "lineWidth": 2.0118525021949076,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_12",
+            "target": "node_9",
+            "label": 6,
+            "style": {
+                "lineWidth": 2.0197541703248465,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_12",
+            "target": "node_8",
+            "label": 3,
+            "style": {
+                "lineWidth": 2.0079016681299384,
                 "endArrow": true
             }
         },
@@ -544,53 +598,8 @@
             }
         },
         {
-            "source": "node_5",
-            "target": "node_2",
-            "label": 4,
-            "style": {
-                "lineWidth": 2.0118525021949076,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_13",
-            "target": "node_13",
-            "label": 4,
-            "style": {
-                "lineWidth": 2.0118525021949076,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_10",
-            "target": "node_11",
-            "label": 4,
-            "style": {
-                "lineWidth": 2.0118525021949076,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_11",
-            "target": "node_4",
-            "label": 6,
-            "style": {
-                "lineWidth": 2.0197541703248465,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_11",
-            "target": "node_13",
-            "label": 3,
-            "style": {
-                "lineWidth": 2.0079016681299384,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_2",
-            "target": "node_11",
+            "source": "node_9",
+            "target": "node_1",
             "label": 1,
             "style": {
                 "lineWidth": 2.0,
@@ -599,16 +608,7 @@
         },
         {
             "source": "node_4",
-            "target": "node_7",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_1",
-            "target": "node_13",
+            "target": "node_8",
             "label": 2,
             "style": {
                 "lineWidth": 2.003950834064969,
@@ -616,17 +616,8 @@
             }
         },
         {
-            "source": "node_2",
-            "target": "node_7",
-            "label": 1,
-            "style": {
-                "lineWidth": 2.0,
-                "endArrow": true
-            }
-        },
-        {
-            "source": "node_4",
-            "target": "node_10",
+            "source": "node_0",
+            "target": "node_1",
             "label": 1,
             "style": {
                 "lineWidth": 2.0,
@@ -635,7 +626,7 @@
         },
         {
             "source": "node_9",
-            "target": "node_12",
+            "target": "node_5",
             "label": 1,
             "style": {
                 "lineWidth": 2.0,
@@ -643,8 +634,17 @@
             }
         },
         {
-            "source": "node_12",
-            "target": "node_0",
+            "source": "node_6",
+            "target": "node_13",
+            "label": 1,
+            "style": {
+                "lineWidth": 2.0,
+                "endArrow": true
+            }
+        },
+        {
+            "source": "node_13",
+            "target": "node_10",
             "label": 1,
             "style": {
                 "lineWidth": 2.0,
