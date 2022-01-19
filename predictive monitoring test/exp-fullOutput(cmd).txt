@@ -1,11 +1,6 @@
 Microsoft Windows [Version 10.0.19043.1466]
 (c) Microsoft Corporation. All rights reserved.
 
-C:\Users\owner>cd C:\LSPM\pm-prediction
-
-C:\LSPM\pm-prediction>ؤي ؤخقث
-'ؤي' is not recognized as an internal or external command,
-operable program or batch file.
 
 C:\LSPM\pm-prediction>cd core
 
