@@ -1,0 +1,3 @@
+task,filename,control_flow_p,time_p,resource_p,data_p,transition,num_epochs,batch_size,loss
+next_activity,../sample_data/test.csv,True,True,False,False,False,10,256,0.7736586928367615
+next_activity,../sample_data/test.csv,True,True,False,False,False,10,256,0.7744330167770386

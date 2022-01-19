@@ -1,0 +1,9 @@
+1- Train a prediction model with an original data (test.csv).
+2- Train another prediction model with a preprocessed data (sampled model from LSPM tool and using different sampling methods).
+3- Evalute both of the resulting models with the test data from the original log.
+
+Notes: 
+-we repeated step 2 with each sampled file according to the sampling method used to sampling that file.
+
+-please refer to this link for more informations:
+https://github.com/gyunamister/pm-prediction

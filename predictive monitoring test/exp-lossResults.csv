@@ -1,0 +1,4 @@
+task,filename,control_flow_p,time_p,resource_p,data_p,transition,num_epochs,batch_size,loss,,
+next_activity,../sample_data/test.csv,TRUE,TRUE,FALSE,FALSE,FALSE,10,256,0.773658693,,With Division method
+next_activity,../sample_data/test.csv,TRUE,TRUE,FALSE,FALSE,FALSE,10,256,0.774433017,,with Logarithmic-distribution method
+next_activity,../sample_data/test.csv,TRUE,TRUE,FALSE,FALSE,FALSE,10,256,0.77246213,,with Unique-Selection method
