@@ -1,5 +1,5 @@
 # Event Log Sampling for Predictive Monitoring
-A web app which takes(csv/xes) files as an input and produce sampled (xes) files as an output according to many different sampling methods.
+A web app which takes(csv/xes) files as an input and produce sampled (csv) files as an output according to many different sampling methods.
 
 
 #
